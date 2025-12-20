@@ -50,7 +50,7 @@ export default function ContactPage() {
     {
       icon: "mdi:map-marker",
       title: "Address",
-      content: "123 Construction Avenue, Building District, City 12345",
+      content: "Insurance Plaza, Financial District, City 12345",
       link: "#",
     },
     {
@@ -68,14 +68,14 @@ export default function ContactPage() {
   ];
 
   return (
-    <main className="bg-white text-[#031B4E]">
+    <main className="text-[#031B4E]">
       <CommonHeroSection
         id="contact"
         backgroundImage="/images/servicesimage.jpg"
         backgroundImageAlt="Contact hero background"
         title="Contact Us"
         flipHorizontal={true}
-        description="Ready to bring your vision to life? Let's discuss your next project and explore how we can help transform your ideas into reality."
+        description="Ready to protect your future? Let's discuss your insurance needs and explore how we can provide comprehensive coverage and peace of mind."
         showGradientOverlay={false}
         scrollIndicatorText="Scroll to contact form"
         backgroundColor="bg-brand-dark"
@@ -84,16 +84,19 @@ export default function ContactPage() {
       />
 
       {/* Contact Form & Info Section */}
-      <section className="relative isolate overflow-hidden bg-white py-12 sm:py-16 lg:py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10 xl:px-14">
-          <div className="mb-8 sm:mb-10 lg:mb-12 text-center">
-            <SectionHeader
-              eyebrow="CONTACT US"
-              title="Let's start a conversation"
-              description="Fill out the form below or reach out to us directly. We're here to help with your infrastructure and construction needs."
-              align="center"
-            />
-          </div>
+      <section className="relative isolate overflow-hidden bg-[#f4f0ee] px-20 pt-20 pb-10">
+        <div className="bg-white rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.08)]">
+          <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/5 via-transparent to-transparent" />
+
+          <div className="relative z-10 mx-auto max-w-7xl px-6 py-16 sm:py-20 lg:px-10 xl:px-14">
+            <div className="mb-8 sm:mb-10 lg:mb-12 text-center">
+              <SectionHeader
+                eyebrow="CONTACT US"
+                title="Let's start a conversation"
+                description="Fill out the form below or reach out to us directly. We're here to help with your insurance needs and provide the right coverage for you."
+                align="center"
+              />
+            </div>
 
           <div className="grid gap-8 sm:gap-10 lg:grid-cols-[1.2fr,1fr] lg:gap-16">
             {/* Contact Form */}
@@ -166,7 +169,7 @@ export default function ContactPage() {
 
                 <label className="block space-y-2">
                   <span className="text-sm font-medium text-brand-dark">
-                    Project Details <span className="text-red-500">*</span>
+                    Insurance Inquiry <span className="text-red-500">*</span>
                   </span>
                   <textarea
                     name="message"
@@ -174,7 +177,7 @@ export default function ContactPage() {
                     onChange={handleChange}
                     required
                     rows={6}
-                    placeholder="Tell us about your project, timeline, and any specific requirements..."
+                    placeholder="Tell us about your insurance needs, coverage requirements, and any questions you have..."
                     className="w-full rounded-xl border border-brand-gray-light bg-white px-4 py-3 text-sm text-brand-dark outline-none transition focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20 resize-none"
                   />
                 </label>
@@ -258,6 +261,7 @@ export default function ContactPage() {
               </div>
             </div>
           </div>
+        </div>
         </div>
       </section>
 

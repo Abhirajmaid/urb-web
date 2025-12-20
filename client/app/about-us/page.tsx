@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { AboutHeroSection } from "@/components/about-us/AboutHeroSection";
 import { AboutIntroSection } from "@/components/about-us/AboutIntroSection";
-import { ConnectMarquee } from "@/components/common/ConnectMarquee";
 import { Footer } from "@/components/common/Footer";
 import { PartnersSection } from "@/components/common/PartnersSection";
 import { PurposeSection } from "@/components/about-us/PurposeSection";
@@ -17,25 +16,25 @@ export const metadata: Metadata = {
   openGraph: {
     title: "About Us - URB Insurance",
     description:
-      "Learn about our construction company passionate about creating inspiring and enduring spaces that adapt to innovation.",
+      "Learn about URB Insurance - a premier insurance company passionate about providing comprehensive coverage and innovative insurance solutions. Experience exceptional service that protects your future.",
     images: ["/images/about.jpg"],
   },
 };
 
 export default function AboutUsPage() {
   return (
-    <main className="bg-white text-[#031B4E]">
+    <main className="text-[#031B4E]">
       <AboutHeroSection
-        title="Designing spaces, bringing ideas to life"
+        title="Protecting futures, securing peace of mind"
         upperImage={{
           src: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1200&q=80",
-          alt: "Modern architectural building with angular roof structure",
+          alt: "Insurance protection and financial security",
         }}
         lowerImage={{
           src: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1200&q=80",
-          alt: "Contemporary building with wave-like roofline",
+          alt: "Comprehensive insurance coverage",
         }}
-        description="We are passionate about creating inspiring, attention-grabbing, and enduring spaces that adapt to innovation."
+        description="We are passionate about providing comprehensive insurance solutions that protect individuals, families, and businesses with reliable coverage and exceptional service."
         buttonText="Our services"
         buttonLink="/services"
       />

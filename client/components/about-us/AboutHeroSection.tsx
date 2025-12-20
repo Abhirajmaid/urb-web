@@ -68,19 +68,19 @@ export function AboutHeroSection({
               <div className="rounded-2xl border border-white/20 bg-white/10 p-4 sm:p-5 backdrop-blur-md">
                 <p className="text-3xl sm:text-4xl font-semibold text-white">25+</p>
                 <p className="mt-1 text-xs sm:text-sm text-white/80">
-                  Years of combined engineering and construction experience.
+                  Years of trusted insurance service and financial protection expertise.
                 </p>
               </div>
               <div className="rounded-2xl border border-white/20 bg-white/10 p-4 sm:p-5 backdrop-blur-md">
-                <p className="text-3xl sm:text-4xl font-semibold text-white">60+</p>
+                <p className="text-3xl sm:text-4xl font-semibold text-white">50K+</p>
                 <p className="mt-1 text-xs sm:text-sm text-white/80">
-                  Large and mid‑scale projects delivered across bridges, roads and urban infrastructure.
+                  Customers protected with comprehensive life, motor, home, and travel insurance coverage.
                 </p>
               </div>
               <div className="rounded-2xl border border-white/20 bg-white/10 p-4 sm:p-5 backdrop-blur-md">
-                <p className="text-3xl sm:text-4xl font-semibold text-white">10+</p>
+                <p className="text-3xl sm:text-4xl font-semibold text-white">98%</p>
                 <p className="mt-1 text-xs sm:text-sm text-white/80">
-                  Cities and regions served with on‑ground project teams.
+                  Claim settlement rate ensuring timely financial support when you need it most.
                 </p>
               </div>
             </div>

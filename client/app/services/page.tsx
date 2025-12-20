@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 
 export default function ServicesPage() {
   return (
-    <main className="text-[#031B4E]">
+    <main className="bg-white text-[#031B4E]">
       <ServicesHeroSection />
       <ConnectWithUsButtons />
       <ServicesSection services={services} />

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { HeroSection } from "@/components/home/HeroSection";
-import { ConnectMarquee } from "@/components/common/ConnectMarquee";
+import { ConnectWithUsButtons } from "@/components/services/ConnectWithUsButtons";
 import { FAQSection } from "@/components/common/FAQSection";
 import { FeatureBlogsSection } from "@/components/home/FeatureBlogsSection";
 import { Footer } from "@/components/common/Footer";
@@ -28,10 +28,10 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <main>
+    <main className="bg-white">
       <HeroSection />
       <ShowcaseSection />
-      <ConnectMarquee />
+      <ConnectWithUsButtons />
       {/* <MissionVisionSection /> */}
       <ServicesHighlightSection />
       <WhyChooseUsSection />

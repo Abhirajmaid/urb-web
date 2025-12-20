@@ -122,15 +122,15 @@ const IconComponent = ({ icon }: { icon: string }) => {
 export function StorySection({
   eyebrow = "OUR STORY",
   title = "Our story",
-  description = "How we started and where we are heading.",
+  description = "How we started and where we are heading in protecting your future.",
   highlights,
 }: StorySectionProps) {
   return (
-    <section className="relative isolate overflow-hidden bg-white text-brand-dark">
-      {/* Top left gradient with primary color */}
-      <div className="absolute inset-0 bg-linear-to-br from-brand-primary/10 via-transparent to-transparent" />
+    <section className="relative isolate overflow-hidden bg-[#f4f0ee] px-20 pt-20 pb-10 text-brand-dark">
+      <div className="bg-white rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.08)]">
+        <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/5 via-transparent to-transparent" />
 
-      <div className="relative z-10 mx-auto max-w-7xl px-6 py-16 sm:py-20 lg:px-10 xl:px-14">
+        <div className="relative z-10 mx-auto max-w-7xl px-6 py-16 sm:py-20 lg:px-10 xl:px-14">
         <div className="mb-10 sm:mb-12 max-w-2xl">
           <SectionHeader
             eyebrow={eyebrow}
@@ -167,6 +167,7 @@ export function StorySection({
               </div>
             </article>
           ))}
+        </div>
         </div>
       </div>
     </section>

@@ -71,7 +71,7 @@ export function BlogsHeroSection() {
           <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
               <h1 className="text-6xl sm:text-6xl lg:text-6xl xl:text-6xl text-center font-medium text-white leading-[1.1]">
-                Insights & Updates
+                Insurance Insights & Updates
               </h1>
             </div>
           </div>

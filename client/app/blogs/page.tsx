@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { BlogsHeroSection } from "@/components/blogs/BlogsHeroSection";
 import { BlogsSection } from "@/components/blogs/BlogsSection";
-import { ConnectMarquee } from "@/components/common/ConnectMarquee";
 import { ServiceCTASection } from "@/components/common/ServiceCTASection";
 import { Footer } from "@/components/common/Footer";
 
@@ -18,7 +17,7 @@ export const metadata: Metadata = {
 
 export default function BlogsPage() {
   return (
-    <main className="bg-white text-[#031B4E]">
+    <main className="text-[#031B4E]">
       <BlogsHeroSection />
 
       <BlogsSection />
