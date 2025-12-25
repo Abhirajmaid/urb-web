@@ -190,14 +190,14 @@ export function ClientCaseStudiesSection() {
   };
 
   return (
-    <section className="relative isolate overflow-hidden bg-primary/10 text-brand-dark px-20 pt-20 pb-10">
-      <div className="bg-white rounded-2xl shadow-[0_4px_20px_rgba(var(--color-dark-rgb),0.08)]">
+    <section className="relative isolate overflow-hidden bg-primary/10 text-brand-dark px-4 sm:px-6 lg:px-20 pt-12 sm:pt-16 lg:pt-20 pb-10">
+      <div className="bg-white rounded-2xl shadow-[0_4px_20px_rgba(var(--color-dark-rgb),0.08)] min-h-[700px] sm:min-h-[750px] lg:min-h-0">
         {/* Background gradient */}
         <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/5 via-transparent to-transparent" />
 
-        <div className="relative z-10 mx-auto max-w-7xl px-6 py-16 sm:py-20 lg:px-10 xl:px-14">
+        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 py-12 sm:py-16 lg:px-10 xl:px-14 lg:py-20">
           {/* Header Section */}
-          <div className="mb-12 sm:mb-16">
+          <div className="mb-10 sm:mb-12 lg:mb-16">
             <SectionHeader
               eyebrow="CLIENT CASE STUDIES"
               title="Our Success Stories"
@@ -210,17 +210,17 @@ export function ClientCaseStudiesSection() {
           </div>
 
           {/* Case Studies Carousel */}
-          <div className="relative -mx-6 sm:-mx-10 lg:-mx-14">
+          <div className="relative -mx-4 sm:-mx-6 lg:-mx-14">
             {/* Left Arrow */}
             <button
               onClick={() => scroll("prev")}
               disabled={!canScrollPrev}
               aria-label="Previous case study"
-              className="absolute left-6 sm:left-10 lg:left-14 top-1/2 z-20 -translate-y-1/2 rounded-full bg-white p-3 shadow-lg transition-all hover:scale-110 focus:outline-none focus:ring-2 focus:ring-brand-primary focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:scale-100 lg:p-4"
+              className="absolute left-4 sm:left-6 lg:left-14 top-1/2 z-20 -translate-y-1/2 rounded-full bg-white p-3 sm:p-3 lg:p-4 shadow-lg transition-all hover:scale-110 focus:outline-none focus:ring-2 focus:ring-brand-primary focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:scale-100"
             >
               <Icon
                 icon="mdi:chevron-left"
-                className="text-2xl text-brand-primary lg:text-3xl"
+                className="text-2xl sm:text-2xl lg:text-3xl text-brand-primary"
               />
             </button>
 
@@ -229,11 +229,11 @@ export function ClientCaseStudiesSection() {
               onClick={() => scroll("next")}
               disabled={!canScrollNext}
               aria-label="Next case study"
-              className="absolute right-6 sm:right-10 lg:right-14 top-1/2 z-20 -translate-y-1/2 rounded-full bg-white p-3 shadow-lg transition-all hover:scale-110 focus:outline-none focus:ring-2 focus:ring-brand-primary focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:scale-100 lg:p-4"
+              className="absolute right-4 sm:right-6 lg:right-14 top-1/2 z-20 -translate-y-1/2 rounded-full bg-white p-3 sm:p-3 lg:p-4 shadow-lg transition-all hover:scale-110 focus:outline-none focus:ring-2 focus:ring-brand-primary focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:scale-100"
             >
               <Icon
                 icon="mdi:chevron-right"
-                className="text-2xl text-brand-primary lg:text-3xl"
+                className="text-2xl sm:text-2xl lg:text-3xl text-brand-primary"
               />
             </button>
 
@@ -254,7 +254,7 @@ export function ClientCaseStudiesSection() {
                 >
                   <div
                     className="w-full h-full px-4 sm:px-6"
-                    style={{ minHeight: "400px" }}
+                    style={{ minHeight: "500px" }}
                   >
                     <ClientCaseStudyCard {...caseStudy} />
                   </div>

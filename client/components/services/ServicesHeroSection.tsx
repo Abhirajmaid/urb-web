@@ -7,27 +7,29 @@ export function ServicesHeroSection() {
   const { openModal } = useEnquiryModal();
 
   return (
-    <section className="bg-[#f4f0ee] px-20 pt-0 pb-12 sm:pb-14 lg:pb-16 min-h-screen flex items-center -mt-[88px] pt-[88px]">
+    <section className="bg-[#f4f0ee] px-4 sm:px-6 lg:px-20 pt-0 pb-12 sm:pb-14 lg:pb-16 min-h-screen flex items-center -mt-[88px] pt-[88px]">
       <div className="w-full">
-        <div className="w-full rounded-2xl border border-[#e9e0dd] bg-white shadow-[0_10px_30px_-15px_rgba(0,0,0,0.25)]">
-          <div className="mx-auto max-w-7xl px-6 py-12 sm:py-14 lg:px-10 xl:px-14">
-          <div className="text-center text-[#4b2f2f] space-y-4">
-            <h1 className="text-4xl font-semibold leading-tight sm:text-5xl">
+        <div className="w-full rounded-2xl border border-[#e9e0dd] bg-white shadow-[0_10px_30px_-15px_rgba(0,0,0,0.25)] min-h-[500px] sm:min-h-[550px] lg:min-h-0 flex items-center">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 py-12 sm:py-14 lg:px-10 xl:px-14 w-full">
+          <div className="text-center text-[#4b2f2f] space-y-5 sm:space-y-4">
+            <h1 className="text-3xl sm:text-5xl font-semibold leading-tight">
               Our Services
             </h1>
-            <p className="text-sm leading-relaxed text-[#6f5655] sm:text-base">
+            <p className="text-base sm:text-base lg:text-sm leading-relaxed text-[#6f5655]">
               We offer a complete range of insurance solutions for individuals,
               families, and businesses.
-              <br />
+              <br className="hidden sm:block" />
+              <span className="sm:hidden"> </span>
               From life and motor to jewellery, property, travel, and liability
               coverage—everything under one roof.
-              <br />
+              <br className="hidden sm:block" />
+              <span className="sm:hidden"> </span>
               Our goal is to provide reliable protection, financial security, and
               peace of mind for every need.
             </p>
           </div>
 
-          <div className="mt-8 flex justify-center">
+          <div className="mt-8 sm:mt-8 lg:mt-8 flex justify-center">
             <div className="w-fit">
               <Button
                 onClick={openModal}

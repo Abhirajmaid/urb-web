@@ -19,20 +19,20 @@ const stats = [
 
 export function ShowcaseSection() {
   return (
-    <section className="relative isolate overflow-hidden bg-[#f4f0ee] px-20 pt-20 pb-10 text-brand-dark">
+    <section className="relative isolate overflow-hidden bg-[#f4f0ee] px-4 sm:px-6 lg:px-20 pt-12 sm:pt-16 lg:pt-20 pb-10 text-brand-dark">
       {/* Dark Brown Container - Full Width */}
-      <div className="w-full rounded-2xl bg-[#3b1d1c] p-6 sm:p-8">
-        <div className="mx-auto max-w-7xl">
+      <div className="w-full rounded-2xl bg-[#3b1d1c] p-6 sm:p-8 min-h-[400px] sm:min-h-[450px] lg:min-h-0 lg:flex lg:items-center">
+        <div className="mx-auto max-w-7xl w-full">
           <div className="grid grid-cols-2 gap-4 sm:grid-cols-4 sm:gap-6">
             {stats.map((stat, index) => (
               <div
                 key={index}
-                className="rounded-xl bg-[#7B4747] p-4 sm:p-6 text-center shadow-[0_10px_30px_-15px_rgba(0,0,0,0.25)]"
+                className="rounded-xl bg-[#7B4747] p-5 sm:p-6 text-center shadow-[0_10px_30px_-15px_rgba(0,0,0,0.25)] min-h-[140px] sm:min-h-[160px] lg:min-h-0 flex flex-col justify-center"
               >
-                <div className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-white mb-2">
+                <div className="text-4xl sm:text-4xl lg:text-5xl font-semibold text-white mb-3 sm:mb-2">
                   {stat.value}
                 </div>
-                <div className="text-xs sm:text-sm text-white/90 leading-tight">
+                <div className="text-sm sm:text-sm text-white/90 leading-tight">
                   {stat.label.split(" ").map((word, i, arr) => (
                     <span key={i}>
                       {word}

@@ -100,7 +100,7 @@ export function CommonHeroSection({
           }`}
         >
           <div
-            className={`max-w-7xl w-full px-6 lg:px-8 pt-20 lg:pt-24 pb-20 ${
+            className={`max-w-7xl w-full px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20 lg:pt-24 pb-16 sm:pb-20 lg:pb-20 ${
               contentAlign === "bottom-left" ? "" : "mx-auto"
             }`}
           >
@@ -112,12 +112,12 @@ export function CommonHeroSection({
               }`}
             >
               {/* Main Headline */}
-              <h1 className="text-5xl lg:text-6xl xl:text-8xl font-medium text-white leading-[1.1] mb-6">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-8xl font-medium text-white leading-[1.1] mb-6 sm:mb-6 lg:mb-6">
                 {title}
               </h1>
 
               {/* Description */}
-              <p className="text-lg lg:text-xl text-white/80 leading-relaxed mb-8 max-w-2xl">
+              <p className="text-base sm:text-base lg:text-lg text-white/80 leading-relaxed mb-8 max-w-2xl">
                 {description}
               </p>
 

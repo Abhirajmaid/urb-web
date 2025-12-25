@@ -70,7 +70,7 @@ export function BlogsHeroSection() {
         <div className="flex-1 flex items-center pt-12 sm:pt-16 lg:pt-24 pb-8 sm:pb-12">
           <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
-              <h1 className="text-6xl sm:text-6xl lg:text-6xl xl:text-6xl text-center font-medium text-white leading-[1.1]">
+              <h1 className="text-3xl sm:text-4xl lg:text-6xl xl:text-6xl text-center font-medium text-white leading-[1.1]">
                 Insurance Insights & Updates
               </h1>
             </div>
@@ -121,18 +121,18 @@ export function BlogsHeroSection() {
             </div>
 
             {/* Navigation Buttons */}
-            <div className="flex items-center justify-center gap-3 sm:gap-4">
+            <div className="flex items-center justify-center gap-4 sm:gap-4">
               <Button
                 onClick={handlePrevious}
                 type="primary"
                 size="md"
                 hideArrow
-                className="h-10 w-10 sm:h-12 sm:w-12 !p-0 bg-white/10 text-white hover:bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm border border-white/20"
+                className="h-12 w-12 sm:h-12 sm:w-12 lg:h-12 lg:w-12 !p-0 bg-white/10 text-white hover:bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm border border-white/20"
                 aria-label="Previous blog post"
               >
                 <Icon
                   icon="solar:alt-arrow-left-bold"
-                  className="text-xl sm:text-2xl"
+                  className="text-2xl sm:text-2xl lg:text-xl"
                 />
               </Button>
               <Button
@@ -140,12 +140,12 @@ export function BlogsHeroSection() {
                 type="primary"
                 size="md"
                 hideArrow
-                className="h-10 w-10 sm:h-12 sm:w-12 !p-0 bg-white/10 text-white hover:bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm border border-white/20"
+                className="h-12 w-12 sm:h-12 sm:w-12 lg:h-12 lg:w-12 !p-0 bg-white/10 text-white hover:bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm border border-white/20"
                 aria-label="Next blog post"
               >
                 <Icon
                   icon="solar:alt-arrow-right-bold"
-                  className="text-xl sm:text-2xl"
+                  className="text-2xl sm:text-2xl lg:text-xl"
                 />
               </Button>
             </div>

@@ -107,24 +107,24 @@ export function TestimonialsSection() {
   }, []);
 
   return (
-    <section className="relative isolate overflow-hidden bg-[#f4f0ee] px-20 pt-20 pb-10 text-brand-dark">
-      <div className="bg-white rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.08)]">
+    <section className="relative isolate overflow-hidden bg-[#f4f0ee] px-4 sm:px-6 lg:px-20 pt-12 sm:pt-16 lg:pt-20 pb-10 text-brand-dark">
+      <div className="bg-white rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.08)] min-h-[600px] sm:min-h-[650px] lg:min-h-0">
         <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/5 via-transparent to-transparent" />
 
-        <div className="relative z-10 mx-auto max-w-7xl px-6 py-16 sm:py-20 lg:px-10 xl:px-14">
-          <div className="text-center space-y-3">
-            <p className="text-sm font-medium text-[#8a6a6a]">Testimonials</p>
-            <h2 className="text-3xl font-semibold text-[#4b2f2f] sm:text-4xl">
+        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 py-12 sm:py-16 lg:px-10 xl:px-14 lg:py-20">
+          <div className="text-center space-y-4 sm:space-y-3">
+            <p className="text-base sm:text-base lg:text-sm font-medium text-[#8a6a6a]">Testimonials</p>
+            <h2 className="text-2xl sm:text-4xl font-semibold text-[#4b2f2f]">
               Trusted by many
             </h2>
-            <p className="text-sm text-[#6f5655]">
+            <p className="text-base sm:text-base lg:text-sm text-[#6f5655]">
               Choose the Right Insurance for Your Needs
             </p>
           </div>
 
           <div
             ref={scrollContainerRef}
-            className="mt-10 flex gap-4 sm:gap-6 overflow-x-auto scrollbar-hide snap-x snap-mandatory pb-4 px-4 sm:px-6 lg:px-8"
+            className="mt-8 sm:mt-10 flex gap-5 sm:gap-6 overflow-x-auto scrollbar-hide snap-x snap-mandatory pb-4 px-4 sm:px-6 lg:px-8"
             style={{
               scrollbarWidth: "none",
               msOverflowStyle: "none",
@@ -137,14 +137,14 @@ export function TestimonialsSection() {
                 key={testimonial.name}
                 className="flex-shrink-0 snap-start w-[85%] sm:w-[60%] lg:w-[calc((100%-48px)/3)]"
               >
-                <div className="flex h-full flex-col items-center justify-start rounded-[28px] border border-[#e9e0dd] bg-white px-6 py-8 text-center shadow-[0_10px_30px_-15px_rgba(0,0,0,0.25)]">
-                  <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-full bg-[#624240] text-white">
-                    <Icon icon="mdi:account" className="h-7 w-7" aria-hidden />
+                <div className="flex h-full flex-col items-center justify-start rounded-[28px] border border-[#e9e0dd] bg-white px-6 sm:px-6 lg:px-6 py-8 sm:py-8 lg:py-8 text-center shadow-[0_10px_30px_-15px_rgba(0,0,0,0.25)] min-h-[280px] sm:min-h-[300px] lg:min-h-0">
+                  <div className="mb-6 sm:mb-6 lg:mb-6 flex h-16 w-16 sm:h-16 sm:w-16 lg:h-14 lg:w-14 items-center justify-center rounded-full bg-[#624240] text-white">
+                    <Icon icon="mdi:account" className="h-8 w-8 sm:h-8 sm:w-8 lg:h-7 lg:w-7" aria-hidden />
                   </div>
-                  <h3 className="text-lg font-semibold text-[#2c1f4a]">
+                  <h3 className="text-xl sm:text-xl lg:text-lg font-semibold text-[#2c1f4a]">
                     {testimonial.name}
                   </h3>
-                  <p className="mt-4 text-sm leading-relaxed text-[#7c6463]">
+                  <p className="mt-5 sm:mt-4 text-base sm:text-base lg:text-sm leading-relaxed text-[#7c6463]">
                     {testimonial.quote}
                   </p>
                 </div>

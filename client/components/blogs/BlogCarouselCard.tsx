@@ -41,15 +41,15 @@ export function BlogCarouselCard({
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
         
         {/* Content */}
-        <div className="absolute inset-x-0 bottom-0 flex flex-col gap-2 p-6 text-white">
-          <time className="text-xs uppercase tracking-[0.12em] text-white/70">
+        <div className="absolute inset-x-0 bottom-0 flex flex-col gap-3 sm:gap-2 p-6 sm:p-6 lg:p-6 text-white">
+          <time className="text-sm sm:text-xs lg:text-xs uppercase tracking-[0.12em] text-white/70">
             {date}
           </time>
           <h3
             className={`font-semibold leading-tight text-white transition-all duration-300 ${
               isActive
-                ? "text-xl sm:text-2xl"
-                : "text-base sm:text-lg group-hover:text-xl"
+                ? "text-2xl sm:text-2xl lg:text-xl"
+                : "text-lg sm:text-lg lg:text-base group-hover:text-xl"
             }`}
           >
             {title}
@@ -57,11 +57,11 @@ export function BlogCarouselCard({
           
           {/* Read More Indicator */}
           {isActive && (
-            <div className="mt-2 flex items-center gap-2 text-sm font-medium text-white/90 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+            <div className="mt-2 flex items-center gap-2 text-base sm:text-base lg:text-sm font-medium text-white/90 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
               <span>Read more</span>
               <Icon
                 icon="solar:arrow-right-up-bold"
-                className="text-sm"
+                className="text-base sm:text-base lg:text-sm"
                 style={{ transform: "rotate(45deg)" }}
               />
             </div>

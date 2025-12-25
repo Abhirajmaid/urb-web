@@ -12,40 +12,40 @@ const services = [
 
 export function ServicesHighlightSection() {
   return (
-    <section className="relative isolate overflow-hidden bg-[#f4f0ee] px-20 pt-20 pb-10 text-brand-dark">
-      <div className="bg-white rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.08)]">
+    <section className="relative isolate overflow-hidden bg-[#f4f0ee] px-4 sm:px-6 lg:px-20 pt-12 sm:pt-16 lg:pt-20 pb-10 text-brand-dark">
+      <div className="bg-white rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.08)] min-h-[600px] sm:min-h-[650px] lg:min-h-0">
         <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/5 via-transparent to-transparent" />
 
-        <div className="relative z-10 mx-auto max-w-7xl px-6 py-16 sm:py-20 lg:px-10 xl:px-14">
-          <p className="text-sm font-medium text-[#8a6a6a]">Services</p>
-          <h2 className="mt-2 text-3xl font-semibold text-[#4b2f2f] sm:text-4xl">
+        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 py-12 sm:py-16 lg:px-10 xl:px-14 lg:py-20">
+          <p className="text-base sm:text-base lg:text-sm font-medium text-[#8a6a6a]">Services</p>
+          <h2 className="mt-3 sm:mt-2 text-2xl sm:text-4xl font-semibold text-[#4b2f2f]">
             Explore Our Service Offerings
           </h2>
-          <p className="mt-2 text-sm text-[#6f5655]">
+          <p className="mt-3 sm:mt-2 text-base sm:text-base lg:text-sm text-[#6f5655]">
             Choose the Right Insurance for Your Needs
           </p>
 
-          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-8 sm:mt-10 grid gap-5 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {services.map((service) => (
               <div
                 key={service.title}
-                className="rounded-3xl bg-[#ebe2df] p-6 text-center shadow-[0_10px_30px_-15px_rgba(0,0,0,0.25)] transition hover:-translate-y-1"
+                className="rounded-3xl bg-[#ebe2df] p-6 sm:p-6 lg:p-6 text-center shadow-[0_10px_30px_-15px_rgba(0,0,0,0.25)] transition hover:-translate-y-1 min-h-[200px] sm:min-h-[220px] lg:min-h-0 flex flex-col justify-center"
               >
-                <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-[#3b1d1c] text-white">
-                  <Icon icon={service.icon} className="h-6 w-6" aria-hidden />
+                <div className="mx-auto mb-5 sm:mb-4 flex h-16 w-16 sm:h-16 sm:w-16 lg:h-14 lg:w-14 items-center justify-center rounded-full bg-[#3b1d1c] text-white">
+                  <Icon icon={service.icon} className="h-7 w-7 sm:h-7 sm:w-7 lg:h-6 lg:w-6" aria-hidden />
                 </div>
-                <h3 className="text-lg font-semibold text-[#4b2f2f]">
+                <h3 className="text-xl sm:text-xl lg:text-lg font-semibold text-[#4b2f2f]">
                   {service.title}
                 </h3>
-                <p className="mt-2 text-sm text-[#7c6463]">Service Description</p>
-                <button className="mt-4 inline-flex items-center justify-center rounded-full bg-white px-5 py-1.5 text-xs font-semibold text-[#6f4d4c] shadow">
+                <p className="mt-3 sm:mt-2 text-base sm:text-base lg:text-sm text-[#7c6463]">Service Description</p>
+                <button className="mt-5 sm:mt-4 inline-flex items-center justify-center rounded-full bg-white px-6 py-2 sm:px-6 sm:py-2 lg:px-5 lg:py-1.5 text-sm sm:text-sm lg:text-xs font-semibold text-[#6f4d4c] shadow">
                   Learn More
                 </button>
               </div>
             ))}
           </div>
 
-          <div className="mt-10 flex justify-center">
+          <div className="mt-8 sm:mt-10 flex justify-center">
             <Button
               link="/services"
               type="primary"

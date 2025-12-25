@@ -17,7 +17,7 @@ const IconComponent = ({ icon }: { icon: string }) => {
   if (icon === "building") {
     return (
       <svg
-        className="h-6 w-6 text-white"
+        className="h-7 w-7 sm:h-7 sm:w-7 lg:h-6 lg:w-6 text-white"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -34,7 +34,7 @@ const IconComponent = ({ icon }: { icon: string }) => {
   if (icon === "thumbs-up") {
     return (
       <svg
-        className="h-6 w-6 text-white"
+        className="h-7 w-7 sm:h-7 sm:w-7 lg:h-6 lg:w-6 text-white"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -51,7 +51,7 @@ const IconComponent = ({ icon }: { icon: string }) => {
   if (icon === "lightbulb") {
     return (
       <svg
-        className="h-6 w-6 text-white"
+        className="h-7 w-7 sm:h-7 sm:w-7 lg:h-6 lg:w-6 text-white"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -68,7 +68,7 @@ const IconComponent = ({ icon }: { icon: string }) => {
   if (icon === "person") {
     return (
       <svg
-        className="h-6 w-6 text-white"
+        className="h-7 w-7 sm:h-7 sm:w-7 lg:h-6 lg:w-6 text-white"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -85,7 +85,7 @@ const IconComponent = ({ icon }: { icon: string }) => {
   if (icon === "leaf") {
     return (
       <svg
-        className="h-6 w-6 text-white"
+        className="h-7 w-7 sm:h-7 sm:w-7 lg:h-6 lg:w-6 text-white"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -102,7 +102,7 @@ const IconComponent = ({ icon }: { icon: string }) => {
   if (icon === "hashtag") {
     return (
       <svg
-        className="h-6 w-6 text-white"
+        className="h-7 w-7 sm:h-7 sm:w-7 lg:h-6 lg:w-6 text-white"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -126,11 +126,11 @@ export function StorySection({
   highlights,
 }: StorySectionProps) {
   return (
-    <section className="relative isolate overflow-hidden bg-[#f4f0ee] px-20 pt-20 pb-10 text-brand-dark">
-      <div className="bg-white rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.08)]">
+    <section className="relative isolate overflow-hidden bg-[#f4f0ee] px-4 sm:px-6 lg:px-20 pt-12 sm:pt-16 lg:pt-20 pb-10 text-brand-dark">
+      <div className="bg-white rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.08)] min-h-[600px] sm:min-h-[650px] lg:min-h-0">
         <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/5 via-transparent to-transparent" />
 
-        <div className="relative z-10 mx-auto max-w-7xl px-6 py-16 sm:py-20 lg:px-10 xl:px-14">
+        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 py-12 sm:py-16 lg:px-10 xl:px-14 lg:py-20">
         <div className="mb-10 sm:mb-12 max-w-2xl">
           <SectionHeader
             eyebrow={eyebrow}
@@ -142,26 +142,26 @@ export function StorySection({
           />
         </div>
 
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-5 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
           {highlights.map((highlight) => (
             <article
               key={highlight.title}
-              className="group relative overflow-hidden rounded-xl sm:rounded-2xl border border-brand-gray-light/50 bg-white p-5 sm:p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-[0_4px_20px_rgba(var(--color-dark-rgb),0.08)]"
+              className="group relative overflow-hidden rounded-xl sm:rounded-2xl border border-brand-gray-light/50 bg-white p-6 sm:p-6 lg:p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-[0_4px_20px_rgba(var(--color-dark-rgb),0.08)] min-h-[180px] sm:min-h-[200px] lg:min-h-0"
             >
               {/* Subtle circular pattern in upper-right */}
               <div className="absolute right-0 top-0 h-32 w-32 translate-x-8 -translate-y-8 rounded-full bg-brand-primary/5 blur-2xl" />
 
               {/* Icon */}
-              <div className="relative mb-4 flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-lg bg-brand-primary">
+              <div className="relative mb-5 sm:mb-4 flex h-12 w-12 sm:h-12 sm:w-12 lg:h-12 lg:w-12 items-center justify-center rounded-lg bg-brand-primary">
                 <IconComponent icon={highlight.icon} />
               </div>
 
               {/* Content */}
-              <div className="relative space-y-2">
-                <h3 className="text-base sm:text-lg font-semibold text-brand-dark">
+              <div className="relative space-y-3 sm:space-y-2">
+                <h3 className="text-lg sm:text-lg lg:text-base font-semibold text-brand-dark">
                   {highlight.title}
                 </h3>
-                <p className="text-sm leading-relaxed text-brand-dark/70">
+                <p className="text-base sm:text-base lg:text-sm leading-relaxed text-brand-dark/70">
                   {highlight.description}
                 </p>
               </div>
