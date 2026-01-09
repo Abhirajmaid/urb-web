@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef } from "react";
 import { Icon } from "@iconify/react";
+import { StructuredData, createReviewSchema } from "@/components/seo/StructuredData";
 
 const testimonials = [
   {
@@ -47,6 +48,16 @@ const testimonials = [
 
 export function TestimonialsSection() {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+  // Generate review schema for testimonials
+  const reviewSchema = createReviewSchema(
+    testimonials.map((testimonial) => ({
+      author: testimonial.name,
+      rating: 5, // Default 5-star rating
+      reviewBody: testimonial.quote,
+      datePublished: "2024-01-01", // You can update this with actual dates
+    }))
+  );
 
   useEffect(() => {
     const container = scrollContainerRef.current;
@@ -108,6 +119,7 @@ export function TestimonialsSection() {
 
   return (
     <section className="relative isolate overflow-hidden bg-[#f4f0ee] px-4 sm:px-6 lg:px-20 pt-12 sm:pt-16 lg:pt-20 pb-10 text-brand-dark">
+      <StructuredData data={reviewSchema} />
       <div className="bg-white rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.08)] min-h-[600px] sm:min-h-[650px] lg:min-h-0">
         <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/5 via-transparent to-transparent" />
 

@@ -13,11 +13,31 @@ export const metadata: Metadata = {
   title: "About Us",
   description:
     "Learn about URB Insurance - a premier insurance company passionate about providing comprehensive coverage and innovative insurance solutions. Experience exceptional service that protects your future.",
+  keywords: [
+    "about URB Insurance",
+    "insurance company history",
+    "insurance mission",
+    "insurance vision",
+    "insurance team",
+    "about insurance agency",
+    "insurance company values",
+  ],
   openGraph: {
     title: "About Us - URB Insurance",
     description:
-      "Learn about URB Insurance - a premier insurance company passionate about providing comprehensive coverage and innovative insurance solutions. Experience exceptional service that protects your future.",
+      "Learn about URB Insurance - a premier insurance company passionate about providing comprehensive coverage and innovative insurance solutions.",
     images: ["/images/about.jpg"],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Us - URB Insurance",
+    description:
+      "Learn about URB Insurance and our mission to provide exceptional insurance services.",
+    images: ["/images/about.jpg"],
+  },
+  alternates: {
+    canonical: "https://urbinsurance.com/about-us",
   },
 };
 

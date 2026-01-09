@@ -4,6 +4,7 @@ import "./globals.css";
 import { StickyHeader } from "@/components/common/StickyHeader";
 import { BottomNavbar } from "@/components/common/BottomNavbar";
 import { EnquiryModalProvider } from "@/contexts/EnquiryModalContext";
+import { StructuredData, organizationSchema, websiteSchema } from "@/components/seo/StructuredData";
 
 const dmSans = DM_Sans({
   variable: "--font-primary",
@@ -85,6 +86,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <StructuredData data={organizationSchema} />
+        <StructuredData data={websiteSchema} />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="apple-touch-icon" href="/URB-logo.png" />
+        <meta name="theme-color" content="#4e0708" />
+        <link rel="manifest" href="/manifest.json" />
+      </head>
       <body
         className={`${dmSans.variable} antialiased pb-20 lg:pb-0`}
       >

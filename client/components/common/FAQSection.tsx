@@ -3,15 +3,20 @@ import { useState } from "react";
 import { FAQItem } from "./FAQItem";
 import { SectionHeader } from "./SectionHeader";
 import { faqItems } from "@/data/faq";
+import { StructuredData, createFAQSchema } from "@/components/seo/StructuredData";
 
 export function FAQSection() {
   const [openIndex, setOpenIndex] = useState(0);
+
+  // Generate FAQ schema
+  const faqSchema = createFAQSchema(faqItems);
 
   return (
     <section
       id="faq"
       className="relative isolate overflow-hidden bg-[#f4f0ee] px-4 sm:px-6 lg:px-20 pt-12 sm:pt-16 lg:pt-20 pb-10 text-brand-dark"
     >
+      <StructuredData data={faqSchema} />
       <div className="bg-white rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.08)] min-h-[600px] sm:min-h-[650px] lg:min-h-0">
         <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/5 via-transparent to-transparent" />
 

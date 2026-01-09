@@ -18,11 +18,32 @@ export const metadata: Metadata = {
   title: "Home",
   description:
     "Welcome to URB Insurance - Your trusted partner for comprehensive insurance solutions. Discover our innovative coverage options and exceptional insurance services.",
+  keywords: [
+    "URB Insurance",
+    "insurance company",
+    "insurance solutions",
+    "health insurance",
+    "auto insurance",
+    "home insurance",
+    "life insurance",
+    "insurance coverage",
+    "insurance quote",
+  ],
   openGraph: {
     title: "URB Insurance - Leading Insurance Company",
     description:
       "Your trusted partner for comprehensive insurance solutions. Discover our innovative coverage options and exceptional insurance services.",
     images: ["/images/hero.jpg"],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "URB Insurance - Leading Insurance Company",
+    description: "Your trusted partner for comprehensive insurance solutions.",
+    images: ["/images/hero.jpg"],
+  },
+  alternates: {
+    canonical: "https://urbinsurance.com",
   },
 };
 

@@ -8,10 +8,30 @@ export const metadata: Metadata = {
   title: "Blogs",
   description:
     "Explore insights, industry news, insurance tips, and coverage updates from URB Insurance. Stay informed about the latest trends in insurance and risk management.",
+  keywords: [
+    "insurance blog",
+    "insurance tips",
+    "insurance news",
+    "insurance insights",
+    "risk management",
+    "insurance trends",
+    "coverage updates",
+  ],
   openGraph: {
     title: "Blogs - URB Insurance",
     description:
       "Explore insights, industry news, insurance tips, and coverage updates from URB Insurance.",
+    images: ["/images/hero.jpg"],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Blogs - URB Insurance",
+    description: "Explore insurance insights, tips, and industry news.",
+    images: ["/images/hero.jpg"],
+  },
+  alternates: {
+    canonical: "https://urbinsurance.com/blogs",
   },
 };
 

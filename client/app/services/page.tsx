@@ -11,11 +11,33 @@ export const metadata: Metadata = {
   title: "Services",
   description:
     "Comprehensive insurance services designed to protect your future with precision and excellence. From personal insurance to commercial coverage, URB Insurance delivers exceptional results.",
+  keywords: [
+    "insurance services",
+    "health insurance",
+    "auto insurance",
+    "home insurance",
+    "life insurance",
+    "commercial insurance",
+    "business insurance",
+    "personal insurance",
+    "insurance coverage",
+  ],
   openGraph: {
     title: "Our Services - URB Insurance",
     description:
-      "Comprehensive architectural and construction services designed to bring your vision to life with precision and excellence.",
+      "Comprehensive insurance services designed to protect your future. From personal insurance to commercial coverage, we deliver exceptional results.",
     images: ["/images/projecthero2.jpg"],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Our Services - URB Insurance",
+    description:
+      "Comprehensive insurance services from personal to commercial coverage.",
+    images: ["/images/projecthero2.jpg"],
+  },
+  alternates: {
+    canonical: "https://urbinsurance.com/services",
   },
 };
 

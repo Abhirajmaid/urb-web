@@ -10,11 +10,29 @@ export const metadata: Metadata = {
   title: "Projects",
   description:
     "Discover our portfolio of successful insurance solutions and client success stories. Explore URB Insurance's comprehensive coverage options and exceptional service delivery.",
+  keywords: [
+    "insurance projects",
+    "insurance case studies",
+    "insurance success stories",
+    "insurance portfolio",
+    "client success",
+    "insurance solutions",
+  ],
   openGraph: {
     title: "Our Projects - URB Insurance",
     description:
-      "Discover our portfolio of iconic infrastructure projects, each crafted with engineering excellence and bold design vision.",
+      "Discover our portfolio of successful insurance solutions and client success stories.",
     images: ["/images/projecthero2.jpg"],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Our Projects - URB Insurance",
+    description: "Explore our portfolio of successful insurance solutions.",
+    images: ["/images/projecthero2.jpg"],
+  },
+  alternates: {
+    canonical: "https://urbinsurance.com/projects",
   },
 };
 

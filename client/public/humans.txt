@@ -1,0 +1,20 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Developer: WebFudge
+    Site: https://urbinsurance.com
+    Location: United States
+
+# THANKS
+
+    To all our customers for their trust and support.
+
+# TECHNOLOGY COLOPHON
+
+    Framework: Next.js 16
+    Language: TypeScript
+    Styles: Tailwind CSS
+    Icons: Iconify
+    Hosting: Vercel

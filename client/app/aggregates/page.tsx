@@ -9,11 +9,30 @@ export const metadata: Metadata = {
   title: "Aggregates - Ready Mix Concrete (RMC)",
   description:
     "Discover URB Insurance's comprehensive insurance solutions. Explore our range of coverage options, locations, and comprehensive insurance services for all your protection needs.",
+  keywords: [
+    "insurance aggregates",
+    "insurance services",
+    "comprehensive insurance",
+    "insurance coverage options",
+    "insurance locations",
+    "insurance solutions",
+  ],
   openGraph: {
     title: "Aggregates - Insurance Services | URB Insurance",
     description:
-      "Quality-assured Ready Mix Concrete from strategically located plants. Expert RMC solutions for construction projects of all scales.",
+      "Discover URB Insurance's comprehensive insurance solutions and coverage options.",
     images: ["/images/projecthero2.jpg"],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Aggregates - Insurance Services | URB Insurance",
+    description:
+      "Comprehensive insurance solutions and coverage options.",
+    images: ["/images/projecthero2.jpg"],
+  },
+  alternates: {
+    canonical: "https://urbinsurance.com/aggregates",
   },
 };
 
