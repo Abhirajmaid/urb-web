@@ -53,7 +53,7 @@ export default function Home() {
       <HeroSection />
       <ShowcaseSection />
       <ConnectMarquee />
-      {/* <MissionVisionSection /> */}
+      <MissionVisionSection />
       <ServicesHighlightSection />
       <WhyChooseUsSection />
       <PartnersSection />
