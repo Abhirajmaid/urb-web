@@ -7,6 +7,7 @@ const navLinks = [
   { label: "Home", href: "/" },
   { label: "About us", href: "/about-us" },
   { label: "Services", href: "/services" },
+  { label: "Case Studies", href: "/case-studies" },
   { label: "Blogs", href: "/blogs" },
   { label: "Contact Us", href: "/contact" },
 ];
@@ -25,7 +26,10 @@ export function Navigation({ variant = "light" }: NavigationProps) {
   const hoverEffect = "transition-all duration-200 hover:-translate-y-0.5";
 
   return (
-    <nav className="flex items-center space-x-8" style={{ pointerEvents: "auto" }}>
+    <nav
+      className="flex items-center space-x-8"
+      style={{ pointerEvents: "auto" }}
+    >
       {navLinks.map((link) => {
         const isActive =
           link.href === "/"

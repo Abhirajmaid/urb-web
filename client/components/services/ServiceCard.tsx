@@ -81,8 +81,12 @@ export function ServiceCard({
             </span>
             Core Service
           </span>
-          <h3 className="text-2xl sm:text-3xl font-semibold text-text-dark">{title}</h3>
-          <p className="text-sm sm:text-base leading-relaxed text-brand-foreground/80">{description}</p>
+          <h3 className="text-2xl sm:text-3xl font-semibold text-text-dark">
+            {title}
+          </h3>
+          <p className="text-sm sm:text-base leading-relaxed text-brand-foreground/80">
+            {description}
+          </p>
         </div>
 
         <div className="flex flex-wrap gap-3 text-xs text-brand-gray">
@@ -112,4 +116,3 @@ export function ServiceCard({
     </article>
   );
 }
-

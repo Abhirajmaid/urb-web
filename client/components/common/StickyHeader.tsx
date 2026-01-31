@@ -1,6 +1,8 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useState } from "react";
+import { Icon } from "@iconify/react";
 
 import { Logo } from "./Logo";
 import { Navigation } from "./Navigation";
@@ -57,26 +59,33 @@ export function StickyHeader() {
           }`}
         />
 
-        {/* Logo Container - Centered */}
-        <div className="relative z-10 px-4 py-3.5 flex items-center justify-center">
+        {/* Logo (left) + Contact (right) - Mobile Top Bar */}
+        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-20 py-3.5 flex items-center justify-between">
           <div className={mobileScrolled ? "" : "drop-shadow-lg"}>
             <Logo isScrolled={mobileScrolled} />
           </div>
+          <Link
+            href="/contact"
+            className="flex size-10 shrink-0 items-center justify-center rounded-full bg-[#3b1d1c] text-white transition hover:bg-[#4e0708] focus:outline-none focus:ring-2 focus:ring-brand-primary focus:ring-offset-2"
+            aria-label="Contact Us"
+          >
+            <Icon icon="mdi:email" className="size-5" />
+          </Link>
         </div>
       </header>
 
       {/* Desktop Header - Always Floating with Glass Morphism */}
       <header
-        className="hidden lg:block fixed top-4 left-20 right-20 z-[100] transition-all duration-300"
+        className="hidden lg:block fixed top-4 left-0 right-0 z-[100] px-4 sm:px-6 lg:px-20 transition-all duration-300"
         style={{ pointerEvents: "auto" }}
       >
-        {/* Glass Morphism Background - Always Visible, Totally Transparent */}
-        <div className="absolute inset-0 backdrop-blur-md w-full rounded-2xl bg-white/10 border border-white/20 shadow-lg shadow-black/5">
-          {/* Glass effect overlay */}
-          <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/20 to-white/5" />
-        </div>
+        <div className="relative mx-auto max-w-7xl">
+          {/* Glass Morphism Background */}
+          <div className="absolute inset-0 backdrop-blur-md w-full rounded-2xl bg-white/10 border border-white/20 shadow-lg shadow-black/5">
+            <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/20 to-white/5" />
+          </div>
 
-        <div className="mx-auto max-w-7xl relative z-10 px-6 py-2 lg:px-10 xl:px-14">
+          <div className="relative z-10 px-6 py-2 lg:px-10 xl:px-14">
           <nav className="flex items-center justify-between">
             {/* Logo */}
             <Logo isScrolled={true} />
@@ -99,6 +108,7 @@ export function StickyHeader() {
               Claim Assistance
             </Button>
           </nav>
+        </div>
         </div>
       </header>
       {!heroPresent ? <div className="h-[56px]" aria-hidden /> : null}

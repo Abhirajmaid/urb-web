@@ -1,4 +1,5 @@
 import { Icon } from "@iconify/react";
+import { SectionHeader } from "@/components/common/SectionHeader";
 
 const reasons = [
   {
@@ -30,20 +31,16 @@ const reasons = [
 export function WhyChooseUsSection() {
   return (
     <section className="relative isolate overflow-hidden bg-[#f4f0ee] px-4 sm:px-6 lg:px-20 pt-12 sm:pt-16 lg:pt-20 pb-10 text-brand-dark">
-      <div className="bg-white rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.08)] min-h-[600px] sm:min-h-[650px] lg:min-h-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/5 via-transparent to-transparent" />
+      <div className="mx-auto max-w-7xl">
+        <div className="relative bg-white rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.08)] min-h-[600px] sm:min-h-[650px] lg:min-h-0">
+          <div className="absolute inset-0 rounded-2xl bg-linear-to-br from-brand-primary/5 via-transparent to-transparent" />
 
-        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 py-12 sm:py-16 lg:px-10 xl:px-14 lg:py-20">
-          <div className="text-center space-y-4 sm:space-y-3">
-            <h2 className="text-2xl sm:text-4xl font-semibold text-[#4b2f2f]">
-              Why Choose Us ?
-            </h2>
-            <p className="text-base sm:text-base lg:text-sm leading-relaxed text-[#6f5655] max-w-2xl mx-auto">
-              With high claim settlement rates, expert advisors, and policies
-              crafted for real-life needs, URB gives you unmatched protection
-              and long-term security.
-            </p>
-          </div>
+          <div className="relative z-10 px-4 sm:px-6 py-12 sm:py-16 lg:px-10 xl:px-14 lg:py-20">
+            <SectionHeader
+              title="Why Choose Us ?"
+              description="With high claim settlement rates, expert advisors, and policies crafted for real-life needs, URB gives you unmatched protection and long-term security."
+              align="center"
+            />
 
           <div className="mt-8 sm:mt-10 grid gap-5 sm:gap-6 md:grid-cols-2">
             {reasons.map((reason) => (
@@ -66,6 +63,7 @@ export function WhyChooseUsSection() {
             ))}
           </div>
         </div>
+      </div>
       </div>
     </section>
   );

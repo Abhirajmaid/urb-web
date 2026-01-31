@@ -2,6 +2,7 @@
 import { useEffect, useRef } from "react";
 import { Icon } from "@iconify/react";
 import { StructuredData, createReviewSchema } from "@/components/seo/StructuredData";
+import { SectionHeader } from "@/components/common/SectionHeader";
 
 const testimonials = [
   {
@@ -120,22 +121,20 @@ export function TestimonialsSection() {
   return (
     <section className="relative isolate overflow-hidden bg-[#f4f0ee] px-4 sm:px-6 lg:px-20 pt-12 sm:pt-16 lg:pt-20 pb-10 text-brand-dark">
       <StructuredData data={reviewSchema} />
-      <div className="bg-white rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.08)] min-h-[600px] sm:min-h-[650px] lg:min-h-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/5 via-transparent to-transparent" />
+      <div className="mx-auto max-w-7xl">
+        <div className="relative bg-white rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.08)] min-h-[600px] sm:min-h-[650px] lg:min-h-0">
+          <div className="absolute inset-0 rounded-2xl bg-linear-to-br from-brand-primary/5 via-transparent to-transparent" />
 
-        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 py-12 sm:py-16 lg:px-10 xl:px-14 lg:py-20">
-          <div className="text-center space-y-4 sm:space-y-3">
-            <p className="text-base sm:text-base lg:text-sm font-medium text-[#8a6a6a]">Testimonials</p>
-            <h2 className="text-2xl sm:text-4xl font-semibold text-[#4b2f2f]">
-              Trusted by many
-            </h2>
-            <p className="text-base sm:text-base lg:text-sm text-[#6f5655]">
-              Choose the Right Insurance for Your Needs
-            </p>
-          </div>
+          <div className="relative z-10 px-4 sm:px-6 py-12 sm:py-16 lg:px-10 xl:px-14 lg:py-20">
+            <SectionHeader
+              eyebrow="Testimonials"
+              title="Trusted by many"
+              description="Choose the Right Insurance for Your Needs"
+              align="center"
+            />
 
-          <div
-            ref={scrollContainerRef}
+            <div
+              ref={scrollContainerRef}
             className="mt-8 sm:mt-10 flex gap-5 sm:gap-6 overflow-x-auto scrollbar-hide snap-x snap-mandatory pb-4 px-4 sm:px-6 lg:px-8"
             style={{
               scrollbarWidth: "none",
@@ -162,6 +161,7 @@ export function TestimonialsSection() {
                 </div>
               </div>
             ))}
+            </div>
           </div>
         </div>
       </div>

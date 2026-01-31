@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import { AboutHeroSection } from "@/components/about-us/AboutHeroSection";
-import { AboutIntroSection } from "@/components/about-us/AboutIntroSection";
+import { PageHeader } from "@/components/common/PageHeader";
 import { Footer } from "@/components/common/Footer";
 import { PartnersSection } from "@/components/common/PartnersSection";
 import { PurposeSection } from "@/components/about-us/PurposeSection";
@@ -44,19 +43,12 @@ export const metadata: Metadata = {
 export default function AboutUsPage() {
   return (
     <main className="text-[#031B4E]">
-      <AboutHeroSection
+      <PageHeader
         title="Protecting futures, securing peace of mind"
-        upperImage={{
-          src: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1200&q=80",
-          alt: "Insurance protection and financial security",
-        }}
-        lowerImage={{
-          src: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1200&q=80",
-          alt: "Comprehensive insurance coverage",
-        }}
         description="We are passionate about providing comprehensive insurance solutions that protect individuals, families, and businesses with reliable coverage and exceptional service."
-        buttonText="Our services"
-        buttonLink="/services"
+        backgroundImage="/images/about.jpg"
+        backgroundImageAlt="About URB Insurance"
+        showButton={true}
       />
       {/* 
       <AboutIntroSection

@@ -8,8 +8,8 @@ const navLinks = [
   { label: "Home", href: "/", icon: "mdi:home" },
   { label: "Products", href: "/projects", icon: "mdi:shield-check" },
   { label: "Services", href: "/services", icon: "mdi:briefcase" },
+  { label: "Case Studies", href: "/case-studies", icon: "mdi:folder-open-outline" },
   { label: "About", href: "/about-us", icon: "mdi:information" },
-  { label: "Contact", href: "/contact", icon: "mdi:email" },
 ];
 
 export function BottomNavbar() {

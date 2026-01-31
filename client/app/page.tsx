@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { HeroSection } from "@/components/home/HeroSection";
-import { ConnectWithUsButtons } from "@/components/services/ConnectWithUsButtons";
+import { ConnectMarquee } from "@/components/common/ConnectMarquee";
 import { FAQSection } from "@/components/common/FAQSection";
 import { FeatureBlogsSection } from "@/components/home/FeatureBlogsSection";
 import { Footer } from "@/components/common/Footer";
@@ -52,7 +52,7 @@ export default function Home() {
     <main className="bg-white">
       <HeroSection />
       <ShowcaseSection />
-      <ConnectWithUsButtons />
+      <ConnectMarquee />
       {/* <MissionVisionSection /> */}
       <ServicesHighlightSection />
       <WhyChooseUsSection />

@@ -15,7 +15,7 @@ export function BlogsFAQSection() {
       {/* Top left gradient with primary color - same as ProjectsSection */}
       <div className="absolute inset-0 bg-linear-to-br from-brand-primary/10 via-transparent to-transparent" />
       
-      <div className="relative z-10 mx-auto flex max-w-5xl flex-col gap-10 px-6 py-24 lg:px-8">
+      <div className="relative z-10 mx-auto flex max-w-7xl flex-col gap-10 px-4 sm:px-6 lg:px-8 py-24">
         <SectionHeader
           eyebrow="Frequently Asked Questions"
           title="Your questions, answered with clarity."

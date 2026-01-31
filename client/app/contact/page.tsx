@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Icon } from "@iconify/react";
-import { CommonHeroSection } from "@/components/common/CommonHeroSection";
+import { PageHeader } from "@/components/common/PageHeader";
 import { SectionHeader } from "@/components/common/SectionHeader";
 import { FAQSection } from "@/components/common/FAQSection";
 import { Footer } from "@/components/common/Footer";
@@ -69,18 +69,12 @@ export default function ContactPage() {
 
   return (
     <main className="text-[#031B4E]">
-      <CommonHeroSection
-        id="contact"
+      <PageHeader
+        title="Contact Us"
+        description="Ready to protect your future? Let's discuss your insurance needs and explore how we can provide comprehensive coverage and peace of mind."
         backgroundImage="/images/servicesimage.jpg"
         backgroundImageAlt="Contact hero background"
-        title="Contact Us"
-        flipHorizontal={true}
-        description="Ready to protect your future? Let's discuss your insurance needs and explore how we can provide comprehensive coverage and peace of mind."
-        showGradientOverlay={false}
-        scrollIndicatorText="Scroll to contact form"
-        backgroundColor="bg-brand-dark"
-        objectPosition="top"
-        maxContentWidth="max-w-4xl"
+        showButton={false}
       />
 
       {/* Contact Form & Info Section */}

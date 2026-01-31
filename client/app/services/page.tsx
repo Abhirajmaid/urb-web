@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ServicesHeroSection } from "@/components/services/ServicesHeroSection";
+import { PageHeader } from "@/components/common/PageHeader";
 import { ConnectWithUsButtons } from "@/components/services/ConnectWithUsButtons";
 import { ServicesSection } from "@/components/services/ServicesSection";
 import { ServiceCTASection } from "@/components/common/ServiceCTASection";
@@ -44,7 +44,12 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   return (
     <main className="bg-white text-[#031B4E]">
-      <ServicesHeroSection />
+      <PageHeader
+        title="Our Services"
+        description="We offer a complete range of insurance solutions for individuals, families, and businesses. From life and motor to jewellery, property, travel, and liability coverage—everything under one roof. Our goal is to provide reliable protection, financial security, and peace of mind for every need."
+        backgroundImage="/images/servicesimage.jpg"
+        backgroundImageAlt="Insurance services"
+      />
       <ConnectWithUsButtons />
       <ServicesSection services={services} />
       <div className="bg-white">

@@ -1,5 +1,6 @@
 import { Icon } from "@iconify/react";
 import Button from "@/components/common/Button";
+import { SectionHeader } from "@/components/common/SectionHeader";
 
 const services = [
   { title: "Life Insurance", icon: "mdi:stethoscope" },
@@ -13,17 +14,16 @@ const services = [
 export function ServicesHighlightSection() {
   return (
     <section className="relative isolate overflow-hidden bg-[#f4f0ee] px-4 sm:px-6 lg:px-20 pt-12 sm:pt-16 lg:pt-20 pb-10 text-brand-dark">
-      <div className="bg-white rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.08)] min-h-[600px] sm:min-h-[650px] lg:min-h-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/5 via-transparent to-transparent" />
+      <div className="mx-auto max-w-7xl">
+        <div className="relative bg-white rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.08)] min-h-[600px] sm:min-h-[650px] lg:min-h-0">
+          <div className="absolute inset-0 rounded-2xl bg-linear-to-br from-brand-primary/5 via-transparent to-transparent" />
 
-        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 py-12 sm:py-16 lg:px-10 xl:px-14 lg:py-20">
-          <p className="text-base sm:text-base lg:text-sm font-medium text-[#8a6a6a]">Services</p>
-          <h2 className="mt-3 sm:mt-2 text-2xl sm:text-4xl font-semibold text-[#4b2f2f]">
-            Explore Our Service Offerings
-          </h2>
-          <p className="mt-3 sm:mt-2 text-base sm:text-base lg:text-sm text-[#6f5655]">
-            Choose the Right Insurance for Your Needs
-          </p>
+          <div className="relative z-10 px-4 sm:px-6 py-12 sm:py-16 lg:px-10 xl:px-14 lg:py-20">
+            <SectionHeader
+              eyebrow="Services"
+              title="Explore Our Service Offerings"
+              description="Choose the Right Insurance for Your Needs"
+            />
 
           <div className="mt-8 sm:mt-10 grid gap-5 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {services.map((service) => (
@@ -56,6 +56,7 @@ export function ServicesHighlightSection() {
             </Button>
           </div>
         </div>
+      </div>
       </div>
     </section>
   );

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { BlogsHeroSection } from "@/components/blogs/BlogsHeroSection";
+import { PageHeader } from "@/components/common/PageHeader";
 import { BlogsSection } from "@/components/blogs/BlogsSection";
 import { ServiceCTASection } from "@/components/common/ServiceCTASection";
 import { Footer } from "@/components/common/Footer";
@@ -38,7 +38,12 @@ export const metadata: Metadata = {
 export default function BlogsPage() {
   return (
     <main className="text-[#031B4E]">
-      <BlogsHeroSection />
+      <PageHeader
+        title="Insurance Insights & Updates"
+        description="Explore our insights on insurance, coverage options, risk management, and financial protection strategies. Stay informed about the latest trends in insurance."
+        backgroundImage="/images/blogsimage.jpg"
+        backgroundImageAlt="Insurance blog insights"
+      />
 
       <BlogsSection />
 

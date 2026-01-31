@@ -154,8 +154,9 @@ export function ProjectsSection() {
   };
 
   return (
-    <section className="relative isolate overflow-hidden bg-primary/10 text-dark px-20 pt-10 pb-10">
-      <div className="bg-white rounded-2xl shadow-[0_4px_20px_rgba(var(--color-dark-rgb),0.08)]">
+    <section className="relative isolate overflow-hidden bg-primary/10 text-dark px-4 sm:px-6 lg:px-20 pt-10 pb-10">
+      <div className="mx-auto max-w-7xl">
+        <div className="bg-white rounded-2xl shadow-[0_4px_20px_rgba(var(--color-dark-rgb),0.08)]">
         {/* Background gradient */}
         <div className="absolute inset-0" />
 
@@ -293,6 +294,7 @@ export function ProjectsSection() {
             )}
           </div>
         </div>
+      </div>
       </div>
 
       <style jsx>{`

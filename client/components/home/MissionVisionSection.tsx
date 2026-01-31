@@ -23,8 +23,9 @@ const missionVisionPurpose = [
 
 export function MissionVisionSection() {
   return (
-    <section className="relative isolate overflow-hidden bg-primary/10 text-brand-dark p-20">
-      <div className="bg-white rounded-2xl shadow-[0_4px_20px_rgba(var(--color-dark-rgb),0.08)]">
+    <section className="relative isolate overflow-hidden bg-primary/10 text-brand-dark px-4 sm:px-6 lg:px-20 py-12 sm:py-16 lg:py-20">
+      <div className="mx-auto max-w-7xl">
+        <div className="bg-white rounded-2xl shadow-[0_4px_20px_rgba(var(--color-dark-rgb),0.08)]">
         {/* Top left gradient with primary color */}
         <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/5 via-transparent to-transparent" />
 
@@ -69,6 +70,7 @@ export function MissionVisionSection() {
             </div>
           ))}
         </div>
+      </div>
       </div>
       </div>
     </section>

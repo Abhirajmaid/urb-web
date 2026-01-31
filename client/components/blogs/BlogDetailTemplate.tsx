@@ -16,7 +16,10 @@ type BlogDetailTemplateProps = {
   relatedBlogs: BlogPost[];
 };
 
-export function BlogDetailTemplate({ blog, relatedBlogs }: BlogDetailTemplateProps) {
+export function BlogDetailTemplate({
+  blog,
+  relatedBlogs,
+}: BlogDetailTemplateProps) {
   return (
     <main className="bg-[#0E0E0E] text-white">
       <section className="relative isolate overflow-hidden" data-hero-root>
@@ -125,7 +128,10 @@ export function BlogDetailTemplate({ blog, relatedBlogs }: BlogDetailTemplatePro
               ))}
 
               <figure className="rounded-[32px] border border-[#0E0E0E]/10 bg-[#0E0E0E]/5 p-8">
-                <Icon icon="mdi:format-quote-close" className="text-4xl text-[#FFE08F]" />
+                <Icon
+                  icon="mdi:format-quote-close"
+                  className="text-4xl text-[#FFE08F]"
+                />
                 <blockquote className="mt-6 text-2xl font-semibold text-[#0E0E0E]">
                   "{blog.quote.text}"
                 </blockquote>
@@ -164,7 +170,9 @@ export function BlogDetailTemplate({ blog, relatedBlogs }: BlogDetailTemplatePro
                       <p className="mt-2 text-3xl font-semibold text-[#0E0E0E]">
                         {stat.value}
                       </p>
-                      <p className="text-sm text-[#0E0E0E]/70">{stat.description}</p>
+                      <p className="text-sm text-[#0E0E0E]/70">
+                        {stat.description}
+                      </p>
                     </div>
                   ))}
                 </div>
@@ -175,13 +183,10 @@ export function BlogDetailTemplate({ blog, relatedBlogs }: BlogDetailTemplatePro
                   Ready to collaborate?
                 </p>
                 <p className="mt-4 text-2xl font-semibold">
-                  Schedule a design sprint with the team that crafted this insight.
+                  Schedule a design sprint with the team that crafted this
+                  insight.
                 </p>
-                <Button
-                  link="/contact"
-                  type="secondary"
-                  className="mt-6"
-                >
+                <Button link="/contact" type="secondary" className="mt-6">
                   Start a project
                 </Button>
               </div>
@@ -223,5 +228,3 @@ export function BlogDetailTemplate({ blog, relatedBlogs }: BlogDetailTemplatePro
     </main>
   );
 }
-
-

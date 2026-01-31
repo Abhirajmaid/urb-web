@@ -1,45 +1,46 @@
 "use client";
 
+import Link from "next/link";
 import { Icon } from "@iconify/react";
-import { useEnquiryModal } from "@/contexts/EnquiryModalContext";
 
 export function ConnectMarquee() {
   const items = Array.from({ length: 12 });
-  const { openModal } = useEnquiryModal();
 
   return (
     <section
       aria-live="off"
-      className="relative bg-brand-primary text-white -mt-px"
+      className="relative bg-brand-primary text-white -mt-px overflow-hidden"
     >
-      <button
-        onClick={openModal}
-        className="group relative block w-full h-[140px] sm:h-[100px] lg:h-[60px] overflow-hidden focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-secondary"
+      <Link
+        href="/contact"
+        className="group relative block w-full h-[72px] sm:h-[88px] lg:h-[60px] overflow-hidden focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-secondary"
       >
-        <div className="pointer-events-none absolute inset-y-0 left-0 w-16 bg-linear-to-r from-brand-primary to-transparent" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-16 bg-linear-to-l from-brand-primary to-transparent" />
+        {/* Fade edges - narrower on mobile for more visible content */}
+        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-6 sm:w-10 lg:w-16 bg-linear-to-r from-brand-primary to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-6 sm:w-10 lg:w-16 bg-linear-to-l from-brand-primary to-transparent" />
 
-        <div className="flex h-full w-max animate-marquee items-center group-hover:[animation-play-state:paused]">
+        <div className="flex h-full w-max animate-marquee items-center py-3 group-hover:[animation-play-state:paused]">
           {[items, items].map((iteration, outerIdx) => (
-            <div key={outerIdx} className="flex items-center gap-16 sm:gap-12 lg:gap-12 pr-16 sm:pr-12 lg:pr-12">
+            <div
+              key={outerIdx}
+              className="flex shrink-0 items-center gap-6 sm:gap-10 lg:gap-12 pr-6 sm:pr-10 lg:pr-12"
+            >
               {iteration.map((_, idx) => (
                 <span
                   key={`${outerIdx}-${idx}`}
-                  className="flex items-center gap-6 sm:gap-5 lg:gap-3 whitespace-nowrap text-3xl sm:text-3xl lg:text-2xl font-black uppercase tracking-[0.2em] transition group-hover:-translate-y-px"
+                  className="flex shrink-0 items-center gap-3 sm:gap-5 lg:gap-3 whitespace-nowrap text-xl sm:text-2xl lg:text-2xl font-black uppercase tracking-[0.12em] sm:tracking-[0.16em] lg:tracking-[0.2em] transition group-hover:-translate-y-px"
                 >
                   Connect with us
                   <Icon
                     icon="solar:arrow-right-up-linear"
-                    width="36"
-                    height="36"
-                    className="sm:w-8 sm:h-8 lg:w-6 lg:h-6"
+                    className="size-5 sm:size-6 lg:size-6 shrink-0"
                   />
                 </span>
               ))}
             </div>
           ))}
         </div>
-      </button>
+      </Link>
     </section>
   );
 }

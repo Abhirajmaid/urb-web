@@ -38,7 +38,7 @@ export function BlogCard({
         <time className="text-sm sm:text-xs lg:text-xs uppercase tracking-[0.12em] text-white/70">
           {date}
         </time>
-        <h3 className="text-xl sm:text-xl lg:text-lg font-semibold leading-snug text-white">{title}</h3>
+        <h3 className="heading-card leading-snug text-white">{title}</h3>
         <p className="text-base sm:text-base lg:text-sm leading-relaxed text-white/80 line-clamp-2">{excerpt}</p>
       </div>
       <Link

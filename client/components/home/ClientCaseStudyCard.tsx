@@ -1,9 +1,10 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Icon } from "@iconify/react";
 
 type ClientCaseStudyCardProps = {
-  clientLogo: string;
-  clientLogoAlt: string;
+  clientLogo?: string;
+  clientLogoAlt?: string;
   clientName: string;
   description: string;
   images: Array<{
@@ -12,86 +13,99 @@ type ClientCaseStudyCardProps = {
   }>;
   projectTitle?: string;
   projectLocation?: string;
+  category?: string;
   className?: string;
 };
 
 export function ClientCaseStudyCard({
-  clientLogo,
-  clientLogoAlt,
   clientName,
   description,
   images,
   projectTitle,
   projectLocation,
+  category,
   className,
 }: ClientCaseStudyCardProps) {
+  const featuredImage = images[0];
+  const thumbnails = images.slice(1, 5);
+
   return (
     <div
-      className={`group relative flex h-full flex-col overflow-hidden rounded-2xl sm:rounded-3xl border border-brand-gray-light/50 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(var(--color-dark-rgb),0.12)] lg:flex-row ${
+      className={`group relative flex h-full flex-col overflow-hidden rounded-2xl bg-white transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_50px_-12px_rgba(0,0,0,0.18)] ${
         className ?? ""
       }`}
     >
-      {/* Left Side: Logo, Client Info, and Description */}
-      <div className="flex flex-col lg:w-2/5 border-b lg:border-b-0 lg:border-r border-brand-gray-light/50 bg-gradient-to-br from-brand-primary/5 to-transparent p-5 sm:p-6 lg:p-6">
-        {/* Client Logo and Name */}
-        <div className="flex items-center gap-4 sm:gap-3 mb-5 sm:mb-4">
-          <div className="relative h-16 w-16 sm:h-16 sm:w-16 lg:h-16 lg:w-16 flex-shrink-0 rounded-lg bg-white p-2 shadow-sm border border-brand-gray-light/50 overflow-hidden">
-            <Image
-              src={clientLogo}
-              alt={clientLogoAlt}
-              fill
-              className="object-contain p-1"
-            />
-          </div>
-          <div className="flex-1 min-w-0">
-            <h3 className="text-lg sm:text-lg lg:text-lg font-semibold text-brand-dark">
-              {clientName}
-            </h3>
-            {projectTitle && (
-              <p className="text-sm sm:text-sm lg:text-sm text-brand-dark/70 mt-1 sm:mt-0.5">
-                {projectTitle}
-              </p>
-            )}
-          </div>
+      {/* Featured Image */}
+      <div className="relative aspect-[16/10] w-full shrink-0 overflow-hidden bg-[#ebe2df]">
+        {featuredImage && (
+          <Image
+            src={featuredImage.src}
+            alt={featuredImage.alt}
+            fill
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+          />
+        )}
+        <div className="absolute inset-0 bg-linear-to-t from-black/40 via-transparent to-transparent" />
+        {category && (
+          <span className="absolute left-4 top-4 z-10 rounded-full border border-white/30 bg-white/95 px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-[#3b1d1c] shadow-sm backdrop-blur-sm">
+            {category}
+          </span>
+        )}
+      </div>
+
+      {/* Content */}
+      <div className="flex flex-1 flex-col p-5 sm:p-6">
+        <div className="mb-3">
+          <h3 className="text-lg font-semibold leading-tight text-[#4b2f2f]">
+            {clientName}
+          </h3>
+          {projectTitle && (
+            <p className="mt-1 text-sm font-medium text-[#8a6a6a]">
+              {projectTitle}
+            </p>
+          )}
         </div>
 
-        {/* Description */}
-        <div className="flex-1">
-          <p className="text-sm sm:text-sm lg:text-sm leading-relaxed text-brand-dark/80 mb-4 sm:mb-3">
-            {description}
-          </p>
+        <p className="flex-1 text-sm leading-relaxed text-[#6f5655] line-clamp-4">
+          {description}
+        </p>
+
+        {/* Thumbnail strip */}
+        {thumbnails.length > 0 && (
+          <div className="mt-4 flex gap-2 overflow-hidden rounded-lg">
+            {thumbnails.slice(0, 3).map((img, idx) => (
+              <div
+                key={idx}
+                className="relative h-14 w-20 shrink-0 overflow-hidden rounded-md bg-[#ebe2df]"
+              >
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  fill
+                  sizes="80px"
+                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
+            ))}
+          </div>
+        )}
+
+        {/* Footer: Location + CTA */}
+        <div className="mt-4 flex items-center justify-between gap-3 border-t border-[#e9e0dd] pt-4">
           {projectLocation && (
-            <div className="flex items-center gap-2 sm:gap-1.5 text-sm sm:text-sm lg:text-sm text-brand-primary">
-              <Icon icon="solar:map-point-bold" className="text-base sm:text-sm" />
+            <div className="flex items-center gap-2 text-sm text-[#6f5655]">
+              <Icon icon="solar:map-point-bold" className="size-4 shrink-0 text-[#8a6a6a]" />
               <span>{projectLocation}</span>
             </div>
           )}
-        </div>
-      </div>
-
-      {/* Right Side: Images Gallery */}
-      <div className="relative lg:w-3/5 flex-shrink-0">
-        <div className="grid grid-cols-2 h-full min-h-[350px] sm:min-h-[400px] lg:min-h-full">
-          {images.slice(0, 4).map((image, index) => (
-            <div
-              key={index}
-              className="relative overflow-hidden border-r border-b border-brand-gray-light/30 last:border-r-0"
-            >
-              <Image
-                src={image.src}
-                alt={image.alt}
-                fill
-                className="object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-              {index === 3 && images.length > 4 && (
-                <div className="absolute inset-0 bg-black/60 flex items-center justify-center">
-                  <span className="text-white font-semibold text-xs">
-                    +{images.length - 4} more
-                  </span>
-                </div>
-              )}
-            </div>
-          ))}
+          <Link
+            href="/contact"
+            className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#4e0708] transition hover:gap-2 hover:text-[#3b1d1c]"
+          >
+            Learn more
+            <Icon icon="solar:arrow-right-linear" className="size-4" />
+          </Link>
         </div>
       </div>
     </div>

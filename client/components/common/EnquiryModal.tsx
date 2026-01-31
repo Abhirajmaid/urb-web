@@ -63,7 +63,7 @@ export function EnquiryModal({ isOpen, onClose }: EnquiryModalProps) {
       await new Promise((resolve) => setTimeout(resolve, 1000));
       setSubmitStatus("success");
       setFormData({ name: "", email: "", company: "", phone: "", message: "" });
-      
+
       // Close modal after 2 seconds on success
       setTimeout(() => {
         onClose();
@@ -231,5 +231,3 @@ export function EnquiryModal({ isOpen, onClose }: EnquiryModalProps) {
     </div>
   );
 }
-
-
