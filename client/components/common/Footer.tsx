@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Logo } from "./Logo";
 import { Icon } from "@iconify/react";
+import { contactDetails } from "@/data/aboutUs";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -12,6 +13,8 @@ const navLinks = [
 ];
 
 const insuranceLinks = [
+  "Jewellery Insurance",
+  "Mutual Fund",
   "Life Insurance",
   "Marine Insurance",
   "Burglary Insurance",
@@ -21,12 +24,10 @@ const insuranceLinks = [
   "Travel Insurance",
   "Liability Insurance",
   "Motor Insurance",
-  "Jewellery Insurance",
   "Diamond Insurance",
   "Gold Insurance",
-  "Lic insurance",
-  "mutual fund Insurance",
-  "GIC general Insurance",
+  "LIC Insurance",
+  "GIC General Insurance",
 ];
 
 const socialLinks = [
@@ -49,31 +50,28 @@ export function Footer() {
                 <div className="space-y-6 sm:space-y-6 lg:space-y-6 max-w-xl">
                   <Logo />
                   <p className="max-w-md text-base sm:text-base lg:text-sm leading-relaxed text-white/80">
-                    Expert team for insurance. Protecting your future with
-                    comprehensive coverage, personalized service, and a
-                    commitment to your peace of mind.
+                    Expert team for insurance and wealth creation. Protecting
+                    your future with comprehensive coverage, personalised
+                    service, and transparent advice.
                   </p>
 
                   <div className="space-y-4 sm:space-y-3 lg:space-y-3">
                     <p className="text-lg sm:text-base lg:text-base font-semibold text-white">
-                      Connect With US
+                      Connect With Us
                     </p>
-                    <div className="flex items-center gap-4 sm:gap-4 lg:gap-4">
-                      {socialLinks.map((social) => (
-                        <Link
-                          key={social.label}
-                          href={social.href}
-                          aria-label={social.label}
-                          className="group flex h-12 w-12 sm:h-11 sm:w-11 lg:h-11 lg:w-11 items-center justify-center rounded-full border border-white/60 bg-transparent transition hover:bg-white/10"
+                    <div className="text-white/90">
+                      <p className="font-medium">{contactDetails.phone}</p>
+                      <p className="truncate">
+                        <a
+                          href={`mailto:${contactDetails.email}`}
+                          className="hover:underline"
                         >
-                          <Icon
-                            icon={social.icon}
-                            width={22}
-                            height={22}
-                            className="sm:w-5 sm:h-5 lg:w-5 lg:h-5 text-white group-hover:text-white"
-                          />
-                        </Link>
-                      ))}
+                          {contactDetails.email}
+                        </a>
+                      </p>
+                      <p className="text-sm text-white/80 mt-2">
+                        {contactDetails.address}
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -99,12 +97,23 @@ export function Footer() {
                     <p className="text-lg sm:text-base lg:text-base font-semibold text-white">
                       Insurance
                     </p>
-                    <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3 text-base sm:text-base lg:text-sm text-white/80">
-                      {insuranceLinks.map((label) => (
-                        <p key={label} className="hover:text-white transition">
-                          {label}
-                        </p>
-                      ))}
+                    <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3 text-base sm:text-base lg:text-sm">
+                      {insuranceLinks.map((label) => {
+                        const isHighlighted =
+                          /jewell/i.test(label) || /mutual fund/i.test(label);
+                        return (
+                          <span
+                            key={label}
+                            className={`inline-block whitespace-nowrap px-3 py-1 rounded-full text-sm transition ${
+                              isHighlighted
+                                ? "bg-white text-[#3b1d1c] font-semibold shadow-sm"
+                                : "bg-white/10 text-white/80 hover:bg-white/20"
+                            }`}
+                          >
+                            {label}
+                          </span>
+                        );
+                      })}
                     </div>
                   </div>
                 </div>
@@ -118,7 +127,7 @@ export function Footer() {
       <div className="bg-[#f4f0ee] px-4 sm:px-6 lg:px-20 pb-10">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10 xl:px-14">
           <p className="text-center text-base sm:text-base lg:text-sm text-[#6f5655]">
-            © 2025 URB — All Rights Reserved
+            © {contactDetails.copyrightYear} URB — All Rights Reserved
           </p>
         </div>
       </div>

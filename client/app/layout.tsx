@@ -54,7 +54,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://urbinsurance.com",
+    url: "https://www.urbinsurance.co.in",
     siteName: "URB Insurance",
     title: "URB Insurance - Leading Insurance Company",
     description:
@@ -77,10 +77,10 @@ export const metadata: Metadata = {
     creator: "@urbinsurance",
   },
   alternates: {
-    canonical: "https://urbinsurance.com",
+    canonical: "https://www.urbinsurance.co.in",
   },
   category: "Insurance",
-  metadataBase: new URL("https://urbinsurance.com"),
+  metadataBase: new URL("https://www.urbinsurance.co.in"),
 };
 
 export default function RootLayout({

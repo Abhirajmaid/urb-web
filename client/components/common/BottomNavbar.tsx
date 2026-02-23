@@ -6,7 +6,6 @@ import { Icon } from "@iconify/react";
 
 const navLinks = [
   { label: "Home", href: "/", icon: "mdi:home" },
-  { label: "Products", href: "/projects", icon: "mdi:shield-check" },
   { label: "Services", href: "/services", icon: "mdi:briefcase" },
   { label: "Case Studies", href: "/case-studies", icon: "mdi:folder-open-outline" },
   { label: "About", href: "/about-us", icon: "mdi:information" },
@@ -20,7 +19,7 @@ export function BottomNavbar() {
       {/* Glass Morphism Background */}
       <div className="absolute inset-0 backdrop-blur-xl bg-white/90 border-t border-dark/10 shadow-2xl shadow-black/20">
         {/* Glass effect overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-white/30 to-white/10" />
+        <div className="absolute inset-0 bg-linear-to-br from-white/30 to-white/10" />
       </div>
 
       {/* Navigation Items */}

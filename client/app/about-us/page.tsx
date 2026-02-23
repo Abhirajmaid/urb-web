@@ -11,7 +11,7 @@ import { purposePillars, storyHighlights } from "@/data/aboutUs";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Learn about URB Insurance - a premier insurance company passionate about providing comprehensive coverage and innovative insurance solutions. Experience exceptional service that protects your future.",
+    "At URB, our mission is to provide simple, unbiased and effective wealth creation and insurance solutions. Established in 1976, we combine professional advice, technology and transparency to help clients reach their financial goals.",
   keywords: [
     "about URB Insurance",
     "insurance company history",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "About Us - URB Insurance",
     description:
-      "Learn about URB Insurance - a premier insurance company passionate about providing comprehensive coverage and innovative insurance solutions.",
+      "URB Insurance: wealth creation, insurance advisory, and personalised financial planning since 1976.",
     images: ["/images/about.jpg"],
     type: "website",
   },
@@ -32,11 +32,11 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "About Us - URB Insurance",
     description:
-      "Learn about URB Insurance and our mission to provide exceptional insurance services.",
+      "URB Insurance: personalised financial and insurance services, certified advisors and client dashboards for easy access.",
     images: ["/images/about.jpg"],
   },
   alternates: {
-    canonical: "https://urbinsurance.com/about-us",
+    canonical: "https://www.urbinsurance.co.in/AboutPage",
   },
 };
 
@@ -44,8 +44,8 @@ export default function AboutUsPage() {
   return (
     <main className="text-[#031B4E]">
       <PageHeader
-        title="Protecting futures, securing peace of mind"
-        description="We are passionate about providing comprehensive insurance solutions that protect individuals, families, and businesses with reliable coverage and exceptional service."
+        title="To Build An Affordable Wealth Creation Platform For Clients Across Industries"
+        description="At URB, we provide simple, unbiased and actionable advice in wealth creation, financial planning and insurance. Certified by NSE and AMFI, we combine technology and personal counsel to help clients achieve their financial goals."
         backgroundImage="/images/about.jpg"
         backgroundImageAlt="About URB Insurance"
         showButton={true}

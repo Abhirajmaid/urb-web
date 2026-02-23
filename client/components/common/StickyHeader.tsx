@@ -1,8 +1,6 @@
 "use client";
 
-import Link from "next/link";
 import { useEffect, useState } from "react";
-import { Icon } from "@iconify/react";
 
 import { Logo } from "./Logo";
 import { Navigation } from "./Navigation";
@@ -10,18 +8,21 @@ import Button from "./Button";
 
 export function StickyHeader() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [heroPresent, setHeroPresent] = useState(true); // Start as true to prevent flash
+  const [heroPresent, setHeroPresent] = useState(true); // Start true to avoid flash
   const [mobileScrolled, setMobileScrolled] = useState(false);
+
+  const isHeroOverlay = heroPresent && !isScrolled;
 
   useEffect(() => {
     const hero = document.querySelector<HTMLElement>("[data-hero-root]");
 
     if (!hero) {
-      // Use setTimeout to avoid synchronous setState
+      // No hero: treat as already scrolled so nav is visible
+      // Wrap in setTimeout to avoid synchronous setState within effect
       setTimeout(() => {
         setHeroPresent(false);
         setIsScrolled(true);
-        // Don't set mobileScrolled to true initially - let scroll handle it
+        setMobileScrolled(true);
       }, 0);
     } else {
       setTimeout(() => {
@@ -31,12 +32,19 @@ export function StickyHeader() {
 
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
+      const hasHero = document.querySelector("[data-hero-root]");
+      setHeroPresent(Boolean(hasHero));
+      if (!hasHero) {
+        setIsScrolled(true);
+        setMobileScrolled(true);
+        return;
+      }
       setIsScrolled(scrollPosition > 50);
       setMobileScrolled(scrollPosition > 30);
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
-    handleScroll(); // Initial check
+    handleScroll();
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -47,68 +55,77 @@ export function StickyHeader() {
     <>
       {/* Mobile Header - Logo Only */}
       <header
-        className="lg:hidden fixed top-0 left-0 right-0 z-[100] bg-transparent"
+        className="lg:hidden fixed top-0 left-0 right-0 z-200 bg-transparent"
         style={{ pointerEvents: "auto" }}
       >
-        {/* White Background on Scroll */}
+        {/* Background on scroll */}
         <div
           className={`absolute inset-0 transition-all duration-500 ${
             mobileScrolled
-              ? "opacity-100 bg-white border-b border-dark/10 shadow-md"
+              ? "opacity-100 bg-white/10 backdrop-blur-md border-b border-white/10 shadow-md"
               : "opacity-0 bg-transparent pointer-events-none"
           }`}
         />
 
-        {/* Logo (left) + Contact (right) - Mobile Top Bar */}
-        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-20 py-3.5 flex items-center justify-between">
+        <div className="relative z-10 px-4 py-3.5 flex items-center justify-center">
           <div className={mobileScrolled ? "" : "drop-shadow-lg"}>
             <Logo isScrolled={mobileScrolled} />
           </div>
-          <Link
-            href="/contact"
-            className="flex size-10 shrink-0 items-center justify-center rounded-full bg-[#3b1d1c] text-white transition hover:bg-[#4e0708] focus:outline-none focus:ring-2 focus:ring-brand-primary focus:ring-offset-2"
-            aria-label="Contact Us"
-          >
-            <Icon icon="mdi:email" className="size-5" />
-          </Link>
         </div>
       </header>
 
-      {/* Desktop Header - Always Floating with Glass Morphism */}
+      {/* Desktop Header */}
       <header
-        className="hidden lg:block fixed top-4 left-0 right-0 z-[100] px-4 sm:px-6 lg:px-20 transition-all duration-300"
+        className={`hidden lg:block fixed z-200 transition-all duration-300 ${
+          isScrolled ? "top-6 left-4 right-4" : "top-0 left-0 right-0"
+        }`}
         style={{ pointerEvents: "auto" }}
       >
-        <div className="relative mx-auto max-w-7xl">
-          {/* Glass Morphism Background */}
-          <div className="absolute inset-0 backdrop-blur-md w-full rounded-2xl bg-white/10 border border-white/20 shadow-lg shadow-black/5">
-            <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/20 to-white/5" />
-          </div>
+        {/* Initial transparent fill to avoid color flash */}
+        <div className="absolute inset-0 bg-transparent pointer-events-none" />
 
-          <div className="relative z-10 px-6 py-2 lg:px-10 xl:px-14">
+        {/* Glass background */}
+        <div
+          className={`absolute inset-0 backdrop-blur-xl max-w-7xl mx-auto rounded-3xl transition-all duration-500 ${
+            isScrolled
+              ? "opacity-100 translate-y-0 bg-white/10 backdrop-blur-xl border border-white/12 shadow-2xl shadow-black/12"
+              : "opacity-0 -translate-y-2 bg-transparent pointer-events-none"
+          }`}
+        >
+          <div
+            className={`absolute inset-0 rounded-3xl bg-linear-to-br from-white/20 to-white/6 transition-opacity duration-500 ${
+              isScrolled ? "opacity-100" : "opacity-0"
+            }`}
+          />
+        </div>
+
+        <div
+          className={`mx-auto max-w-7xl relative z-10 transition-all duration-300 ${
+            // When the header overlays the hero, reduce top padding so the nav sits directly on the hero.
+            isHeroOverlay ? "px-6 py-2" : "px-6 py-4"
+          }`}
+        >
           <nav className="flex items-center justify-between">
-            {/* Logo */}
-            <Logo isScrolled={true} />
+            <Logo isScrolled={isScrolled} />
 
-            {/* Desktop Navigation */}
             <div
               className="hidden lg:flex items-center space-x-8 relative z-10"
               style={{ pointerEvents: "auto" }}
             >
-              <Navigation variant="dark" />
+              <Navigation
+                variant={isHeroOverlay || isScrolled ? "dark" : "light"}
+              />
             </div>
 
-            {/* Claim Assistance Button */}
             <Button
               link="/contact"
-              type="primary"
+              type={isScrolled ? "primary" : "secondary"}
               size="sm"
-              className="uppercase tracking-[0.12em] !bg-[#3b1d1c]"
+              className="uppercase tracking-[0.12em]"
             >
               Claim Assistance
             </Button>
           </nav>
-        </div>
         </div>
       </header>
       {!heroPresent ? <div className="h-[56px]" aria-hidden /> : null}

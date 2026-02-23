@@ -9,7 +9,6 @@ const navLinks = [
   { label: "Services", href: "/services" },
   { label: "Case Studies", href: "/case-studies" },
   { label: "Blogs", href: "/blogs" },
-  { label: "Contact Us", href: "/contact" },
 ];
 
 type NavigationProps = {

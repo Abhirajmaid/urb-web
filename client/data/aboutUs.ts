@@ -1,59 +1,67 @@
 export const storyHighlights = [
   {
-    title: "Our beginnings",
+    title: "Founded in 1976",
     icon: "building",
     description:
-      "URB Insurance was founded to provide comprehensive insurance protection and financial security for individuals, families, and businesses.",
+      "We began operations in 1976 and have since grown into a trusted financial services firm focused on wealth creation and insurance advisory.",
   },
   {
-    title: "Milestones of growth",
+    title: "Certified Advisors",
     icon: "thumbs-up",
     description:
-      "We have evolved from a small insurance agency to a leading name, protecting over 50,000 customers with trusted coverage.",
+      "Our team are certified wealth managers and insurance consultants recognized by NSE and AMFI, delivering professional and compliant advice.",
   },
   {
-    title: "A legacy of trust",
-    icon: "lightbulb",
-    description:
-      "Our story is defined by exceptional claim settlement rates, transparent policies, and unwavering commitment to customer protection.",
-  },
-  {
-    title: "Client-focused",
+    title: "Client-first approach",
     icon: "person",
     description:
-      "Committed to understanding our clients' unique insurance needs and providing personalized coverage solutions.",
+      "We provide personalised counsel, helping clients understand investments and insurance so they can make informed decisions toward their financial goals.",
   },
   {
-    title: "Comprehensive coverage",
+    title: "Wide range of services",
     icon: "leaf",
     description:
-      "We offer a complete range of insurance products from life and motor to home, travel, jewellery, and commercial coverage.",
+      "We offer investment portfolios, insurance policies, mutual funds, PMS, direct equity, fixed deposits, bonds and more to build balanced wealth strategies.",
   },
   {
-    title: "Partnership approach",
+    title: "Technology & access",
+    icon: "lightbulb",
+    description:
+      "We emphasise technology for ease of access — secure client logins and mobile access let clients view dashboards and reports anytime.",
+  },
+  {
+    title: "Transparent & dependable",
     icon: "hashtag",
     description:
-      "We collaborate with clients, partners, and stakeholders to deliver exceptional insurance solutions and peace of mind.",
+      "Transparency, fast support and actionable guidance are central to our service — we value our clients' trust above everything.",
   },
 ];
 
 export const purposePillars = [
   {
     number: "01",
-    title: "Protection first",
-    description: "Providing comprehensive insurance coverage that safeguards your assets, health, and financial future.",
+    title: "Wealth creation",
+    description:
+      "Deliver structured investment planning and products that help clients progress toward short and long term financial goals.",
   },
   {
     number: "02",
-    title: "Personalized solutions",
+    title: "Insurance protection",
     description:
-      "Tailoring insurance policies to perfectly align with your unique needs, lifestyle, and risk profile.",
+      "Offer clear, unbiased insurance solutions to protect families, assets and businesses from unexpected risks.",
   },
   {
     number: "03",
-    title: "Trustworthy service",
+    title: "Client empowerment",
     description:
-      "Delivering reliable claim settlement, transparent communication, and exceptional customer support at every step.",
+      "Educate clients with simple, transparent advice and reporting so they can take confident, informed decisions.",
   },
 ];
 
+export const contactDetails = {
+  phone: "09773113511",
+  email: "punmiya.bharat@gmail.com",
+  address: "G-14, Bussa Udyog Bhavan, T.J. Road, Sewree, Mumbai 400015",
+  copyrightYear: 2026,
+  designerCredit: "pruit",
+};
