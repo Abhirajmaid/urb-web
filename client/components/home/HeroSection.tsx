@@ -11,7 +11,7 @@ export function HeroSection() {
       <div className="w-full mx-auto">
         <div className="relative z-0 rounded-2xl overflow-hidden min-h-[80vh]">
           <Image
-            src="/images/hero.jpg"
+            src="/images/insurance.jpg"
             alt="Insurance protection"
             fill
             priority

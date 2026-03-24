@@ -16,12 +16,12 @@ const lifePersonalInsuranceServices = [
     highlighted: false,
   },
   {
-    title: "LIC Insurance",
+    title: "Health Insurance",
     icon: "mdi:heart",
     highlighted: false,
   },
   {
-    title: "Mutual Fund Insurance",
+    title: "General Insurance",
     icon: "mdi:bank",
     highlighted: true,
   },
@@ -29,7 +29,7 @@ const lifePersonalInsuranceServices = [
 
 const motorVehicleServices = [
   {
-    title: "Motor Insurance",
+    title: "Motor Insurance (Car & Bike)",
     icon: "mdi:car-outline",
     highlighted: false,
   },
@@ -42,7 +42,7 @@ const homePropertyServices = [
     highlighted: false,
   },
   {
-    title: "Property Insurance",
+    title: "Shop & Business Insurance",
     icon: "mdi:office-building-outline",
     highlighted: false,
   },
@@ -50,12 +50,12 @@ const homePropertyServices = [
 
 const fireBurglaryServices = [
   {
-    title: "Fire Insurance",
+    title: "Mutual Fund Investments",
     icon: "mdi:fire",
     highlighted: false,
   },
   {
-    title: "Burglary Insurance",
+    title: "Financial Planning & Wealth Management",
     icon: "mdi:shield-lock-outline",
     highlighted: false,
   },
@@ -79,7 +79,7 @@ const travelServices = [
 
 const liabilityServices = [
   {
-    title: "Liability Insurance",
+    title: "Tax Planning Services",
     icon: "mdi:file-document-edit-outline",
     highlighted: false,
   },
@@ -87,17 +87,17 @@ const liabilityServices = [
 
 const jewelleryPreciousServices = [
   {
-    title: "Jewellery Insurance",
+    title: "Business & Personal Financial Advisory",
     icon: "mdi:diamond-stone",
     highlighted: true,
   },
   {
-    title: "Gold Insurance",
+    title: "Complete Protection Planning",
     icon: "mdi:ring",
     highlighted: false,
   },
   {
-    title: "Diamond Insurance",
+    title: "Smart Financial Growth Strategy",
     icon: "mdi:diamond",
     highlighted: false,
   },
@@ -105,7 +105,7 @@ const jewelleryPreciousServices = [
 
 const generalInsurerServices = [
   {
-    title: "GIC General Insurance",
+    title: "General Insurance Solutions",
     icon: "mdi:shield-check-outline",
     highlighted: false,
   },
@@ -115,7 +115,7 @@ export function ServicesSection({
   services,
   eyebrow = "Services",
   title = "Explore Our Service Offerings",
-  description = "Choose the Right Insurance for Your Needs",
+  description = "50+ Years of Trusted Experience • Family-Run Legacy with Strong Values • One-Stop Solution for All Insurance & Financial Needs • In-House Experts - Chartered Accountant, Lawyer & Certified Financial Planner • Personalized Advice Tailored to Your Needs • Transparent & Honest Guidance • Strong Customer Relationships Built on Trust",
 }: ServicesSectionProps) {
   return (
     <section className="relative isolate overflow-hidden bg-[#f4f0ee] px-4 sm:px-6 lg:px-20 pt-12 sm:pt-16 lg:pt-20 pb-10 text-brand-dark">
@@ -138,10 +138,10 @@ export function ServicesSection({
           <div className="mt-8 space-y-5 sm:space-y-4">
             <div>
               <h3 className="text-xl sm:text-xl lg:text-xl font-semibold text-[#4b2f2f]">
-                1. Jewellery & Precious Items
+                1. Financial Advisory & Growth Services
               </h3>
               <p className="mt-3 sm:mt-2 text-base sm:text-base lg:text-sm text-[#6f5655]">
-                Comprehensive coverage for your valuable jewellery, gold, and precious items.
+                Additional services to help you plan, manage, and grow your finances with confidence.
               </p>
             </div>
             <div className="grid gap-5 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -176,7 +176,7 @@ export function ServicesSection({
                 2. Life & Personal Insurance
               </h3>
               <p className="mt-3 sm:mt-2 text-base sm:text-base lg:text-sm text-[#6f5655]">
-                These cover individuals and their lives/health/financial protection.
+                Essential personal coverage plans for life, health, and all-round protection.
               </p>
             </div>
 
@@ -210,10 +210,10 @@ export function ServicesSection({
           <div className="mt-10 sm:mt-12 space-y-8 sm:space-y-8">
             <div>
               <h3 className="text-xl sm:text-xl lg:text-xl font-semibold text-[#4b2f2f]">
-                3. General Insurance (Non-Life Insurance)
+                3. General Insurance (Non-Life)
               </h3>
               <p className="mt-3 sm:mt-2 text-base sm:text-base lg:text-sm text-[#6f5655]">
-                All asset-based and risk-based policies.
+                Protection for your assets, property, travel, and business needs.
               </p>
             </div>
 
@@ -283,91 +283,93 @@ export function ServicesSection({
               </div>
             </div>
 
-            {/* D. Marine & Transit */}
-            <div className="space-y-5 sm:space-y-4">
-              <h4 className="text-lg sm:text-lg lg:text-lg font-semibold text-[#4b2f2f]">
-                D. Marine & Transit
-              </h4>
-              <div className="grid gap-5 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                {marineTransitServices.map((service) => (
-                  <div
-                    key={service.title}
-                    className="rounded-3xl bg-[#ebe2df] p-6 sm:p-6 lg:p-6 text-center shadow-[0_10px_30px_-15px_rgba(0,0,0,0.25)] transition hover:-translate-y-1 min-h-[180px] sm:min-h-[200px] lg:min-h-0 flex flex-col justify-center"
-                  >
-                    <div className="mx-auto mb-5 sm:mb-4 flex h-16 w-16 sm:h-16 sm:w-16 lg:h-14 lg:w-14 items-center justify-center rounded-full bg-[#3b1d1c] text-white">
-                      <Icon icon={service.icon} className="h-7 w-7 sm:h-7 sm:w-7 lg:h-6 lg:w-6" aria-hidden />
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-10">
+              {/* D. Marine & Transit */}
+              <div className="space-y-5 sm:space-y-4">
+                <h4 className="text-lg sm:text-lg lg:text-lg font-semibold text-[#4b2f2f]">
+                  D. Marine & Transit
+                </h4>
+                <div className="grid gap-5 sm:gap-6">
+                  {marineTransitServices.map((service) => (
+                    <div
+                      key={service.title}
+                      className="rounded-3xl bg-[#ebe2df] p-6 sm:p-6 lg:p-6 text-center shadow-[0_10px_30px_-15px_rgba(0,0,0,0.25)] transition hover:-translate-y-1 min-h-[180px] sm:min-h-[200px] lg:min-h-0 flex flex-col justify-center"
+                    >
+                      <div className="mx-auto mb-5 sm:mb-4 flex h-16 w-16 sm:h-16 sm:w-16 lg:h-14 lg:w-14 items-center justify-center rounded-full bg-[#3b1d1c] text-white">
+                        <Icon icon={service.icon} className="h-7 w-7 sm:h-7 sm:w-7 lg:h-6 lg:w-6" aria-hidden />
+                      </div>
+                      <h4 className="text-xl sm:text-xl lg:text-lg font-semibold text-[#4b2f2f]">
+                        {service.title}
+                      </h4>
                     </div>
-                    <h4 className="text-xl sm:text-xl lg:text-lg font-semibold text-[#4b2f2f]">
-                      {service.title}
-                    </h4>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
-            </div>
 
-            {/* E. Travel */}
-            <div className="space-y-5 sm:space-y-4">
-              <h4 className="text-lg sm:text-lg lg:text-lg font-semibold text-[#4b2f2f]">
-                E. Travel
-              </h4>
-              <div className="grid gap-5 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                {travelServices.map((service) => (
-                  <div
-                    key={service.title}
-                    className="rounded-3xl bg-[#ebe2df] p-6 sm:p-6 lg:p-6 text-center shadow-[0_10px_30px_-15px_rgba(0,0,0,0.25)] transition hover:-translate-y-1 min-h-[180px] sm:min-h-[200px] lg:min-h-0 flex flex-col justify-center"
-                  >
-                    <div className="mx-auto mb-5 sm:mb-4 flex h-16 w-16 sm:h-16 sm:w-16 lg:h-14 lg:w-14 items-center justify-center rounded-full bg-[#3b1d1c] text-white">
-                      <Icon icon={service.icon} className="h-7 w-7 sm:h-7 sm:w-7 lg:h-6 lg:w-6" aria-hidden />
+              {/* E. Travel */}
+              <div className="space-y-5 sm:space-y-4">
+                <h4 className="text-lg sm:text-lg lg:text-lg font-semibold text-[#4b2f2f]">
+                  E. Travel
+                </h4>
+                <div className="grid gap-5 sm:gap-6">
+                  {travelServices.map((service) => (
+                    <div
+                      key={service.title}
+                      className="rounded-3xl bg-[#ebe2df] p-6 sm:p-6 lg:p-6 text-center shadow-[0_10px_30px_-15px_rgba(0,0,0,0.25)] transition hover:-translate-y-1 min-h-[180px] sm:min-h-[200px] lg:min-h-0 flex flex-col justify-center"
+                    >
+                      <div className="mx-auto mb-5 sm:mb-4 flex h-16 w-16 sm:h-16 sm:w-16 lg:h-14 lg:w-14 items-center justify-center rounded-full bg-[#3b1d1c] text-white">
+                        <Icon icon={service.icon} className="h-7 w-7 sm:h-7 sm:w-7 lg:h-6 lg:w-6" aria-hidden />
+                      </div>
+                      <h4 className="text-xl sm:text-xl lg:text-lg font-semibold text-[#4b2f2f]">
+                        {service.title}
+                      </h4>
                     </div>
-                    <h4 className="text-xl sm:text-xl lg:text-lg font-semibold text-[#4b2f2f]">
-                      {service.title}
-                    </h4>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
-            </div>
 
-            {/* F. Liability */}
-            <div className="space-y-5 sm:space-y-4">
-              <h4 className="text-lg sm:text-lg lg:text-lg font-semibold text-[#4b2f2f]">
-                F. Liability
-              </h4>
-              <div className="grid gap-5 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                {liabilityServices.map((service) => (
-                  <div
-                    key={service.title}
-                    className="rounded-3xl bg-[#ebe2df] p-6 sm:p-6 lg:p-6 text-center shadow-[0_10px_30px_-15px_rgba(0,0,0,0.25)] transition hover:-translate-y-1 min-h-[180px] sm:min-h-[200px] lg:min-h-0 flex flex-col justify-center"
-                  >
-                    <div className="mx-auto mb-5 sm:mb-4 flex h-16 w-16 sm:h-16 sm:w-16 lg:h-14 lg:w-14 items-center justify-center rounded-full bg-[#3b1d1c] text-white">
-                      <Icon icon={service.icon} className="h-7 w-7 sm:h-7 sm:w-7 lg:h-6 lg:w-6" aria-hidden />
+              {/* F. Tax & Advisory */}
+              <div className="space-y-5 sm:space-y-4">
+                <h4 className="text-lg sm:text-lg lg:text-lg font-semibold text-[#4b2f2f]">
+                  F. Tax & Advisory
+                </h4>
+                <div className="grid gap-5 sm:gap-6">
+                  {liabilityServices.map((service) => (
+                    <div
+                      key={service.title}
+                      className="rounded-3xl bg-[#ebe2df] p-6 sm:p-6 lg:p-6 text-center shadow-[0_10px_30px_-15px_rgba(0,0,0,0.25)] transition hover:-translate-y-1 min-h-[180px] sm:min-h-[200px] lg:min-h-0 flex flex-col justify-center"
+                    >
+                      <div className="mx-auto mb-5 sm:mb-4 flex h-16 w-16 sm:h-16 sm:w-16 lg:h-14 lg:w-14 items-center justify-center rounded-full bg-[#3b1d1c] text-white">
+                        <Icon icon={service.icon} className="h-7 w-7 sm:h-7 sm:w-7 lg:h-6 lg:w-6" aria-hidden />
+                      </div>
+                      <h4 className="text-xl sm:text-xl lg:text-lg font-semibold text-[#4b2f2f]">
+                        {service.title}
+                      </h4>
                     </div>
-                    <h4 className="text-xl sm:text-xl lg:text-lg font-semibold text-[#4b2f2f]">
-                      {service.title}
-                    </h4>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
-            </div>
 
-            {/* G. General Insurer Category */}
-            <div className="space-y-5 sm:space-y-4">
-              <h4 className="text-lg sm:text-lg lg:text-lg font-semibold text-[#4b2f2f]">
-                G. General Insurer Category
-              </h4>
-              <div className="grid gap-5 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                {generalInsurerServices.map((service) => (
-                  <div
-                    key={service.title}
-                    className="rounded-3xl bg-[#ebe2df] p-6 sm:p-6 lg:p-6 text-center shadow-[0_10px_30px_-15px_rgba(0,0,0,0.25)] transition hover:-translate-y-1 min-h-[180px] sm:min-h-[200px] lg:min-h-0 flex flex-col justify-center"
-                  >
-                    <div className="mx-auto mb-5 sm:mb-4 flex h-16 w-16 sm:h-16 sm:w-16 lg:h-14 lg:w-14 items-center justify-center rounded-full bg-[#3b1d1c] text-white">
-                      <Icon icon={service.icon} className="h-7 w-7 sm:h-7 sm:w-7 lg:h-6 lg:w-6" aria-hidden />
+              {/* G. General Insurance Category */}
+              <div className="space-y-5 sm:space-y-4">
+                <h4 className="text-lg sm:text-lg lg:text-lg font-semibold text-[#4b2f2f]">
+                  G. General Insurance Category
+                </h4>
+                <div className="grid gap-5 sm:gap-6">
+                  {generalInsurerServices.map((service) => (
+                    <div
+                      key={service.title}
+                      className="rounded-3xl bg-[#ebe2df] p-6 sm:p-6 lg:p-6 text-center shadow-[0_10px_30px_-15px_rgba(0,0,0,0.25)] transition hover:-translate-y-1 min-h-[180px] sm:min-h-[200px] lg:min-h-0 flex flex-col justify-center"
+                    >
+                      <div className="mx-auto mb-5 sm:mb-4 flex h-16 w-16 sm:h-16 sm:w-16 lg:h-14 lg:w-14 items-center justify-center rounded-full bg-[#3b1d1c] text-white">
+                        <Icon icon={service.icon} className="h-7 w-7 sm:h-7 sm:w-7 lg:h-6 lg:w-6" aria-hidden />
+                      </div>
+                      <h4 className="text-xl sm:text-xl lg:text-lg font-semibold text-[#4b2f2f]">
+                        {service.title}
+                      </h4>
                     </div>
-                    <h4 className="text-xl sm:text-xl lg:text-lg font-semibold text-[#4b2f2f]">
-                      {service.title}
-                    </h4>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
             </div>
           </div>

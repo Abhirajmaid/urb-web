@@ -9,44 +9,104 @@ import { SectionHeader } from "@/components/common/SectionHeader";
 
 const testimonials = [
   {
-    name: "Alex Walker",
+    name: "Rajesh Mehta, Jeweller",
     quote:
-      "The quality of work and professionalism displayed by URB Insurance exceeded all our expectations.",
+      "As a third-generation jeweller, trust is everything for us. We have successfully passed over 100 claims with complete ease and professionalism. The entire process has always been smooth and dependable.",
   },
   {
-    name: "Jennifer Lawrence",
+    name: "Kunal Shah, Jeweller",
     quote:
-      "The quality of work and professionalism displayed by URB Insurance exceeded all our expectations.",
+      "In our line of work, claim settlement matters the most. Every claim we've had has been handled efficiently and without delays.",
   },
   {
-    name: "Steve Smith",
+    name: "Dhaval Doshi, Jeweller",
     quote:
-      "The quality of work and professionalism displayed by URB Insurance exceeded all our expectations.",
+      "We've faced multiple claim situations over the years, and each one was managed seamlessly with proper guidance throughout.",
   },
   {
-    name: "Priya Verma",
+    name: "Nitin Zaveri, Jeweller",
     quote:
-      "URB Insurance guided us end-to-end and made everything clear and stress-free.",
+      "The understanding of jewellery insurance and claim handling is truly exceptional. It gives us complete peace of mind.",
   },
   {
-    name: "Michael Brown",
+    name: "Harsh Jain, Jeweller",
     quote:
-      "Fast, transparent claim support and great advice whenever we needed it.",
+      "Having a reliable support system for claims is crucial in our business. Over 100 claims have been passed smoothly for us and our network.",
   },
   {
-    name: "Sara Lee",
+    name: "Neha Agarwal, Entrepreneur",
     quote:
-      "Flexible plans and responsive support made choosing URB an easy decision.",
+      "During a recent medical emergency, our Mediclaim process was handled with utmost care and efficiency. Truly dependable service.",
   },
   {
-    name: "David Kim",
+    name: "Dr. Rohan Mehta, Healthcare Professional",
     quote:
-      "Professional, reliable, and always available—exactly what we were looking for.",
+      "The Mediclaim support is extremely well-managed. From documentation to final settlement, everything was taken care of seamlessly.",
   },
   {
-    name: "Nina Rodriguez",
+    name: "Pooja Shah, Business Owner",
     quote:
-      "Their team simplified every detail and delivered outstanding service.",
+      "The health insurance claim experience was completely hassle-free. The team was proactive and supportive throughout.",
+  },
+  {
+    name: "Amit Jain, Chartered Accountant",
+    quote:
+      "We trust them for all our family Mediclaim policies. Their responsiveness and clarity set them apart.",
+  },
+  {
+    name: "Sneha Doshi, Consultant",
+    quote:
+      "In times of need, they truly stand by you. The Mediclaim service reflects professionalism and genuine care.",
+  },
+  {
+    name: "Vikram Patel, Business Owner",
+    quote:
+      "All our insurance needs are managed under one roof, making everything extremely convenient and well-organized.",
+  },
+  {
+    name: "Ritesh Shah, Entrepreneur",
+    quote:
+      "From motor to business insurance, everything has been handled with clarity and expertise.",
+  },
+  {
+    name: "Ankit Mehta, Investor",
+    quote:
+      "The presence of in-house experts like a Chartered Accountant and Financial Planner adds immense value.",
+  },
+  {
+    name: "Kavita Jain, Homemaker",
+    quote:
+      "Our family's insurance portfolio has been managed with transparency and long-term vision.",
+  },
+  {
+    name: "Sandeep Agarwal, Businessman",
+    quote:
+      "Every policy is explained in detail, making decision-making simple and confident.",
+  },
+  {
+    name: "Rahul Doshi, Entrepreneur",
+    quote:
+      "Investment guidance has been structured and aligned with long-term goals.",
+  },
+  {
+    name: "Manish Zaveri, Trader",
+    quote:
+      "What truly stands out is the commitment during claim settlements. Support is always there when needed.",
+  },
+  {
+    name: "Priya Shah, Boutique Owner",
+    quote:
+      "Professional approach, deep knowledge, and a very smooth overall experience.",
+  },
+  {
+    name: "Sanjay Mehta, Industrialist",
+    quote:
+      "We've been associated for years, and the trust has only grown stronger over time.",
+  },
+  {
+    name: "Nishita Jain, Interior Designer",
+    quote:
+      "A complete financial solution with a very refined and reliable approach.",
   },
 ];
 
@@ -132,7 +192,7 @@ export function TestimonialsSection() {
             <SectionHeader
               eyebrow="Testimonials"
               title="Trusted by many"
-              description="Choose the Right Insurance for Your Needs"
+              description="All Your Insurance & Financial Needs, Under One Roof."
               align="center"
             />
 

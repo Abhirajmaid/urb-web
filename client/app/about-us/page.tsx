@@ -11,7 +11,7 @@ import { purposePillars, storyHighlights } from "@/data/aboutUs";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "At URB, our mission is to provide simple, unbiased and effective wealth creation and insurance solutions. Established in 1976, we combine professional advice, technology and transparency to help clients reach their financial goals.",
+    "URB Insurance is a trusted insurance and financial services name since 5th February 1976, offering complete protection and planning with multi-generational values of trust, commitment, and excellence.",
   keywords: [
     "about URB Insurance",
     "insurance company history",
@@ -24,16 +24,16 @@ export const metadata: Metadata = {
   openGraph: {
     title: "About Us - URB Insurance",
     description:
-      "URB Insurance: wealth creation, insurance advisory, and personalised financial planning since 1976.",
-    images: ["/images/about.jpg"],
+      "URB Insurance: over 50 years of trusted insurance, investment, and financial guidance backed by expert in-house professionals.",
+    images: ["/images/about2.jpg"],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "About Us - URB Insurance",
     description:
-      "URB Insurance: personalised financial and insurance services, certified advisors and client dashboards for easy access.",
-    images: ["/images/about.jpg"],
+      "URB Insurance helps protect, grow, and secure your future with expert and well-structured financial decisions.",
+    images: ["/images/about2.jpg"],
   },
   alternates: {
     canonical: "https://www.urbinsurance.co.in/AboutPage",
@@ -44,9 +44,9 @@ export default function AboutUsPage() {
   return (
     <main className="text-[#031B4E]">
       <PageHeader
-        title="To Build An Affordable Wealth Creation Platform For Clients Across Industries"
-        description="At URB, we provide simple, unbiased and actionable advice in wealth creation, financial planning and insurance. Certified by NSE and AMFI, we combine technology and personal counsel to help clients achieve their financial goals."
-        backgroundImage="/images/about.jpg"
+        title="A Legacy Of Trust Since 5th February 1976"
+        description="URB Insurance began as a small initiative by our grandfather and has grown into a strong multi-generational business. Today, we provide complete insurance, investment, and financial solutions under one roof to help protect, grow, and secure your future."
+        backgroundImage="/images/about2.jpg"
         backgroundImageAlt="About URB Insurance"
         showButton={true}
       />

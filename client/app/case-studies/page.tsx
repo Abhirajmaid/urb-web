@@ -22,14 +22,14 @@ export const metadata: Metadata = {
     title: "Case Studies - URB Insurance",
     description:
       "Real success stories from URB Insurance clients. See how we deliver quick claims, tailored coverage, and peace of mind.",
-    images: ["/images/hero.jpg"],
+    images: ["/images/case3.jpg"],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "Case Studies - URB Insurance",
     description: "Client success stories and real insurance outcomes.",
-    images: ["/images/hero.jpg"],
+    images: ["/images/case3.jpg"],
   },
   alternates: {
     canonical: "https://urbinsurance.com/case-studies",
@@ -42,7 +42,7 @@ export default function CaseStudiesPage() {
       <PageHeader
         title="Client Case Studies"
         description="Discover how we've helped individuals, families, and businesses protect what matters most. From quick claim settlements to tailored coverage, URB Insurance delivers peace of mind."
-        backgroundImage="/images/pageheader.jpg"
+        backgroundImage="/images/case3.jpg"
         backgroundImageAlt="Client case studies"
         showButton={true}
       />

@@ -3,19 +3,19 @@ import { SectionHeader } from "@/components/common/SectionHeader";
 const missionVisionPurpose = [
   {
     number: "01",
-    title: "Mission",
+    title: "Our Mission",
     description:
       "To deliver exceptional construction and infrastructure solutions that exceed client expectations through innovation, quality craftsmanship, and unwavering commitment to excellence.",
   },
   {
     number: "02",
-    title: "Vision",
+    title: "Our Vision",
     description:
-      "To be the leading construction company recognized for transforming visions into reality, creating sustainable infrastructure that shapes communities and stands the test of time.",
+      "To become a leading and most trusted financial and insurance service provider by delivering reliable, transparent, and complete solutions under one roof while continuing our legacy of excellence for generations to come.",
   },
   {
     number: "03",
-    title: "Purpose",
+    title: "Our Purpose",
     description:
       "Focused on creativity and precision, we turn ideas into lasting designs that harmonize aesthetic brilliance with structural integrity.",
   },
@@ -43,7 +43,7 @@ export function MissionVisionSection() {
             </div>
 
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {missionVisionPurpose.map((item, index) => (
+              {missionVisionPurpose.map((item) => (
                 <div
                   key={item.title}
                   className="group relative overflow-hidden rounded-xl sm:rounded-2xl border border-brand-gray-light/50 bg-white p-6 sm:p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-[0_4px_20px_rgba(var(--color-dark-rgb),0.08)]"

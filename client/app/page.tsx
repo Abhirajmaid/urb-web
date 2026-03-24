@@ -1,12 +1,9 @@
 import type { Metadata } from "next";
 import { HeroSection } from "@/components/home/HeroSection";
 import { ConnectMarquee } from "@/components/common/ConnectMarquee";
-import { FAQSection } from "@/components/common/FAQSection";
-import { FeatureBlogsSection } from "@/components/home/FeatureBlogsSection";
 import { Footer } from "@/components/common/Footer";
 import { MissionVisionSection } from "@/components/home/MissionVisionSection";
 import { PartnersSection } from "@/components/common/PartnersSection";
-import { ProjectsSection } from "@/components/home/ProjectsSection";
 import { ServiceCTASection } from "@/components/common/ServiceCTASection";
 import { ServicesHighlightSection } from "@/components/home/ServicesHighlightSection";
 import { TestimonialsSection } from "@/components/home/TestimonialsSection";

@@ -72,7 +72,7 @@ export default function ContactPage() {
       <PageHeader
         title="Contact Us"
         description="Ready to protect your future? Let's discuss your insurance needs and explore how we can provide comprehensive coverage and peace of mind."
-        backgroundImage="/images/servicesimage.jpg"
+        backgroundImage="/images/contact5.jpg"
         backgroundImageAlt="Contact hero background"
         showButton={false}
       />

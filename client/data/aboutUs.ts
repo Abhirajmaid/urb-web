@@ -1,60 +1,60 @@
 export const storyHighlights = [
   {
-    title: "Founded in 1976",
+    title: "Legacy since 5th February 1976",
     icon: "building",
     description:
-      "We began operations in 1976 and have since grown into a trusted financial services firm focused on wealth creation and insurance advisory.",
+      "URB Insurance began as a small initiative by our grandfather and has grown into a trusted, multi-generational insurance and financial services business.",
   },
   {
-    title: "Certified Advisors",
+    title: "50+ years of trusted experience",
     icon: "thumbs-up",
     description:
-      "Our team are certified wealth managers and insurance consultants recognized by NSE and AMFI, delivering professional and compliant advice.",
+      "With over five decades of experience, we have built long-term client relationships through reliability, deep industry knowledge, and consistent service.",
   },
   {
-    title: "Client-first approach",
+    title: "Evolved beyond LIC-only services",
     icon: "person",
     description:
-      "We provide personalised counsel, helping clients understand investments and insurance so they can make informed decisions toward their financial goals.",
+      "From working exclusively with LIC in earlier years, we now offer a wider portfolio of insurance, investment, and financial solutions for modern needs.",
   },
   {
-    title: "Wide range of services",
+    title: "Complete solutions under one roof",
     icon: "leaf",
     description:
-      "We offer investment portfolios, insurance policies, mutual funds, PMS, direct equity, fixed deposits, bonds and more to build balanced wealth strategies.",
+      "We provide complete financial protection and planning through integrated insurance, investment, and advisory support tailored to each client.",
   },
   {
-    title: "Technology & access",
+    title: "In-house expert guidance",
     icon: "lightbulb",
     description:
-      "We emphasise technology for ease of access — secure client logins and mobile access let clients view dashboards and reports anytime.",
+      "Our in-house Chartered Accountant, Lawyer, and Certified Financial Planner ensure every recommendation is professional, secure, and well-structured.",
   },
   {
-    title: "Transparent & dependable",
+    title: "Our goal for every client",
     icon: "hashtag",
     description:
-      "Transparency, fast support and actionable guidance are central to our service — we value our clients' trust above everything.",
+      "Our goal is simple: to protect, grow, and secure your future by helping you make the right financial decisions with confidence.",
   },
 ];
 
 export const purposePillars = [
   {
     number: "01",
-    title: "Wealth creation",
+    title: "Protect your future",
     description:
-      "Deliver structured investment planning and products that help clients progress toward short and long term financial goals.",
+      "Build financial safety through insurance and risk planning designed to safeguard your family, assets, and long-term stability.",
   },
   {
     number: "02",
-    title: "Insurance protection",
+    title: "Grow your wealth",
     description:
-      "Offer clear, unbiased insurance solutions to protect families, assets and businesses from unexpected risks.",
+      "Create long-term growth with suitable investment and financial solutions aligned to your goals and life stage.",
   },
   {
     number: "03",
-    title: "Client empowerment",
+    title: "Secure with expert advice",
     description:
-      "Educate clients with simple, transparent advice and reporting so they can take confident, informed decisions.",
+      "Make confident decisions with guidance from trusted professionals and a process built on trust, commitment, and excellence.",
   },
 ];
 

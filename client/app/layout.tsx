@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
 import "./globals.css";
-import { StickyHeader } from "@/components/common/StickyHeader";
+import { Navbar } from "@/components/common/Navbar";
 import { BottomNavbar } from "@/components/common/BottomNavbar";
 import { EnquiryModalProvider } from "@/contexts/EnquiryModalContext";
 import {
@@ -100,7 +100,7 @@ export default function RootLayout({
       </head>
       <body className={`${dmSans.variable} antialiased pb-20 lg:pb-0`}>
         <EnquiryModalProvider>
-          <StickyHeader />
+          <Navbar />
           {children}
           <BottomNavbar />
         </EnquiryModalProvider>
