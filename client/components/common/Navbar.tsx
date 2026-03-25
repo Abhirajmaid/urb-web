@@ -75,7 +75,7 @@ export function Navbar() {
         }`}
         style={{ pointerEvents: "auto" }}
       >
-        <div className="relative z-10 px-4 py-3.5 flex items-center justify-center">
+        <div className="relative z-10 px-4 pt-0 pb-3.5 flex items-center justify-center">
           <div className={mobileScrolled ? "" : "drop-shadow-lg"}>
             <Logo isScrolled={mobileScrolled} />
           </div>
@@ -90,7 +90,7 @@ export function Navbar() {
       >
         <div
           className={`mx-auto max-w-7xl relative z-10 transition-all duration-300 ${
-            isHeroOverlay ? "px-6 py-2" : "px-6 py-4"
+            isHeroOverlay ? "px-6 pt-0 pb-2" : "px-6 pt-0 pb-4"
           }`}
         >
           <nav

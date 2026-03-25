@@ -7,7 +7,7 @@ import { Icon } from "@iconify/react";
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center pt-[70px] md:pt-[80px] overflow-hidden bg-[#f4f0ee] px-2 sm:px-3 lg:px-4">
+    <section className="relative min-h-screen flex items-center pt-[70px] md:pt-[80px] overflow-hidden bg-[#ffffff] px-2 sm:px-3 lg:px-4">
       <div className="w-full mx-auto">
         <div className="relative z-0 rounded-2xl overflow-hidden min-h-[80vh]">
           <Image
