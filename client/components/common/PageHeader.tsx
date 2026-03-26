@@ -20,7 +20,7 @@ export function PageHeader({
 }: PageHeaderProps) {
   return (
     <section
-      className="relative overflow-hidden bg-[#f4f0ee] px-2 sm:px-3 lg:px-4 pt-[120px] md:pt-[120px] pb-12 sm:pb-14 lg:pb-16"
+      className="relative overflow-hidden bg-white px-2 sm:px-3 lg:px-4 pt-[120px] md:pt-[120px] pb-12 sm:pb-14 lg:pb-16"
       data-hero-root
     >
       <div className="mx-auto ">

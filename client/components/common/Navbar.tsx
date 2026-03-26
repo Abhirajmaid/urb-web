@@ -68,7 +68,7 @@ export function Navbar() {
   return (
     <>
       <header
-        className={`lg:hidden fixed top-0 left-0 right-0 z-200 transition-all duration-300 ${
+        className={`lg:hidden fixed top-1 left-2 right-2 z-200 transition-all duration-300 rounded-2xl ${
           mobileScrolled
             ? "bg-white/15 backdrop-blur-md border-b border-white/20 shadow-[0_8px_24px_rgba(0,0,0,0.12)]"
             : "bg-white"
@@ -84,7 +84,7 @@ export function Navbar() {
 
       <header
         className={`hidden lg:block fixed z-200 transition-all duration-300 ${
-          isScrolled ? "top-0 left-4 right-4" : "top-0 left-0 right-0"
+          isScrolled ? "top-4 left-4 right-4" : "top-4 left-0 right-0"
         }`}
         style={{ pointerEvents: "auto" }}
       >
@@ -146,7 +146,7 @@ export function Navbar() {
           </nav>
         </div>
       </header>
-      {!heroPresent ? <div className="h-[56px]" aria-hidden /> : null}
+      <div className="h-[80px] lg:h-[98px]" aria-hidden />
     </>
   );
 }
