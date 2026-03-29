@@ -1,3 +1,5 @@
+import { SITE_IMAGES } from "./siteImages";
+
 export type CaseStudy = {
   clientLogo: string;
   clientLogoAlt: string;
@@ -123,6 +125,48 @@ export const caseStudies: CaseStudy[] = [
       {
         src: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80",
         alt: "Peace of mind",
+      },
+    ],
+  },
+  {
+    clientLogo:
+      "https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&w=200&q=80",
+    clientLogoAlt: "SME business client",
+    clientName: "Heritage Textiles Collective",
+    projectTitle: "SME Group Health & Property Bundle",
+    description:
+      "A cooperative of mid-size manufacturers needed affordable group health for staff plus fire and stock cover for shared warehousing. URB structured a single renewal calendar, aligned sum insured with inventory audits, and delivered a cashless hospital network their teams actually use.",
+    projectLocation: "Ahmedabad",
+    category: "SME",
+    images: [
+      {
+        src: SITE_IMAGES.caseStudies.extra1,
+        alt: "Professional insurance advisory meeting at URB office",
+      },
+      {
+        src: SITE_IMAGES.caseStudies.extra1,
+        alt: "Client documentation and policy planning",
+      },
+    ],
+  },
+  {
+    clientLogo:
+      "https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&w=200&q=80",
+    clientLogoAlt: "Medical professional client",
+    clientName: "Dr. Meera Iyer",
+    projectTitle: "Clinic Liability & Equipment Cover",
+    description:
+      "An independent physician required professional indemnity, equipment breakdown protection, and cyber safeguards for patient records. URB bundled coverage with clear claim playbooks so the clinic could focus on care—not paperwork—when equipment failed during peak hours.",
+    projectLocation: "Chennai",
+    category: "Professional",
+    images: [
+      {
+        src: SITE_IMAGES.caseStudies.extra2,
+        alt: "Modern office interior where URB supports professional clients",
+      },
+      {
+        src: SITE_IMAGES.caseStudies.extra2,
+        alt: "Insurance consultation environment",
       },
     ],
   },

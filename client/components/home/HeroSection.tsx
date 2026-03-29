@@ -5,11 +5,21 @@ import Link from "next/link";
 import Button from "@/components/common/Button";
 import { Icon } from "@iconify/react";
 
+const stats = [
+  { value: "25+", label: "years of trusted service" },
+  { value: "98%", label: "claim settlement rate" },
+  { value: "50K+", label: "customers protected" },
+  { value: "30+", label: "corporate clients" },
+];
+
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center pt-[70px] md:pt-[80px] overflow-hidden bg-white px-2 sm:px-3 lg:px-4">
-      <div className="w-full mx-auto">
-        <div className="relative z-0 rounded-2xl overflow-hidden min-h-[80vh]">
+    <section
+      className="relative min-h-screen flex flex-col pt-0 overflow-hidden bg-white px-2 sm:px-3 lg:px-4"
+      data-hero-root
+    >
+      <div className="w-full mx-auto flex-1 flex flex-col min-h-0">
+        <div className="relative flex-1 w-full mt-2 sm:mt-8 lg:mt-12 rounded-2xl overflow-hidden min-h-[min(92vh,920px)] sm:min-h-[min(94vh,960px)]">
           <Image
             src="/images/insurance.jpg"
             alt="Insurance protection"
@@ -23,40 +33,62 @@ export function HeroSection() {
             className="absolute inset-0 bg-linear-to-r from-black/70 via-black/50 to-black/30"
             aria-hidden
           />
-          <div className="absolute inset-0 z-10 flex items-center px-4 sm:px-6 lg:px-10 xl:px-14 pt-[88px] pb-16 sm:pb-20 lg:pb-24 max-w-7xl mx-auto">
-            <div className="max-w-2xl">
-              <h1 className="text-2xl md:text-7xl leading-[60px] font-semibold text-white">
-                Insurance that protects what matters most.
-              </h1>
-              <p className="mt-4 sm:mt-5 text-sm md:text-lg leading-relaxed text-white/90">
-                Reliable insurance solutions to secure your health, home,
-                vehicle, and future, all in one trusted platform.
-              </p>
-              <div className="mt-6 sm:mt-8 hidden lg:block w-fit">
-                <Button
-                  link="/contact"
-                  type="primary"
-                  size="sm"
-                  className="gap-3 pl-3 text-sm shadow-[0_20px_40px_rgba(14,14,14,0.18)] hover:-translate-y-0.5 hover:shadow-[0_30px_50px_rgba(14,14,14,0.22)]"
-                >
-                  Get a Quote
-                </Button>
+          <div className="absolute inset-0 z-10 flex flex-col justify-between">
+            <div className="flex-1 flex items-center px-4 sm:px-6 lg:px-10 xl:px-14 pt-6 sm:pt-8 max-w-7xl mx-auto w-full">
+              <div className="max-w-2xl">
+                <h1 className="text-2xl md:text-7xl leading-[60px] font-semibold text-white">
+                  Insurance that protects what matters most.
+                </h1>
+                <p className="mt-4 sm:mt-5 text-xs sm:text-sm md:text-base leading-relaxed text-white/90">
+                  Reliable insurance solutions to secure your health, home,
+                  vehicle, and future, all in one trusted platform.
+                </p>
+                <div className="mt-6 sm:mt-8 hidden lg:block w-fit">
+                  <Button
+                    link="/contact"
+                    type="primary"
+                    size="md"
+                    className="gap-3 pl-5 py-1.5 text-base font-medium shadow-[0_20px_40px_rgba(14,14,14,0.18)] hover:-translate-y-0.5 hover:shadow-[0_30px_50px_rgba(14,14,14,0.22)]"
+                  >
+                    Connect us
+                  </Button>
+                </div>
+                <div className="mt-6 sm:mt-8 lg:hidden flex justify-start w-full">
+                  <Link
+                    href="/contact"
+                    className="flex items-center justify-center gap-3.5 bg-[#4e0708] hover:bg-[#5a0a0b] text-white rounded-full px-7 py-4.5 pr-4 shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl"
+                  >
+                    <span className="text-lg font-medium">Connect us</span>
+                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white">
+                      <Icon
+                        icon="solar:arrow-right-up-linear"
+                        width={20}
+                        height={20}
+                        className="text-[#4e0708]"
+                      />
+                    </span>
+                  </Link>
+                </div>
               </div>
-              <div className="mt-6 sm:mt-8 lg:hidden flex justify-start w-full">
-                <Link
-                  href="/contact"
-                  className="flex items-center justify-center gap-3 bg-[#4e0708] hover:bg-[#5a0a0b] text-white rounded-full px-6 py-4 pr-4 shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl"
-                >
-                  <span className="text-base font-medium">Get a Quote</span>
-                  <span className="flex items-center justify-center w-9 h-9 bg-white rounded-full shrink-0">
-                    <Icon
-                      icon="solar:arrow-right-up-linear"
-                      width={18}
-                      height={18}
-                      className="text-[#4e0708]"
-                    />
-                  </span>
-                </Link>
+            </div>
+
+            <div className="shrink-0 px-4 sm:px-6 lg:px-10 xl:px-14 pb-5 sm:pb-6 lg:pb-8 max-w-7xl mx-auto w-full">
+              <div className="rounded-2xl  p-4 sm:p-5 lg:p-6">
+                <div className="grid grid-cols-2 gap-4 sm:grid-cols-4 sm:gap-6">
+                  {stats.map((stat, index) => (
+                    <div
+                      key={index}
+                      className="rounded-xl  px-4 py-4 sm:px-5 sm:py-6 text-center"
+                    >
+                      <div className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-white mb-2 sm:mb-2">
+                        {stat.value}
+                      </div>
+                      <p className="text-xs sm:text-sm text-white/85 leading-snug">
+                        {stat.label}
+                      </p>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>

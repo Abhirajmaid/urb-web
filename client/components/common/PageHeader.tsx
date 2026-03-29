@@ -20,11 +20,11 @@ export function PageHeader({
 }: PageHeaderProps) {
   return (
     <section
-      className="relative overflow-hidden bg-white px-2 sm:px-3 lg:px-4 pt-[120px] md:pt-[120px] pb-12 sm:pb-14 lg:pb-16"
+      className="relative overflow-hidden bg-white px-2 sm:px-3 lg:px-4 pt-0 pb-8 sm:pb-10 lg:pb-12"
       data-hero-root
     >
-      <div className="mx-auto ">
-        <div className="relative rounded-2xl overflow-hidden min-h-[400px] md:min-h-[80vh] flex items-center justify-center">
+      <div className="mx-auto">
+        <div className="relative mt-2 sm:mt-8 lg:mt-12 rounded-2xl overflow-hidden min-h-[400px] md:min-h-[80vh] flex items-center justify-center">
           <Image
             src={backgroundImage}
             alt={backgroundImageAlt}
@@ -42,7 +42,7 @@ export function PageHeader({
             <h1 className="text-2xl sm:text-3xl lg:text-5xl font-semibold leading-tight text-white">
               {title}
             </h1>
-            <p className="mt-4 sm:mt-5 text-sm sm:text-base lg:text-lg leading-relaxed text-white/90 max-w-3xl mx-auto">
+            <p className="mt-4 sm:mt-5 text-xs sm:text-sm lg:text-base leading-relaxed text-white/90 max-w-3xl mx-auto">
               {description}
             </p>
             {showButton && (
@@ -50,10 +50,10 @@ export function PageHeader({
                 <Button
                   link="/contact"
                   type="primary"
-                  size="sm"
-                  className="gap-3 pl-3 text-sm shadow-[0_20px_40px_rgba(14,14,14,0.18)] hover:-translate-y-0.5 hover:shadow-[0_30px_50px_rgba(14,14,14,0.22)]"
+                  size="md"
+                  className="gap-3 pl-5 py-1.5 text-base font-medium shadow-[0_20px_40px_rgba(14,14,14,0.18)] hover:-translate-y-0.5 hover:shadow-[0_30px_50px_rgba(14,14,14,0.22)]"
                 >
-                  Get a Quote
+                  Connect us
                 </Button>
               </div>
             )}

@@ -4,7 +4,7 @@ import Button from "@/components/common/Button";
 
 export function ServicesHeroSection() {
   return (
-    <section className="bg-[#f4f0ee] px-4 sm:px-6 lg:px-20 pt-0 pb-12 sm:pb-14 lg:pb-16 min-h-screen flex items-center -mt-[88px] pt-[88px]">
+    <section className="bg-[#f4f0ee] px-4 sm:px-6 lg:px-20 pb-12 sm:pb-14 lg:pb-16 min-h-screen flex items-center -mt-[88px] pt-[88px]">
       <div className="w-full mx-auto max-w-7xl">
         <div className="w-full rounded-2xl border border-[#e9e0dd] bg-white shadow-[0_10px_30px_-15px_rgba(0,0,0,0.25)] min-h-[500px] sm:min-h-[550px] lg:min-h-0 flex items-center">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 py-12 sm:py-14 lg:px-10 xl:px-14 w-full">
@@ -34,7 +34,7 @@ export function ServicesHeroSection() {
                 size="sm"
                 className="gap-3 self-start pl-3 text-sm shadow-[0_20px_40px_rgba(14,14,14,0.18)] hover:-translate-y-0.5 hover:shadow-[0_30px_50px_rgba(14,14,14,0.22)]"
               >
-                Get a Quote
+                Connect us
               </Button>
             </div>
           </div>

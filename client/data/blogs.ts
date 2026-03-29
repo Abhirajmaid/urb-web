@@ -1,3 +1,5 @@
+import { SITE_IMAGES } from "./siteImages";
+
 export type BlogPost = {
   slug: string;
   href: string;
@@ -16,7 +18,7 @@ export const blogs: BlogPost[] = [
     title: "Comprehensive Life Insurance Guide: Protecting Your Family's Future",
     date: "October 4, 2024",
     excerpt: "Discover how life insurance provides financial security and peace of mind for your loved ones. Learn about different policy types, coverage options, and choosing the right plan.",
-    imageSrc: "/showcase.jpg",
+    imageSrc: SITE_IMAGES.blogs[0],
     imageAlt: "Family protection and financial security",
     tag: "Feature blog",
   },
@@ -26,7 +28,7 @@ export const blogs: BlogPost[] = [
     title: "Motor Insurance Essentials: Everything You Need to Know About Vehicle Coverage",
     date: "October 4, 2024",
     excerpt: "A complete guide to motor insurance policies, coverage types, claim processes, and how to get the best protection for your vehicle at competitive rates.",
-    imageSrc: "/yashrajhero.jpg",
+    imageSrc: SITE_IMAGES.blogs[1],
     imageAlt: "Vehicle insurance and protection",
     tag: "Feature blog",
   },
@@ -36,7 +38,7 @@ export const blogs: BlogPost[] = [
     title: "Home & Property Insurance: Comprehensive Protection for Your Assets",
     date: "October 4, 2024",
     excerpt: "Understanding home and property insurance policies, coverage options, and how to safeguard your most valuable assets against unexpected risks and damages.",
-    imageSrc: "/yashrajhero1.jpg",
+    imageSrc: SITE_IMAGES.blogs[2],
     imageAlt: "Home and property protection",
     tag: "Feature blog",
   },
@@ -46,7 +48,7 @@ export const blogs: BlogPost[] = [
     title: "Travel Insurance Complete Guide: Stay Protected on Every Journey",
     date: "October 4, 2024",
     excerpt: "Learn why travel insurance is essential for every trip. Explore coverage options, claim procedures, and how to choose the right policy for your travel needs.",
-    imageSrc: "/showcase.jpg",
+    imageSrc: SITE_IMAGES.blogs[3],
     imageAlt: "Travel protection and insurance",
     tag: "Feature blog",
   },
@@ -56,7 +58,7 @@ export const blogs: BlogPost[] = [
     title: "Jewellery & Precious Items Insurance: Protecting Your Valuables",
     date: "October 4, 2024",
     excerpt: "Discover specialized insurance coverage for jewellery, gold, diamonds, and precious items. Learn how to properly insure and protect your valuable possessions.",
-    imageSrc: "/yashrajhero.jpg",
+    imageSrc: SITE_IMAGES.blogs[4],
     imageAlt: "Jewellery and precious items protection",
     tag: "Feature blog",
   },
@@ -66,7 +68,7 @@ export const blogs: BlogPost[] = [
     title: "Fire & Burglary Insurance: Essential Protection for Your Property",
     date: "October 4, 2024",
     excerpt: "Understanding fire and burglary insurance policies, coverage benefits, and how these essential protections safeguard your property and belongings.",
-    imageSrc: "/yashrajhero1.jpg",
+    imageSrc: SITE_IMAGES.blogs[5],
     imageAlt: "Fire and burglary protection coverage",
     tag: "Feature blog",
   },

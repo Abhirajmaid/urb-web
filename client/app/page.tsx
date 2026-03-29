@@ -7,7 +7,6 @@ import { PartnersSection } from "@/components/common/PartnersSection";
 import { ServiceCTASection } from "@/components/common/ServiceCTASection";
 import { ServicesHighlightSection } from "@/components/home/ServicesHighlightSection";
 import { TestimonialsSection } from "@/components/home/TestimonialsSection";
-import { ShowcaseSection } from "@/components/home/ShowcaseSection";
 import { ClientCaseStudiesSection } from "@/components/home/ClientCaseStudiesSection";
 import { WhyChooseUsSection } from "@/components/home/WhyChooseUsSection";
 
@@ -48,7 +47,6 @@ export default function Home() {
   return (
     <main className="bg-white">
       <HeroSection />
-      <ShowcaseSection />
       <ConnectMarquee />
       <MissionVisionSection />
       <ServicesHighlightSection />

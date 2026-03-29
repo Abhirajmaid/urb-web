@@ -12,7 +12,7 @@ export function PartnersSection() {
   const duplicatedLogos = [...partnerImages, ...partnerImages];
 
   return (
-    <section className="relative isolate overflow-hidden bg-white px-4 sm:px-6 lg:px-20 py-16">
+    <section className="relative isolate overflow-hidden bg-white px-4 sm:px-6 lg:px-20 py-12 sm:py-14 lg:py-16">
       {/* Wave SVG Pattern Background */}
       <div className="absolute inset-0 z-0 opacity-5">
         <svg
@@ -59,7 +59,7 @@ export function PartnersSection() {
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* First Row - Moving Left */}
-        <div className="mb-8 overflow-hidden">
+        <div className="mb-5 overflow-hidden">
           <div className="flex w-max animate-partners-marquee-left gap-8">
             {duplicatedLogos.map((partner, index) => (
               <div

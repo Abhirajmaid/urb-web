@@ -5,11 +5,11 @@ import { caseStudies } from "@/data/caseStudies";
 export function CaseStudiesSection() {
   return (
     <section
-      className="relative isolate overflow-hidden bg-[#f4f0ee] px-4 sm:px-6 lg:px-20 pt-12 sm:pt-16 lg:pt-20 pb-16 text-brand-dark"
+      className="relative isolate overflow-hidden bg-[#f4f0ee] px-4 sm:px-6 lg:px-20 py-8 sm:py-10 lg:py-12 text-brand-dark"
       id="case-studies-grid"
     >
       <div className="mx-auto max-w-7xl">
-        <div className="mb-10 sm:mb-12 lg:mb-14">
+        <div className="mb-6 sm:mb-8">
           <SectionHeader
             eyebrow="SUCCESS STORIES"
             title="Client Case Studies"

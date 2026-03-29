@@ -23,14 +23,14 @@ const missionVisionPurpose = [
 
 export function MissionVisionSection() {
   return (
-    <section className="relative isolate overflow-hidden text-brand-dark px-4 sm:px-6 lg:px-20 py-12 sm:py-16 lg:py-20">
+    <section className="relative isolate overflow-hidden text-brand-dark px-4 sm:px-6 lg:px-20 py-8 sm:py-10 lg:py-12">
       <div className="mx-auto max-w-7xl">
         <div className="bg-white rounded-2xl shadow-[0_4px_20px_rgba(var(--color-dark-rgb),0.08)]">
           {/* Top left gradient with primary color */}
           <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/5 via-transparent to-transparent" />
 
-          <div className="relative z-10 mx-auto max-w-7xl px-6 py-16 sm:py-20 lg:px-10 xl:px-14">
-            <div className="mb-12 sm:mb-16">
+          <div className="relative z-10 mx-auto max-w-7xl px-6 py-8 sm:py-10 lg:px-10 xl:px-14 lg:py-12">
+            <div className="mb-6 sm:mb-8">
               <SectionHeader
                 eyebrow="OUR FOUNDATION"
                 title="Mission, Vision & Purpose"

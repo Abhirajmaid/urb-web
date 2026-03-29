@@ -76,14 +76,14 @@ export function ClientCaseStudiesSection() {
   };
 
   return (
-    <section className="relative isolate overflow-hidden px-4 sm:px-6 lg:px-20 pt-12 sm:pt-16 lg:pt-20 pb-12 lg:pb-20 text-brand-dark">
+    <section className="relative isolate overflow-hidden px-4 sm:px-6 lg:px-20 py-8 sm:py-10 lg:py-12 text-brand-dark">
       <div className="mx-auto max-w-7xl">
         <div className="relative rounded-2xl bg-white shadow-[0_4px_20px_rgba(0,0,0,0.08)]">
           <div className="absolute inset-0 rounded-2xl bg-linear-to-br from-brand-primary/5 via-transparent to-transparent" />
 
-          <div className="relative z-10 px-4 sm:px-6 py-12 sm:py-16 lg:px-10 xl:px-14 lg:py-20">
+          <div className="relative z-10 px-4 sm:px-6 py-8 sm:py-10 lg:px-10 xl:px-14 lg:py-12">
             {/* Header */}
-            <div className="mb-10 sm:mb-12 lg:mb-14">
+            <div className="mb-6 sm:mb-8">
               <SectionHeader
                 eyebrow="CLIENT CASE STUDIES"
                 title="Our Success Stories"

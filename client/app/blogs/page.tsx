@@ -21,14 +21,14 @@ export const metadata: Metadata = {
     title: "Blogs - URB Insurance",
     description:
       "Explore insights, industry news, insurance tips, and coverage updates from URB Insurance.",
-    images: ["/images/blog4.jpg"],
+    images: ["/blog.png"],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "Blogs - URB Insurance",
     description: "Explore insurance insights, tips, and industry news.",
-    images: ["/images/blog4.jpg"],
+    images: ["/blog.png"],
   },
   alternates: {
     canonical: "https://urbinsurance.com/blogs",
@@ -41,7 +41,7 @@ export default function BlogsPage() {
       <PageHeader
         title="Insurance Insights & Updates"
         description="Explore our insights on insurance, coverage options, risk management, and financial protection strategies. Stay informed about the latest trends in insurance."
-        backgroundImage="/images/blog4.jpg"
+        backgroundImage="/blog.png"
         backgroundImageAlt="Insurance blog insights"
       />
 

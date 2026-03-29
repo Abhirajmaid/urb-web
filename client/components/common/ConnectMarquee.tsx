@@ -9,17 +9,18 @@ export function ConnectMarquee() {
   return (
     <section
       aria-live="off"
-      className="relative bg-brand-primary text-white -mt-px overflow-hidden"
+      className="relative bg-brand-primary text-white mt-6 sm:mt-8 lg:mt-10 overflow-hidden"
     >
       <Link
         href="/contact"
-        className="group relative block w-full h-[72px] sm:h-[88px] lg:h-[60px] overflow-hidden focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-secondary"
+        className="group relative block w-full h-[80px] sm:h-[96px] lg:h-[72px] overflow-hidden focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-secondary"
       >
         {/* Fade edges - narrower on mobile for more visible content */}
         <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-6 sm:w-10 lg:w-16 bg-linear-to-r from-brand-primary to-transparent" />
         <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-6 sm:w-10 lg:w-16 bg-linear-to-l from-brand-primary to-transparent" />
 
-        <div className="flex h-full w-max animate-marquee items-center py-3 group-hover:[animation-play-state:paused]">
+        <div className="flex h-full w-max animate-marquee items-center pt-5 pb-4 sm:pt-
+         sm:pb-5 lg:pt-5 lg:pb-4 group-hover:[animation-play-state:paused]">
           {[items, items].map((iteration, outerIdx) => (
             <div
               key={outerIdx}

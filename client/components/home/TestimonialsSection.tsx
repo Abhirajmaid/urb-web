@@ -182,13 +182,13 @@ export function TestimonialsSection() {
   }, []);
 
   return (
-    <section className="relative isolate overflow-hidden bg-linear-to-br from-brand-primary/5 via-transparent to-transparent px-4 sm:px-6 lg:px-20 pt-12 sm:pt-16 lg:pt-20 pb-12 lg:pb-20 text-brand-dark">
+    <section className="relative isolate overflow-hidden bg-linear-to-br from-brand-primary/5 via-transparent to-transparent px-4 sm:px-6 lg:px-20 py-8 sm:py-10 lg:py-12 text-brand-dark">
       <StructuredData data={reviewSchema} />
       <div className="mx-auto max-w-7xl">
-        <div className="relative bg-white rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.08)] min-h-[600px] sm:min-h-[650px] lg:min-h-0">
+        <div className="relative bg-white rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.08)]">
           <div className="absolute inset-0 rounded-2xl bg-linear-to-br from-brand-primary/5 via-transparent to-transparent" />
 
-          <div className="relative z-10 px-4 sm:px-6 py-12 sm:py-16 lg:px-10 xl:px-14 lg:py-20">
+          <div className="relative z-10 px-4 sm:px-6 py-8 sm:py-10 lg:px-10 xl:px-14 lg:py-12">
             <SectionHeader
               eyebrow="Testimonials"
               title="Trusted by many"

@@ -16,14 +16,14 @@ export const metadata: Metadata = {
     title: "Contact Us - URB Insurance",
     description:
       "Get in touch with URB Insurance for your insurance needs. Let's discuss your insurance requirements.",
-    images: ["/images/servicesimage.jpg"],
+    images: ["/contact.jpg"],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "Contact Us - URB Insurance",
     description: "Get in touch with URB Insurance for your insurance needs.",
-    images: ["/images/servicesimage.jpg"],
+    images: ["/contact.jpg"],
   },
   alternates: {
     canonical: "https://www.urbinsurance.co.in/contact",

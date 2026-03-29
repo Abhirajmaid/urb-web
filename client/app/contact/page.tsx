@@ -7,6 +7,8 @@ import { SectionHeader } from "@/components/common/SectionHeader";
 import { FAQSection } from "@/components/common/FAQSection";
 import { Footer } from "@/components/common/Footer";
 import Button from "@/components/common/Button";
+import { SITE_IMAGES } from "@/data/siteImages";
+import { ClientExperienceStrip } from "@/components/common/OfficeVisualSections";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -72,18 +74,34 @@ export default function ContactPage() {
       <PageHeader
         title="Contact Us"
         description="Ready to protect your future? Let's discuss your insurance needs and explore how we can provide comprehensive coverage and peace of mind."
-        backgroundImage="/images/contact5.jpg"
+        backgroundImage="/contact.jpg"
         backgroundImageAlt="Contact hero background"
         showButton={false}
       />
 
+      <ClientExperienceStrip
+        eyebrow="CLIENT EXPERIENCE"
+        title="Visit us—or start the conversation online"
+        description="Whether you walk in for a review or reach out digitally, you get the same careful attention: clear answers, honest timelines, and guidance that respects your priorities."
+        images={[
+          {
+            src: SITE_IMAGES.office[5],
+            alt: "URB Insurance office—comfortable client meeting environment",
+          },
+          {
+            src: SITE_IMAGES.office[6],
+            alt: "Professional setting for insurance consultations at URB",
+          },
+        ]}
+      />
+
       {/* Contact Form & Info Section */}
-      <section className="relative isolate overflow-hidden bg-[#f4f0ee] px-4 sm:px-6 lg:px-20 pt-12 sm:pt-16 lg:pt-20 pb-10">
+      <section className="relative isolate overflow-hidden bg-[#f4f0ee] px-4 sm:px-6 lg:px-20 py-8 sm:py-10 lg:py-12">
         <div className="bg-white rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.08)] min-h-[800px] sm:min-h-[900px] lg:min-h-0">
           <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/5 via-transparent to-transparent" />
 
-          <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 py-12 sm:py-16 lg:px-10 xl:px-14 lg:py-20">
-            <div className="mb-8 sm:mb-10 lg:mb-12 text-center">
+          <div className="relative z-10 mx-auto max-w-7xl px-6 py-8 sm:py-10 lg:px-10 xl:px-14 lg:py-12">
+            <div className="mb-6 sm:mb-8 text-center">
               <SectionHeader
                 eyebrow="CONTACT US"
                 title="Let's start a conversation"
