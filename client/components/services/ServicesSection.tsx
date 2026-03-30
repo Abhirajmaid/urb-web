@@ -2,6 +2,12 @@ import { Icon } from "@iconify/react";
 import type { ReactNode } from "react";
 import { SectionHeader } from "@/components/common/SectionHeader";
 import { Service } from "@/data/services";
+import type { InsuranceServiceCard } from "@/data/insuranceServiceCards";
+import {
+  financialAdvisoryServices,
+  generalInsuranceServices,
+  lifePersonalInsuranceServices,
+} from "@/data/insuranceServiceCards";
 
 type ServicesSectionProps = {
   services: Service[];
@@ -10,55 +16,29 @@ type ServicesSectionProps = {
   description?: string;
 };
 
-type ServiceCardItem = {
-  title: string;
-  icon: string;
-};
-
-/* ─── Data ──────────────────────────────────────────────────── */
-
-const financialAdvisoryServices: ServiceCardItem[] = [
-  { title: "Business & Personal Financial Advisory", icon: "mdi:briefcase-outline" },
-  { title: "Complete Protection Planning",           icon: "mdi:shield-star-outline" },
-  { title: "Smart Financial Growth Strategy",        icon: "mdi:trending-up" },
-];
-
-const lifePersonalInsuranceServices: ServiceCardItem[] = [
-  { title: "Life Insurance",    icon: "mdi:heart-pulse" },
-  { title: "Health Insurance",  icon: "mdi:hospital-box-outline" },
-  { title: "General Insurance", icon: "mdi:bank-outline" },
-];
-
-const generalInsuranceServices: ServiceCardItem[] = [
-  { title: "Motor Insurance (Car & Bike)",          icon: "mdi:car-outline" },
-  { title: "Home Insurance",                         icon: "mdi:home-outline" },
-  { title: "Shop & Business Insurance",              icon: "mdi:office-building-outline" },
-  { title: "Mutual Fund Investments",                icon: "mdi:chart-line" },
-  { title: "Financial Planning & Wealth Management", icon: "mdi:wallet-outline" },
-  { title: "Marine Insurance",                       icon: "mdi:anchor" },
-  { title: "Travel Insurance",                       icon: "mdi:airplane" },
-  { title: "Tax Planning Services",                  icon: "mdi:file-document-edit-outline" },
-  { title: "General Insurance Solutions",            icon: "mdi:shield-check-outline" },
-];
-
 /* ─── Card ───────────────────────────────────────────────────── */
 
-function ServiceCard({ title, icon }: ServiceCardItem) {
+function ServiceCard({ title, icon, description }: InsuranceServiceCard) {
   return (
-    <article className="group flex items-center gap-4 rounded-xl border border-[#e8deda] bg-white px-5 py-5 shadow-[0_2px_10px_rgba(59,29,28,0.06)] transition duration-200 hover:-translate-y-0.5 hover:border-[#c5a9a5] hover:shadow-[0_6px_20px_rgba(59,29,28,0.12)]">
-      <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-[#3b1d1c] text-white transition duration-200 group-hover:bg-[#5a2a29]">
-        <Icon icon={icon} className="h-5 w-5" aria-hidden />
+    <article className="group flex gap-3 rounded-xl border border-[#e8deda] bg-white px-4 py-4 shadow-[0_2px_10px_rgba(59,29,28,0.06)] transition duration-200 hover:-translate-y-0.5 hover:border-[#c5a9a5] hover:shadow-[0_6px_20px_rgba(59,29,28,0.12)] sm:gap-4 sm:px-5 sm:py-5">
+      <div className="flex h-10 w-10 shrink-0 items-center justify-center self-start rounded-lg bg-[#3b1d1c] text-white sm:h-11 sm:w-11">
+        <Icon icon={icon} className="h-5 w-5 shrink-0" aria-hidden />
       </div>
-      <h4 className="text-sm sm:text-base font-semibold leading-snug text-[#3b1d1c]">
-        {title}
-      </h4>
+      <div className="min-w-0 flex-1 pt-0.5">
+        <h4 className="text-sm font-semibold leading-snug text-[#3b1d1c] sm:text-base">
+          {title}
+        </h4>
+        <p className="mt-1.5 line-clamp-2 text-xs leading-snug text-[#7c6463] sm:text-sm sm:leading-snug">
+          {description}
+        </p>
+      </div>
     </article>
   );
 }
 
 /* ─── Grid ───────────────────────────────────────────────────── */
 
-function ServiceCardsGrid({ items }: { items: ServiceCardItem[] }) {
+function ServiceCardsGrid({ items }: { items: InsuranceServiceCard[] }) {
   return (
     <div className="grid gap-3 sm:gap-4 sm:grid-cols-2 lg:grid-cols-3">
       {items.map((s) => (
@@ -113,16 +93,16 @@ export function ServicesSection({
     <section className="relative isolate overflow-hidden bg-[#f4f0ee] px-4 sm:px-6 lg:px-20 py-8 sm:py-10 lg:py-12 text-brand-dark">
       <div className="mx-auto max-w-7xl">
         <div className="relative overflow-hidden rounded-2xl border border-[#e8ddda] bg-white shadow-[0_8px_28px_rgba(0,0,0,0.08)]">
-          <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/5 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/5 via-transparent to-transparent" />
 
           <div className="relative z-10 mx-auto max-w-7xl px-6 py-8 sm:py-10 lg:px-10 xl:px-14 lg:py-12">
-            <SectionHeader
-              eyebrow={eyebrow}
-              title={title}
-              description={description}
-            />
+          <SectionHeader
+            eyebrow={eyebrow}
+            title={title}
+            description={description}
+          />
 
-            <div className="mt-6 border-t border-[#e9e0dd]" />
+          <div className="mt-6 border-t border-[#e9e0dd]" />
 
             <div className="mt-8 space-y-6">
               <ServiceGroup
@@ -148,9 +128,9 @@ export function ServicesSection({
               >
                 <ServiceCardsGrid items={generalInsuranceServices} />
               </ServiceGroup>
-            </div>
           </div>
         </div>
+      </div>
       </div>
     </section>
   );

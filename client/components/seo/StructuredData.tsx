@@ -150,38 +150,3 @@ export const createReviewSchema = (
   })),
 });
 
-// Article Schema for Blog Posts
-export const createArticleSchema = (article: {
-  headline: string;
-  description: string;
-  image: string;
-  datePublished: string;
-  dateModified: string;
-  author: string;
-  url: string;
-}) => ({
-  "@context": "https://schema.org",
-  "@type": "Article",
-  headline: article.headline,
-  description: article.description,
-  image: article.image,
-  datePublished: article.datePublished,
-  dateModified: article.dateModified,
-  author: {
-    "@type": "Person",
-    name: article.author,
-  },
-  publisher: {
-    "@type": "Organization",
-    name: "URB Insurance",
-    logo: {
-      "@type": "ImageObject",
-      url: "https://urbinsurance.com/URB-logo.png",
-    },
-  },
-  url: article.url,
-  mainEntityOfPage: {
-    "@type": "WebPage",
-    "@id": article.url,
-  },
-});

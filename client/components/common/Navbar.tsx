@@ -12,7 +12,6 @@ const navLinks = [
   { label: "About us", href: "/about-us" },
   { label: "Services", href: "/services" },
   { label: "Case Studies", href: "/case-studies" },
-  { label: "Blogs", href: "/blogs" },
 ];
 
 export function Navbar() {
@@ -68,14 +67,14 @@ export function Navbar() {
   return (
     <>
       <header
-        className={`lg:hidden fixed inset-x-0 top-0 z-200 w-full transition-all duration-300 rounded-b-2xl border-x-0 border-t-0 ${
+        className={`lg:hidden fixed left-0 right-0 top-0 z-200 w-screen max-w-none transition-all duration-300 rounded-b-2xl border-x-0 border-t-0 ${
           mobileScrolled
             ? "border-b border-white/20 bg-white/15 shadow-[0_8px_24px_rgba(0,0,0,0.12)] backdrop-blur-md"
             : "border-b border-brand-gray-light/40 bg-white shadow-sm"
         }`}
         style={{ pointerEvents: "auto" }}
       >
-        <div className="relative z-10 mx-auto flex w-full max-w-[100vw] items-center justify-center px-4 pb-3.5 pt-2">
+        <div className="relative z-10 flex w-full items-center justify-center pb-3.5 pt-2">
           <div
             className={`flex w-full justify-center ${mobileScrolled ? "" : "drop-shadow-lg"}`}
           >
@@ -94,15 +93,19 @@ export function Navbar() {
           }`}
         >
           <nav
-            className={`grid w-full grid-cols-[1fr_auto_1fr] items-center gap-2 rounded-3xl transition-all duration-300 sm:gap-3 ${
+            className={`flex w-full items-center justify-between rounded-3xl transition-all duration-300 ${
               isScrolled
                 ? "border border-white/20 bg-white/15 shadow-[0_12px_32px_rgba(0,0,0,0.14)] backdrop-blur-md"
                 : "border border-brand-gray-light/60 bg-white shadow-sm"
             } px-3 py-3 sm:px-5 lg:px-6`}
           >
+            <div className="flex shrink-0 items-center">
+              <Logo isScrolled={isScrolled} />
+            </div>
+
             <div
-              className="flex min-w-0 flex-wrap items-center justify-end gap-x-3 gap-y-1 pr-1 lg:gap-x-4 xl:gap-x-6"
-              style={{ pointerEvents: "auto" }}
+              className="flex shrink-0 items-center"
+              style={{ pointerEvents: "auto", gap: "2rem" }}
             >
               {navLinks.map((link) => {
                 const isActive =
@@ -128,14 +131,7 @@ export function Navbar() {
               })}
             </div>
 
-            <div className="flex justify-center px-1 sm:px-2">
-              <Logo isScrolled={isScrolled} />
-            </div>
-
-            <div
-              className="flex min-w-0 justify-start pl-1"
-              style={{ pointerEvents: "auto" }}
-            >
+            <div className="flex shrink-0 items-center" style={{ pointerEvents: "auto" }}>
               <Button
                 link="/contact"
                 type={isScrolled ? "primary" : "secondary"}

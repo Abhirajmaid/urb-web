@@ -55,7 +55,6 @@ export default function Home() {
       <ClientCaseStudiesSection />
       {/* <ProjectsSection /> */}
       <TestimonialsSection />
-      {/* <FeatureBlogsSection /> */}
       <ServiceCTASection />
       <Footer />
     </main>

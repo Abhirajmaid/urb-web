@@ -17,9 +17,9 @@ export function Logo({ isScrolled = false }: LogoProps) {
       <Image
         src="/URB-logo.png"
         alt="URB Insurance Logo"
-        width={150}
-        height={150}
-        className="h-7 w-auto sm:h-7 lg:h-7 object-contain transition-all duration-300 group-hover:opacity-90"
+        width={170}
+        height={170}
+        className="h-7 w-auto sm:h-8 lg:h-9 object-contain transition-all duration-300 group-hover:opacity-90"
         style={{
           maxWidth,
           height: "auto",

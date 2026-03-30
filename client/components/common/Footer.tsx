@@ -7,14 +7,13 @@ const quickLinks = [
   { label: "About us", href: "/about-us" },
   { label: "Services", href: "/services" },
   { label: "Case Studies", href: "/case-studies" },
-  { label: "Blogs", href: "/blogs" },
   { label: "Contact Us", href: "/contact" },
 ];
 
 const resourceLinks = [
   { label: "All services", href: "/services" },
   { label: "Client stories", href: "/case-studies" },
-  { label: "Articles & insights", href: "/blogs" },
+  { label: "Articles & insights", href: "/case-studies" },
   { label: "Request a quote", href: "/contact" },
   { label: "Claim assistance", href: "/contact" },
   { label: "Talk to advisor", href: "/contact" },
@@ -30,7 +29,7 @@ function FooterLinkColumn({
   return (
     <div className="flex w-full min-w-0 flex-col items-stretch">
       <nav className="w-full" aria-label={title}>
-        <h3 className="mb-5 block text-xs font-bold uppercase tracking-[0.13em] text-white">
+        <h3 className="mb-5 block text-sm font-bold uppercase tracking-[0.13em] text-white">
           {title}
         </h3>
         <ul className="flex flex-col gap-3.5 sm:gap-4">
@@ -38,7 +37,7 @@ function FooterLinkColumn({
             <li key={`${title}-${link.label}`} className="leading-snug">
               <Link
                 href={link.href}
-                className="inline-block text-sm text-white/80 transition hover:text-white hover:underline decoration-white/40 underline-offset-[5px]"
+                className="inline-block text-base text-white/80 transition hover:text-white hover:underline decoration-white/40 underline-offset-[5px]"
               >
                 {link.label}
               </Link>
@@ -56,7 +55,7 @@ export function Footer() {
   return (
     <footer className="relative isolate overflow-hidden bg-[#f4f0ee] text-white">
       <div className="px-4 sm:px-6 lg:px-20 pt-10 sm:pt-6 pb-2 ">
-        <div className="mx-auto max-w-7xl">
+        <div className="mx-auto max-w-9xl">
           <div className="overflow-hidden rounded-2xl border border-[#2a1514]/40 bg-[#3b1d1c] shadow-[0_10px_30px_-15px_rgba(0,0,0,0.25)] sm:rounded-3xl">
             <div
               className="h-px bg-[linear-gradient(90deg,transparent,#e8b4b4,transparent)] opacity-80"
@@ -73,17 +72,17 @@ export function Footer() {
                 {/* Left: brand + contact */}
                 <div className="min-w-0 max-w-xl md:max-w-none">
                   <Logo />
-                  <p className="mt-6 text-sm leading-[1.65] text-white/80 sm:text-[0.9375rem]">
+                  <p className="mt-6 text-base leading-[1.65] text-white/80 sm:text-lg">
                     Expert team for insurance and wealth creation. Protecting
                     your future with comprehensive coverage, personalised
                     service, and transparent advice.
                   </p>
 
                   <div className="mt-8 border-t border-white/10 pt-8">
-                    <h3 className="text-xs font-bold uppercase tracking-[0.14em] text-white">
+                    <h3 className="text-sm font-bold uppercase tracking-[0.14em] text-white">
                       Connect with us
                     </h3>
-                    <address className="mt-5 space-y-2.5 not-italic text-sm leading-relaxed text-white/75">
+                    <address className="mt-5 space-y-2.5 not-italic text-base leading-relaxed text-white/80">
                       <p>
                         <a
                           href={telHref}
@@ -133,7 +132,7 @@ export function Footer() {
 
       <div className="bg-[#f4f0ee] px-4 sm:px-6 lg:px-20 sm:pb-8 pb-4">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10 xl:px-14 pt-4">
-          <p className="text-center text-sm text-[#6f5655]">
+          <p className="text-center text-base text-[#6f5655]">
             © {contactDetails.copyrightYear} URB — All Rights Reserved
           </p>
         </div>
