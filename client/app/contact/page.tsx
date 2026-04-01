@@ -252,7 +252,7 @@ export default function ContactPage() {
                     </h3>
                     <div className="space-y-3 text-sm text-brand-dark/70 sm:space-y-2 sm:text-sm lg:text-xs">
                       <div className="flex justify-between gap-4">
-                        <span>Monday - Saturday</span>
+                        <span>Mon–Sat</span>
                         <span className="shrink-0 font-medium text-right">
                           10:30 AM - 6:00 PM
                         </span>
