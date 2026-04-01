@@ -21,7 +21,7 @@ type TeamsSectionProps = {
 const foundingMembers: TeamMember[] = [
   {
     name: "Ritesh Jain",
-    role: "Owner & Founder, URB Insurance",
+    role: "Owner, URB Insurance",
     imageSrc: "/images/ritesh.jpeg",
     imageAlt: "Ritesh Jain",
     badge: "👑 Visionary Leader",

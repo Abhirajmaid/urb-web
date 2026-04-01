@@ -59,9 +59,14 @@ export const purposePillars = [
 ];
 
 export const contactDetails = {
-  phone: "09773113511",
-  email: "punmiya.bharat@gmail.com",
-  address: "G-14, Bussa Udyog Bhavan, T.J. Road, Sewree, Mumbai 400015",
+  phoneTel1: "9004162157",
+  phoneTel2: "9821311710",
+  /** Formatted contact line */
+  contactPhoneDisplay: "+91 90041 62157",
+  contactPhoneTel: "+919004162157",
+  email: "Riteshjain.lic@gmail.com",
+  address:
+    "Tanvi 108 regal industrial estates acharya dongde marg sewree naka opp white magic store Mumbai 400015 sewree Maharashtra",
   copyrightYear: 2026,
   designerCredit: "pruit",
 };

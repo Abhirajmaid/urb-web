@@ -6,10 +6,10 @@ import Button from "@/components/common/Button";
 import { Icon } from "@iconify/react";
 
 const stats = [
-  { value: "25+", label: "years of trusted service" },
+  { value: "50+", label: "years trusted services" },
   { value: "98%", label: "claim settlement rate" },
-  { value: "50K+", label: "customers protected" },
-  { value: "30+", label: "corporate clients" },
+  { value: "100K+", label: "customers protected" },
+  { value: "100+", label: "corporate clients" },
 ];
 
 export function HeroSection() {

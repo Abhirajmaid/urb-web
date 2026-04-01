@@ -2,13 +2,7 @@ import Link from "next/link";
 import { Icon } from "@iconify/react";
 import { Logo } from "./Logo";
 import { contactDetails } from "@/data/aboutUs";
-
-const navigationLinks = [
-  { label: "Home", href: "/" },
-  { label: "Who we are", href: "/about-us" },
-  { label: "What we do", href: "/services" },
-  { label: "Claims support", href: "/contact" },
-];
+import { mainNavLinks } from "@/data/navigation";
 
 const planLinks = [
   { label: "Health Insurance", href: "/services" },
@@ -53,7 +47,7 @@ function FooterLinkColumn({
 }
 
 export function Footer() {
-  const telHref = `tel:${contactDetails.phone.replace(/\s/g, "")}`;
+  const navigationLinks = [...mainNavLinks];
 
   return (
     <footer className="relative isolate overflow-hidden bg-black text-white">
@@ -97,8 +91,26 @@ export function Footer() {
 
                 <address className="mt-6 space-y-2 not-italic text-base leading-relaxed text-white">
                   <p>
-                    <a href={telHref} className="transition hover:text-white/80">
-                      {contactDetails.phone}
+                    <a
+                      href={`tel:${contactDetails.phoneTel1}`}
+                      className="transition hover:text-white/80"
+                    >
+                      {contactDetails.phoneTel1}
+                    </a>
+                    {" / "}
+                    <a
+                      href={`tel:${contactDetails.phoneTel2}`}
+                      className="transition hover:text-white/80"
+                    >
+                      {contactDetails.phoneTel2}
+                    </a>
+                  </p>
+                  <p>
+                    <a
+                      href={`tel:${contactDetails.contactPhoneTel}`}
+                      className="transition hover:text-white/80"
+                    >
+                      {contactDetails.contactPhoneDisplay}
                     </a>
                   </p>
                   <p>

@@ -251,17 +251,15 @@ export default function ContactPage() {
                       Business Hours
                     </h3>
                     <div className="space-y-3 text-sm text-brand-dark/70 sm:space-y-2 sm:text-sm lg:text-xs">
-                      <div className="flex justify-between">
-                        <span>Monday - Friday</span>
-                        <span className="font-medium">9:00 AM - 6:00 PM</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span>Saturday</span>
-                        <span className="font-medium">10:00 AM - 4:00 PM</span>
+                      <div className="flex justify-between gap-4">
+                        <span>Monday - Saturday</span>
+                        <span className="shrink-0 font-medium text-right">
+                          10:30 AM - 6:00 PM
+                        </span>
                       </div>
                       <div className="flex justify-between">
                         <span>Sunday</span>
-                        <span className="font-medium">Closed</span>
+                        <span className="font-medium">Holiday</span>
                       </div>
                     </div>
                   </div>

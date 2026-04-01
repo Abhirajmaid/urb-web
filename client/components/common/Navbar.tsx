@@ -6,13 +6,7 @@ import { useEffect, useState } from "react";
 
 import Button from "./Button";
 import { Logo } from "./Logo";
-
-const navLinks = [
-  { label: "Home", href: "/" },
-  { label: "About us", href: "/about-us" },
-  { label: "Services", href: "/services" },
-  { label: "Case Studies", href: "/case-studies" },
-];
+import { mainNavLinks } from "@/data/navigation";
 
 export function Navbar() {
   const pathname = usePathname();
@@ -107,7 +101,7 @@ export function Navbar() {
               className="absolute left-1/2 top-1/2 z-10 flex max-w-[min(100%-12rem,48rem)] -translate-x-1/2 -translate-y-1/2 flex-nowrap items-center justify-center gap-6 sm:gap-8 lg:gap-10"
               style={{ pointerEvents: "auto" }}
             >
-              {navLinks.map((link) => {
+              {mainNavLinks.map((link) => {
                 const isActive =
                   link.href === "/"
                     ? pathname === "/"
