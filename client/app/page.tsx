@@ -3,7 +3,7 @@ import { HeroSection } from "@/components/home/HeroSection";
 import { ConnectMarquee } from "@/components/common/ConnectMarquee";
 import { Footer } from "@/components/common/Footer";
 import { MissionVisionSection } from "@/components/home/MissionVisionSection";
-import { PartnersSection } from "@/components/common/PartnersSection";
+// import { PartnersSection } from "@/components/common/PartnersSection";
 import { ServiceCTASection } from "@/components/common/ServiceCTASection";
 import { ServicesHighlightSection } from "@/components/home/ServicesHighlightSection";
 import { TestimonialsSection } from "@/components/home/TestimonialsSection";
@@ -51,7 +51,7 @@ export default function Home() {
       <MissionVisionSection />
       <ServicesHighlightSection />
       <WhyChooseUsSection />
-      <PartnersSection />
+      {/* <PartnersSection /> */}
       <ClientCaseStudiesSection />
       {/* <ProjectsSection /> */}
       <TestimonialsSection />

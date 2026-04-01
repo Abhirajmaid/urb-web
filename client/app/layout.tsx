@@ -5,10 +5,9 @@ import { Navbar } from "@/components/common/Navbar";
 import { BottomNavbar } from "@/components/common/BottomNavbar";
 import { EnquiryModalProvider } from "@/contexts/EnquiryModalContext";
 import {
-  StructuredData,
   organizationSchema,
   websiteSchema,
-} from "@/components/seo/StructuredData";
+} from "@/lib/jsonLdSchemas";
 
 const dmSans = DM_Sans({
   variable: "--font-primary",
@@ -91,8 +90,18 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <StructuredData data={organizationSchema} />
-        <StructuredData data={websiteSchema} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(websiteSchema),
+          }}
+        />
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/URB-logo.png" />
         <meta name="theme-color" content="#4e0708" />

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { PageHeader } from "@/components/common/PageHeader";
 import { Footer } from "@/components/common/Footer";
-import { PartnersSection } from "@/components/common/PartnersSection";
+// import { PartnersSection } from "@/components/common/PartnersSection";
 import { PurposeSection } from "@/components/about-us/PurposeSection";
 import { ServiceCTASection } from "@/components/common/ServiceCTASection";
 import { StorySection } from "@/components/about-us/StorySection";
@@ -99,7 +99,7 @@ export default function AboutUsPage() {
       />
 
       <TeamsSection />
-      <PartnersSection />
+      {/* <PartnersSection /> */}
 
       <ServiceCTASection />
 

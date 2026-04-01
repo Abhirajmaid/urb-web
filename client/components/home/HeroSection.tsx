@@ -15,13 +15,13 @@ const stats = [
 export function HeroSection() {
   return (
     <section
-      className="relative min-h-screen flex flex-col pt-0 overflow-hidden bg-white px-2 sm:px-3 lg:px-4"
+      className="relative min-h-screen flex flex-col pt-8 overflow-hidden bg-white px-2 sm:px-3 lg:px-4 "
       data-hero-root
     >
       <div className="w-full mx-auto flex-1 flex flex-col min-h-0">
         <div className="relative flex-1 w-full mt-2 sm:mt-8 lg:mt-12 rounded-2xl overflow-hidden min-h-[min(92vh,920px)] sm:min-h-[min(94vh,960px)]">
           <Image
-            src="/images/insurance.jpg"
+            src="/images/hero1.jpg"
             alt="Insurance protection"
             fill
             priority

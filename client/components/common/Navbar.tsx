@@ -93,19 +93,19 @@ export function Navbar() {
           }`}
         >
           <nav
-            className={`flex w-full items-center justify-between rounded-3xl transition-all duration-300 ${
+            className={`relative flex w-full flex-nowrap items-center justify-between gap-4 rounded-3xl transition-all duration-300 ${
               isScrolled
                 ? "border border-white/20 bg-white/15 shadow-[0_12px_32px_rgba(0,0,0,0.14)] backdrop-blur-md"
                 : "border border-brand-gray-light/60 bg-white shadow-sm"
             } px-3 py-3 sm:px-5 lg:px-6`}
           >
-            <div className="flex shrink-0 items-center">
+            <div className="relative z-20 flex min-w-0 shrink-0 items-center">
               <Logo isScrolled={isScrolled} />
             </div>
 
             <div
-              className="flex shrink-0 items-center"
-              style={{ pointerEvents: "auto", gap: "2rem" }}
+              className="absolute left-1/2 top-1/2 z-10 flex max-w-[min(100%-12rem,48rem)] -translate-x-1/2 -translate-y-1/2 flex-nowrap items-center justify-center gap-6 sm:gap-8 lg:gap-10"
+              style={{ pointerEvents: "auto" }}
             >
               {navLinks.map((link) => {
                 const isActive =
@@ -131,7 +131,10 @@ export function Navbar() {
               })}
             </div>
 
-            <div className="flex shrink-0 items-center" style={{ pointerEvents: "auto" }}>
+            <div
+              className="relative z-20 flex min-w-0 shrink-0 items-center"
+              style={{ pointerEvents: "auto" }}
+            >
               <Button
                 link="/contact"
                 type={isScrolled ? "primary" : "secondary"}
