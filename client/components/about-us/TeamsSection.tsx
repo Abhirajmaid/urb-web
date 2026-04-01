@@ -28,20 +28,12 @@ const foundingMembers: TeamMember[] = [
     bio: "The backbone of URB Insurance — a tycoon who builds businesses and shapes people. His leadership reflects power, precision, and purpose, holding the entire team together while standing strong through every challenge. Ritesh Jain defines what it means to lead from the front.",
   },
   {
-    name: "Ugam Jain",
-    role: "The 'U' of URB - Insurance Pioneer",
+    name: "Ugam Jain & Bharat Ji",
+    role: "Founding Partners of URB",
     imageSrc: "/images/bharat&ugam.jpeg",
-    imageAlt: "Ugam Jain",
-    badge: "🏛️ Legacy of 50 Years",
-    bio: "The foundation of URB Insurance. Ugam Ji started his insurance journey with LIC over 50 years ago, laying the groundwork for what URB stands for today — trust, reliability, and decades of expertise.",
-  },
-  {
-    name: "Bharat Ji",
-    role: "The 'B' of URB - Founding Member",
-    imageSrc: "/images/bharat&ugam.jpeg",
-    imageAlt: "Bharat Ji",
-    badge: "🛡️ Pillar of URB",
-    bio: "A core pillar of URB's founding story, Bharat Ji's wisdom and experience continue to inspire the values and work ethic the entire team carries forward.",
+    imageAlt: "Ugam Jain and Bharat Ji",
+    badge: "🏛️ Legacy and Pillar of URB",
+    bio: "Ugam Ji and Bharat Ji are the founding partners behind URB's legacy. With decades of insurance experience, wisdom, and values-driven leadership, they built the foundation of trust, reliability, and work ethic that continues to guide the entire team.",
   },
   {
     name: "Tanvi Ritesh Jain",
@@ -152,7 +144,7 @@ export function TeamsSection({
             <p className="mb-5 text-center text-md font-semibold uppercase tracking-[0.28em] text-brand-primary">
               Founding Team
             </p>
-            <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+            <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
               {foundingMembers.map((member) => (
                 <TeamCard key={member.name} {...member} variant="founding" />
               ))}
@@ -171,7 +163,7 @@ export function TeamsSection({
                     alt="URB team image 1"
                     width={1200}
                     height={600}
-                    className="h-[90px] w-full object-contain "
+                    className="h-[220px] w-full object-contain sm:h-[90px]"
                   />
                 </div>
                 <div className="overflow-hidden rounded-xl border border-brand-dark/15 bg-[#f8f5f2]">
@@ -180,7 +172,7 @@ export function TeamsSection({
                     alt="URB team image 2"
                     width={1200}
                     height={600}
-                    className="h-[90px] w-full object-contain "
+                    className="h-[220px] w-full object-contain sm:h-[90px]"
                   />
                 </div>
               </div>
