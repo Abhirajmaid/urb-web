@@ -20,9 +20,9 @@ export default function ContactPage() {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<
-    "idle" | "success" | "error"
-  >("idle");
+  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">(
+    "idle"
+  );
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -36,7 +36,6 @@ export default function ContactPage() {
     setIsSubmitting(true);
     setSubmitStatus("idle");
 
-    // Simulate form submission
     try {
       await new Promise((resolve) => setTimeout(resolve, 1000));
       setSubmitStatus("success");
@@ -95,189 +94,184 @@ export default function ContactPage() {
         ]}
       />
 
-      {/* Contact Form & Info Section */}
-      <section className="relative isolate overflow-hidden bg-[#f4f0ee] px-4 sm:px-6 lg:px-20 py-8 sm:py-10 lg:py-12">
-        <div className="bg-white rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.08)] min-h-[800px] sm:min-h-[900px] lg:min-h-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/5 via-transparent to-transparent" />
+      <section className="relative isolate overflow-hidden bg-[#f4f0ee] px-4 py-8 sm:px-6 sm:py-10 lg:px-20 lg:py-12">
+        <div className="mx-auto max-w-7xl">
+          <div className="relative min-h-[800px] overflow-hidden rounded-2xl bg-white shadow-[0_4px_20px_rgba(0,0,0,0.08)] sm:min-h-[900px] lg:min-h-0">
+            <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/5 via-transparent to-transparent" />
 
-          <div className="relative z-10 mx-auto max-w-7xl px-6 py-8 sm:py-10 lg:px-10 xl:px-14 lg:py-12">
-            <div className="mb-6 sm:mb-8 text-center">
-              <SectionHeader
-                eyebrow="CONTACT US"
-                title="Let's start a conversation"
-                description="Fill out the form below or reach out to us directly. We're here to help with your insurance needs and provide the right coverage for you."
-                align="center"
-              />
-            </div>
-
-          <div className="grid gap-8 sm:gap-10 lg:grid-cols-[1.2fr,1fr] lg:gap-16">
-            {/* Contact Form */}
-            <div
-              className="rounded-2xl border border-brand-gray-light/50 bg-white p-5 sm:p-6 lg:p-10 shadow-sm"
-              id="contact-form"
-            >
-              <form onSubmit={handleSubmit} className="space-y-5 sm:space-y-6">
-                <div className="grid gap-5 sm:gap-6 sm:grid-cols-2">
-                  <label className="block space-y-2">
-                    <span className="text-base sm:text-base lg:text-sm font-medium text-brand-dark">
-                      Full Name <span className="text-red-500">*</span>
-                    </span>
-                    <input
-                      type="text"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      required
-                      placeholder="John Doe"
-                      className="w-full rounded-xl border border-brand-gray-light bg-white px-4 py-3.5 sm:py-3 lg:py-3 text-base sm:text-base lg:text-sm text-brand-dark outline-none transition focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20"
-                    />
-                  </label>
-
-                  <label className="block space-y-2">
-                    <span className="text-base sm:text-base lg:text-sm font-medium text-brand-dark">
-                      Email Address <span className="text-red-500">*</span>
-                    </span>
-                    <input
-                      type="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      required
-                      placeholder="john@example.com"
-                      className="w-full rounded-xl border border-brand-gray-light bg-white px-4 py-3.5 sm:py-3 lg:py-3 text-base sm:text-base lg:text-sm text-brand-dark outline-none transition focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20"
-                    />
-                  </label>
-                </div>
-
-                <div className="grid gap-5 sm:gap-6 sm:grid-cols-2">
-                  <label className="block space-y-2">
-                    <span className="text-base sm:text-base lg:text-sm font-medium text-brand-dark">
-                      Company Name
-                    </span>
-                    <input
-                      type="text"
-                      name="company"
-                      value={formData.company}
-                      onChange={handleChange}
-                      placeholder="Company Inc."
-                      className="w-full rounded-xl border border-brand-gray-light bg-white px-4 py-3.5 sm:py-3 lg:py-3 text-base sm:text-base lg:text-sm text-brand-dark outline-none transition focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20"
-                    />
-                  </label>
-
-                  <label className="block space-y-2">
-                    <span className="text-base sm:text-base lg:text-sm font-medium text-brand-dark">
-                      Phone Number
-                    </span>
-                    <input
-                      type="tel"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleChange}
-                      placeholder="+1 (555) 123-4567"
-                      className="w-full rounded-xl border border-brand-gray-light bg-white px-4 py-3.5 sm:py-3 lg:py-3 text-base sm:text-base lg:text-sm text-brand-dark outline-none transition focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20"
-                    />
-                  </label>
-                </div>
-
-                <label className="block space-y-2">
-                  <span className="text-base sm:text-base lg:text-sm font-medium text-brand-dark">
-                    Insurance Inquiry <span className="text-red-500">*</span>
-                  </span>
-                  <textarea
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    rows={6}
-                    placeholder="Tell us about your insurance needs, coverage requirements, and any questions you have..."
-                    className="w-full rounded-xl border border-brand-gray-light bg-white px-4 py-3.5 sm:py-3 lg:py-3 text-base sm:text-base lg:text-sm text-brand-dark outline-none transition focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20 resize-none"
-                  />
-                </label>
-
-                {submitStatus === "success" && (
-                  <div className="rounded-xl bg-green-50 border border-green-200 p-4 sm:p-4 text-sm sm:text-sm lg:text-xs text-green-800">
-                    Thank you! Your message has been sent. We&apos;ll get back
-                    to you soon.
-                  </div>
-                )}
-
-                {submitStatus === "error" && (
-                  <div className="rounded-xl bg-red-50 border border-red-200 p-4 sm:p-4 text-sm sm:text-sm lg:text-xs text-red-800">
-                    Something went wrong. Please try again or contact us
-                    directly.
-                  </div>
-                )}
-
-                <Button
-                  type="primary"
-                  size="lg"
-                  htmlType="submit"
-                  disabled={isSubmitting}
-                  className="w-full uppercase tracking-wide"
-                >
-                  {isSubmitting ? "Sending..." : "Send Message"}
-                </Button>
-              </form>
-            </div>
-
-            {/* Contact Information */}
-            <div className="space-y-5 sm:space-y-6">
-              <div className="rounded-2xl border border-brand-gray-light/50 bg-gradient-to-br from-brand-primary/5 to-transparent p-6 sm:p-6 lg:p-10">
-                <h3 className="mb-5 sm:mb-6 text-xl sm:text-xl lg:text-lg font-semibold text-brand-dark">
-                  Contact Information
-                </h3>
-                <div className="space-y-5 sm:space-y-6">
-                  {contactInfo.map((info) => (
-                    <a
-                      key={info.title}
-                      href={info.link}
-                      className="group flex items-start gap-4 sm:gap-4 transition hover:opacity-80"
-                    >
-                      <div className="flex h-12 w-12 sm:h-12 sm:w-12 lg:h-12 lg:w-12 shrink-0 items-center justify-center rounded-xl bg-brand-primary text-white transition group-hover:scale-110">
-                        <Icon
-                          icon={info.icon}
-                          className="text-xl sm:text-2xl lg:text-lg"
-                        />
-                      </div>
-                      <div>
-                        <h4 className="text-base sm:text-base lg:text-sm font-semibold text-brand-dark">
-                          {info.title}
-                        </h4>
-                        <p className="mt-2 sm:mt-1 text-sm sm:text-sm lg:text-xs text-brand-dark/70">
-                          {info.content}
-                        </p>
-                      </div>
-                    </a>
-                  ))}
-                </div>
+            <div className="relative z-10 mx-auto max-w-7xl px-6 py-8 sm:py-10 lg:px-10 lg:py-12 xl:px-14">
+              <div className="mb-6 text-center sm:mb-8">
+                <SectionHeader
+                  eyebrow="CONTACT US"
+                  title="Let's start a conversation"
+                  description="Fill out the form below or reach out to us directly. We're here to help with your insurance needs and provide the right coverage for you."
+                  align="center"
+                />
               </div>
 
-              <div className="rounded-2xl border border-brand-gray-light/50 bg-white p-6 sm:p-6 lg:p-10">
-                <h3 className="mb-4 sm:mb-4 text-lg sm:text-lg lg:text-base font-semibold text-brand-dark">
-                  Business Hours
-                </h3>
-                <div className="space-y-3 sm:space-y-2 text-sm sm:text-sm lg:text-xs text-brand-dark/70">
-                  <div className="flex justify-between">
-                    <span>Monday - Friday</span>
-                    <span className="font-medium">9:00 AM - 6:00 PM</span>
+              <div className="grid gap-8 sm:gap-10 lg:grid-cols-[1.2fr,1fr] lg:gap-16">
+                <div
+                  className="rounded-2xl border border-brand-gray-light/50 bg-white p-5 shadow-sm sm:p-6 lg:p-10"
+                  id="contact-form"
+                >
+                  <form onSubmit={handleSubmit} className="space-y-5 sm:space-y-6">
+                    <div className="grid gap-5 sm:grid-cols-2 sm:gap-6">
+                      <label className="block space-y-2">
+                        <span className="text-base font-medium text-brand-dark sm:text-base lg:text-sm">
+                          Full Name <span className="text-red-500">*</span>
+                        </span>
+                        <input
+                          type="text"
+                          name="name"
+                          value={formData.name}
+                          onChange={handleChange}
+                          required
+                          placeholder="John Doe"
+                          className="w-full rounded-xl border border-brand-gray-light bg-white px-4 py-3.5 text-base text-brand-dark outline-none transition focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20 sm:py-3 sm:text-base lg:py-3 lg:text-sm"
+                        />
+                      </label>
+                      <label className="block space-y-2">
+                        <span className="text-base font-medium text-brand-dark sm:text-base lg:text-sm">
+                          Email Address <span className="text-red-500">*</span>
+                        </span>
+                        <input
+                          type="email"
+                          name="email"
+                          value={formData.email}
+                          onChange={handleChange}
+                          required
+                          placeholder="john@example.com"
+                          className="w-full rounded-xl border border-brand-gray-light bg-white px-4 py-3.5 text-base text-brand-dark outline-none transition focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20 sm:py-3 sm:text-base lg:py-3 lg:text-sm"
+                        />
+                      </label>
+                    </div>
+
+                    <div className="grid gap-5 sm:grid-cols-2 sm:gap-6">
+                      <label className="block space-y-2">
+                        <span className="text-base font-medium text-brand-dark sm:text-base lg:text-sm">
+                          Company Name
+                        </span>
+                        <input
+                          type="text"
+                          name="company"
+                          value={formData.company}
+                          onChange={handleChange}
+                          placeholder="Company Inc."
+                          className="w-full rounded-xl border border-brand-gray-light bg-white px-4 py-3.5 text-base text-brand-dark outline-none transition focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20 sm:py-3 sm:text-base lg:py-3 lg:text-sm"
+                        />
+                      </label>
+                      <label className="block space-y-2">
+                        <span className="text-base font-medium text-brand-dark sm:text-base lg:text-sm">
+                          Phone Number
+                        </span>
+                        <input
+                          type="tel"
+                          name="phone"
+                          value={formData.phone}
+                          onChange={handleChange}
+                          placeholder="+1 (555) 123-4567"
+                          className="w-full rounded-xl border border-brand-gray-light bg-white px-4 py-3.5 text-base text-brand-dark outline-none transition focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20 sm:py-3 sm:text-base lg:py-3 lg:text-sm"
+                        />
+                      </label>
+                    </div>
+
+                    <label className="block space-y-2">
+                      <span className="text-base font-medium text-brand-dark sm:text-base lg:text-sm">
+                        Insurance Inquiry <span className="text-red-500">*</span>
+                      </span>
+                      <textarea
+                        name="message"
+                        value={formData.message}
+                        onChange={handleChange}
+                        required
+                        rows={6}
+                        placeholder="Tell us about your insurance needs, coverage requirements, and any questions you have..."
+                        className="w-full resize-none rounded-xl border border-brand-gray-light bg-white px-4 py-3.5 text-base text-brand-dark outline-none transition focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20 sm:py-3 sm:text-base lg:py-3 lg:text-sm"
+                      />
+                    </label>
+
+                    {submitStatus === "success" && (
+                      <div className="rounded-xl border border-green-200 bg-green-50 p-4 text-sm text-green-800 sm:p-4 sm:text-sm lg:text-xs">
+                        Thank you! Your message has been sent. We&apos;ll get back
+                        to you soon.
+                      </div>
+                    )}
+                    {submitStatus === "error" && (
+                      <div className="rounded-xl border border-red-200 bg-red-50 p-4 text-sm text-red-800 sm:p-4 sm:text-sm lg:text-xs">
+                        Something went wrong. Please try again or contact us
+                        directly.
+                      </div>
+                    )}
+
+                    <Button
+                      type="primary"
+                      size="lg"
+                      htmlType="submit"
+                      disabled={isSubmitting}
+                      className="w-full uppercase tracking-wide"
+                    >
+                      {isSubmitting ? "Sending..." : "Send Message"}
+                    </Button>
+                  </form>
+                </div>
+
+                <div className="space-y-5 sm:space-y-6">
+                  <div className="rounded-2xl border border-brand-gray-light/50 bg-gradient-to-br from-brand-primary/5 to-transparent p-6 sm:p-6 lg:p-10">
+                    <h3 className="mb-5 text-xl font-semibold text-brand-dark sm:mb-6 sm:text-xl lg:text-lg">
+                      Contact Information
+                    </h3>
+                    <div className="space-y-5 sm:space-y-6">
+                      {contactInfo.map((info) => (
+                        <a
+                          key={info.title}
+                          href={info.link}
+                          className="group flex items-start gap-4 transition hover:opacity-80"
+                        >
+                          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-brand-primary text-white transition group-hover:scale-110">
+                            <Icon
+                              icon={info.icon}
+                              className="text-xl sm:text-2xl lg:text-lg"
+                            />
+                          </div>
+                          <div>
+                            <h4 className="text-base font-semibold text-brand-dark sm:text-base lg:text-sm">
+                              {info.title}
+                            </h4>
+                            <p className="mt-2 text-sm text-brand-dark/70 sm:mt-1 sm:text-sm lg:text-xs">
+                              {info.content}
+                            </p>
+                          </div>
+                        </a>
+                      ))}
+                    </div>
                   </div>
-                  <div className="flex justify-between">
-                    <span>Saturday</span>
-                    <span className="font-medium">10:00 AM - 4:00 PM</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Sunday</span>
-                    <span className="font-medium">Closed</span>
+
+                  <div className="rounded-2xl border border-brand-gray-light/50 bg-white p-6 sm:p-6 lg:p-10">
+                    <h3 className="mb-4 text-lg font-semibold text-brand-dark sm:text-lg lg:text-base">
+                      Business Hours
+                    </h3>
+                    <div className="space-y-3 text-sm text-brand-dark/70 sm:space-y-2 sm:text-sm lg:text-xs">
+                      <div className="flex justify-between">
+                        <span>Monday - Friday</span>
+                        <span className="font-medium">9:00 AM - 6:00 PM</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span>Saturday</span>
+                        <span className="font-medium">10:00 AM - 4:00 PM</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span>Sunday</span>
+                        <span className="font-medium">Closed</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        </div>
       </section>
 
-      {/* FAQ Section */}
       <div className="bg-white">
         <FAQSection />
       </div>

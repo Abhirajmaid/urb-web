@@ -17,7 +17,7 @@ export function FAQSection() {
       className="relative isolate overflow-hidden bg-[#f4f0ee] px-4 sm:px-6 lg:px-20 py-8 sm:py-10 lg:py-12 text-brand-dark"
     >
       <StructuredData data={faqSchema} />
-      <div className="mx-auto max-w-7xl">
+      <div className="mx-auto max-w-9xl">
         <div className="bg-white rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.08)] min-h-[600px] sm:min-h-[650px] lg:min-h-0">
         <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/5 via-transparent to-transparent" />
 

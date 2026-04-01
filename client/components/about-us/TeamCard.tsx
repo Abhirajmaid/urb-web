@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { Icon } from "@iconify/react";
 
 type TeamCardProps = {
   name: string;
@@ -7,8 +6,8 @@ type TeamCardProps = {
   imageSrc: string;
   imageAlt: string;
   bio?: string;
-  email?: string;
-  linkedin?: string;
+  badge?: string;
+  variant?: "founding" | "team";
   className?: string;
 };
 
@@ -18,21 +17,34 @@ export function TeamCard({
   imageSrc,
   imageAlt,
   bio,
-  email,
-  linkedin,
+  badge,
+  variant = "team",
   className,
 }: TeamCardProps) {
+  const isFounding = variant === "founding";
+  const cardBaseClasses =
+    "group relative overflow-hidden rounded-xl sm:rounded-2xl border shadow-sm transition hover:-translate-y-1 hover:shadow-[0_4px_20px_rgba(var(--color-dark-rgb),0.08)]";
+  const cardVariantClasses = isFounding
+    ? "border-[#d7b26b]/50 bg-[#2a1010] p-6 sm:p-8 min-h-[430px]"
+    : "border-brand-gray-light/50 bg-white p-6 sm:p-7 min-h-[280px]";
+
   return (
     <article
-      className={`group relative overflow-hidden rounded-xl sm:rounded-2xl border border-brand-gray-light/50 bg-white p-6 sm:p-8 lg:p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-[0_4px_20px_rgba(var(--color-dark-rgb),0.08)] min-h-[320px] sm:min-h-[350px] lg:min-h-0 ${
-        className ?? ""
-      }`}
+      className={`${cardBaseClasses} ${cardVariantClasses} ${className ?? ""}`}
     >
-      {/* Subtle circular pattern in upper-right */}
-      <div className="absolute right-0 top-0 h-32 w-32 translate-x-8 -translate-y-8 rounded-full bg-brand-primary/5 blur-2xl" />
+      <div
+        className={`absolute right-0 top-0 h-32 w-32 translate-x-8 -translate-y-8 rounded-full blur-2xl ${
+          isFounding ? "bg-[#d7b26b]/20" : "bg-brand-primary/5"
+        }`}
+      />
 
-      {/* Profile Image */}
-      <div className="relative mb-6 sm:mb-6 lg:mb-6 h-36 w-36 sm:h-40 sm:w-40 lg:h-40 lg:w-40 mx-auto overflow-hidden rounded-full border-2 border-brand-primary/20 bg-brand-secondary shadow-lg">
+      <div
+        className={`relative mx-auto mb-5 overflow-hidden rounded-full bg-brand-secondary shadow-lg ${
+          isFounding
+            ? "h-32 w-32 border-4 border-[#d7b26b] sm:h-40 sm:w-40"
+            : "h-32 w-32 border-2 border-brand-primary/20"
+        }`}
+      >
         <Image
           src={imageSrc}
           alt={imageAlt}
@@ -41,47 +53,40 @@ export function TeamCard({
         />
       </div>
 
-      {/* Content */}
-      <div className="relative space-y-4 sm:space-y-3 lg:space-y-3 text-center">
+      <div className="relative space-y-3 text-center">
         <div>
-          <h3 className="text-xl sm:text-xl lg:text-lg font-semibold text-brand-dark">
+          <h3
+            className={`font-semibold ${
+              isFounding ? "text-2xl !text-white" : "text-xl text-brand-dark"
+            }`}
+          >
             {name}
           </h3>
-          <p className="mt-2 sm:mt-1 text-base sm:text-base lg:text-sm font-medium text-brand-primary uppercase tracking-wide">
+          <p
+            className={`mt-2 font-medium tracking-wide ${
+              isFounding
+                ? "text-sm uppercase !text-[#f2ddae]"
+                : "text-sm uppercase text-brand-primary"
+            }`}
+          >
             {role}
           </p>
         </div>
 
-        {bio && (
-          <p className="text-base sm:text-base lg:text-sm leading-relaxed text-brand-dark/70">
-            {bio}
-          </p>
+        {isFounding && badge && (
+          <div className="inline-flex rounded-full border border-[#d7b26b]/60 bg-[#d7b26b]/15 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide !text-[#f7e6bd]">
+            {badge}
+          </div>
         )}
 
-        {/* Social Links */}
-        {(email || linkedin) && (
-          <div className="flex items-center justify-center gap-4 sm:gap-3 lg:gap-3 pt-3 sm:pt-2 lg:pt-2">
-            {email && (
-              <a
-                href={`mailto:${email}`}
-                aria-label={`Email ${name}`}
-                className="flex h-10 w-10 sm:h-9 sm:w-9 lg:h-9 lg:w-9 items-center justify-center rounded-full bg-brand-primary/10 text-brand-primary transition hover:bg-brand-primary hover:text-white"
-              >
-                <Icon icon="mdi:email" className="text-xl sm:text-lg lg:text-lg" />
-              </a>
-            )}
-            {linkedin && (
-              <a
-                href={linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={`${name}'s LinkedIn`}
-                className="flex h-10 w-10 sm:h-9 sm:w-9 lg:h-9 lg:w-9 items-center justify-center rounded-full bg-brand-primary/10 text-brand-primary transition hover:bg-brand-primary hover:text-white"
-              >
-                <Icon icon="mdi:linkedin" className="text-xl sm:text-lg lg:text-lg" />
-              </a>
-            )}
-          </div>
+        {bio && (
+          <p
+            className={`leading-relaxed ${
+              isFounding ? "text-sm !text-white/85" : "text-sm text-brand-dark/70"
+            }`}
+          >
+            {bio}
+          </p>
         )}
       </div>
     </article>
