@@ -81,7 +81,7 @@ export function TeamCard({
 
         {bio && (
           <p
-            className={`leading-relaxed ${
+            className={`whitespace-pre-line leading-relaxed ${
               isFounding ? "text-sm !text-white/85" : "text-sm text-brand-dark/70"
             }`}
           >
