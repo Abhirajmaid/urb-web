@@ -1,6 +1,4 @@
 import { Icon } from "@iconify/react";
-import type { ReactNode } from "react";
-import { SectionHeader } from "@/components/common/SectionHeader";
 import { Service } from "@/data/services";
 import type { InsuranceServiceCard } from "@/data/insuranceServiceCards";
 import {
@@ -16,19 +14,17 @@ type ServicesSectionProps = {
   description?: string;
 };
 
-/* ─── Card ───────────────────────────────────────────────────── */
-
-function ServiceCard({ title, icon, description }: InsuranceServiceCard) {
+function ServiceOfferingCard({ title, icon, description }: InsuranceServiceCard) {
   return (
-    <article className="group flex gap-3 rounded-xl border border-[#e8deda] bg-white px-4 py-4 shadow-[0_2px_10px_rgba(59,29,28,0.06)] transition duration-200 hover:-translate-y-0.5 hover:border-[#c5a9a5] hover:shadow-[0_6px_20px_rgba(59,29,28,0.12)] sm:gap-4 sm:px-5 sm:py-5">
-      <div className="flex h-10 w-10 shrink-0 items-center justify-center self-start rounded-lg bg-[#3b1d1c] text-white sm:h-11 sm:w-11">
-        <Icon icon={icon} className="h-5 w-5 shrink-0" aria-hidden />
+    <article className="flex h-full min-h-[132px] min-w-0 flex-row items-start gap-4 rounded-lg border border-[#eeeeee] bg-white px-5 py-5 sm:min-h-[140px] sm:gap-5 sm:px-6 sm:py-6">
+      <div className="flex h-[52px] w-[52px] shrink-0 items-center justify-center rounded-lg bg-[#4e0708] text-white shadow-sm sm:h-14 sm:w-14">
+        <Icon icon={icon} className="h-[1.375rem] w-[1.375rem] sm:h-7 sm:w-7" aria-hidden />
       </div>
       <div className="min-w-0 flex-1 pt-0.5">
-        <h4 className="text-sm font-semibold leading-snug text-[#3b1d1c] sm:text-base">
+        <h4 className="text-[15px] font-semibold leading-snug tracking-tight text-[#4e0708] sm:text-[17px] sm:leading-snug">
           {title}
         </h4>
-        <p className="mt-1.5 line-clamp-2 text-xs leading-snug text-[#7c6463] sm:text-sm sm:leading-snug">
+        <p className="mt-2 line-clamp-3 text-sm leading-relaxed text-[#5c5652] sm:mt-2.5 sm:text-[15px] sm:leading-relaxed">
           {description}
         </p>
       </div>
@@ -36,101 +32,93 @@ function ServiceCard({ title, icon, description }: InsuranceServiceCard) {
   );
 }
 
-/* ─── Grid ───────────────────────────────────────────────────── */
-
-function ServiceCardsGrid({ items }: { items: InsuranceServiceCard[] }) {
-  return (
-    <div className="grid gap-3 sm:gap-4 sm:grid-cols-2 lg:grid-cols-3">
-      {items.map((s) => (
-        <ServiceCard key={s.title} {...s} />
-      ))}
-    </div>
-  );
-}
-
-/* ─── Group wrapper ──────────────────────────────────────────── */
-
-function ServiceGroup({
+function CategoryBlock({
   number,
   heading,
-  description,
-  children,
+  subtitle,
+  items,
 }: {
   number: string;
   heading: string;
-  description: string;
-  children: ReactNode;
+  subtitle: string;
+  items: InsuranceServiceCard[];
 }) {
   return (
-    <div className="rounded-2xl border border-[#ede4e0] bg-[#faf6f4] overflow-hidden">
-      {/* group header */}
-      <div className="flex items-start gap-4 border-b border-[#ede4e0] bg-white px-6 py-5 sm:px-7 sm:py-6">
-        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#3b1d1c] text-sm font-bold text-white">
-          {number}
-        </span>
-        <div>
-          <h3 className="text-lg sm:text-xl font-semibold text-[#3b1d1c] leading-tight">
-            {heading}
-          </h3>
-          <p className="mt-1 text-sm text-[#7c6463]">{description}</p>
+    <section className="shrink-0 overflow-hidden rounded-xl border border-[#e8e4e0] border-l-4 border-l-[#4e0708] bg-white shadow-[0_2px_14px_rgba(78,7,8,0.06)]">
+      <div className="px-6 py-7 sm:px-8 sm:py-8">
+        <div className="mb-10 flex flex-col gap-4 sm:mb-11 sm:flex-row sm:items-center lg:mb-12">
+          <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#4e0708] text-sm font-bold tabular-nums text-white ring-2 ring-[#e8af3c] ring-offset-2 ring-offset-white sm:h-[52px] sm:w-[52px] sm:text-[0.9375rem]">
+            {number}
+          </span>
+          <div className="min-w-0 flex-1">
+            <h3 className="font-serif text-xl font-bold leading-tight text-[#4e0708] sm:text-[22px]">
+              {heading}
+            </h3>
+            <p className="mt-3 text-[15px] leading-relaxed text-[#6d6762] sm:mt-3.5 sm:text-base">
+              {subtitle}
+            </p>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2  lg:grid-cols-3 ">
+          {items.map((item) => (
+            <ServiceOfferingCard key={item.title} {...item} />
+          ))}
         </div>
       </div>
-      {/* cards */}
-      <div className="px-5 py-5 sm:px-7 sm:py-6">{children}</div>
-    </div>
+    </section>
   );
 }
 
-/* ─── Section ────────────────────────────────────────────────── */
+const DEFAULT_SUBTEXT =
+  "50+ Years of Trusted Experience • Family-Run Legacy • One-Stop Insurance & Financial Solution • In-House CA, Lawyer & CFP • Transparent & Honest Guidance";
 
 export function ServicesSection({
   services: _services,
-  eyebrow = "Services",
+  eyebrow = "SERVICES",
   title = "Explore Our Service Offerings",
-  description = "50+ Years of Trusted Experience • Family-Run Legacy with Strong Values • One-Stop Solution for All Insurance & Financial Needs • In-House Experts – Chartered Accountant, Lawyer & Certified Financial Planner • Personalized Advice Tailored to Your Needs • Transparent & Honest Guidance • Strong Customer Relationships Built on Trust",
+  description = DEFAULT_SUBTEXT,
 }: ServicesSectionProps) {
   return (
-    <section className="relative isolate overflow-hidden bg-[#f4f0ee] px-4 sm:px-6 lg:px-20 py-8 sm:py-10 lg:py-12 text-brand-dark">
-      <div className="mx-auto max-w-7xl">
-        <div className="relative overflow-hidden rounded-2xl border border-[#e8ddda] bg-white shadow-[0_8px_28px_rgba(0,0,0,0.08)]">
-        <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/5 via-transparent to-transparent" />
-
-          <div className="relative z-10 mx-auto max-w-7xl px-6 py-8 sm:py-10 lg:px-10 xl:px-14 lg:py-12">
-          <SectionHeader
-            eyebrow={eyebrow}
-            title={title}
-            description={description}
-          />
-
-          <div className="mt-6 border-t border-[#e9e0dd]" />
-
-            <div className="mt-8 space-y-6">
-              <ServiceGroup
-                number="01"
-                heading="Financial Advisory & Growth Services"
-                description="Additional services to help you plan, manage, and grow your finances with confidence."
-              >
-                <ServiceCardsGrid items={financialAdvisoryServices} />
-              </ServiceGroup>
-
-              <ServiceGroup
-                number="02"
-                heading="Life & Personal Insurance"
-                description="Essential personal coverage plans for life, health, and all-round protection."
-              >
-                <ServiceCardsGrid items={lifePersonalInsuranceServices} />
-              </ServiceGroup>
-
-              <ServiceGroup
-                number="03"
-                heading="General Insurance (Non-Life)"
-                description="Protection for your assets, property, travel, and business needs."
-              >
-                <ServiceCardsGrid items={generalInsuranceServices} />
-              </ServiceGroup>
+    <section className="relative isolate overflow-x-hidden bg-[#F5F3F0] text-brand-dark">
+      <div className="h-1.5 w-full bg-[#4e0708]" aria-hidden />
+      <div className="px-4 pb-12 pt-14 sm:px-6 sm:pb-14 sm:pt-16 lg:px-20 lg:pb-16 lg:pt-20">
+        <div className="mx-auto max-w-7xl">
+        <header className="text-center">
+          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#4e0708] sm:text-[0.8125rem]">
+            {eyebrow}
+          </p>
+          <h2 className="mt-4 font-serif text-2xl font-bold leading-tight text-[#4e0708] sm:mt-5 sm:text-3xl lg:text-[2.125rem] lg:leading-snug">
+            {title}
+          </h2>
+          <div className="mx-auto mt-6 max-w-5xl border-t border-[#cfc7bf] pt-6 sm:mt-7 sm:pt-7">
+            <p className="text-center text-sm leading-relaxed text-[#6d6762] sm:text-[15px] sm:leading-relaxed">
+              {description}
+            </p>
           </div>
+        </header>
+
+        <div className="mt-12 flex flex-col gap-12 sm:mt-14 sm:gap-4">
+          <CategoryBlock
+            number="01"
+            heading="Financial Advisory & Growth Services"
+            subtitle="Additional services to help you plan, manage, and grow your finances with confidence."
+            items={financialAdvisoryServices}
+          />
+          <CategoryBlock
+            number="02"
+            heading="Life & Personal Insurance"
+            subtitle="Essential personal coverage plans for life, health, and all-round protection."
+            items={lifePersonalInsuranceServices}
+          />
+          <CategoryBlock
+            number="03"
+            heading="General Insurance (Non-Life)"
+            subtitle="Protection for your assets, property, travel, business, and community premises — including specialist cover for temples and sacred sites."
+            items={generalInsuranceServices}
+          />
         </div>
-      </div>
+        </div>
       </div>
     </section>
   );

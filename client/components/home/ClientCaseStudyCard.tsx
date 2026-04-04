@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import { Icon } from "@iconify/react";
 
 type ClientCaseStudyCardProps = {
@@ -27,7 +26,6 @@ export function ClientCaseStudyCard({
   className,
 }: ClientCaseStudyCardProps) {
   const featuredImage = images[0];
-  const thumbnails = images.slice(1, 5);
 
   return (
     <div
@@ -67,46 +65,16 @@ export function ClientCaseStudyCard({
           )}
         </div>
 
-        <p className="flex-1 text-sm leading-relaxed text-[#6f5655] line-clamp-4">
+        <p className="flex-1 text-sm sm:text-[15px] leading-relaxed text-[#6f5655]">
           {description}
         </p>
 
-        {/* Thumbnail strip */}
-        {thumbnails.length > 0 && (
-          <div className="mt-4 flex gap-2 overflow-hidden rounded-lg">
-            {thumbnails.slice(0, 3).map((img, idx) => (
-              <div
-                key={idx}
-                className="relative h-14 w-20 shrink-0 overflow-hidden rounded-md bg-[#ebe2df]"
-              >
-                <Image
-                  src={img.src}
-                  alt={img.alt}
-                  fill
-                  sizes="80px"
-                  className="object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-              </div>
-            ))}
+        {projectLocation && (
+          <div className="mt-5 flex items-center gap-2 border-t border-[#e9e0dd] pt-4 text-sm text-[#6f5655]">
+            <Icon icon="solar:map-point-bold" className="size-4 shrink-0 text-[#8a6a6a]" />
+            <span>{projectLocation}</span>
           </div>
         )}
-
-        {/* Footer: Location + CTA */}
-        <div className="mt-4 flex items-center justify-between gap-3 border-t border-[#e9e0dd] pt-4">
-          {projectLocation && (
-            <div className="flex items-center gap-2 text-sm text-[#6f5655]">
-              <Icon icon="solar:map-point-bold" className="size-4 shrink-0 text-[#8a6a6a]" />
-              <span>{projectLocation}</span>
-            </div>
-          )}
-          <Link
-            href="/contact"
-            className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#4e0708] transition hover:gap-2 hover:text-[#3b1d1c]"
-          >
-            Learn more
-            <Icon icon="solar:arrow-right-linear" className="size-4" />
-          </Link>
-        </div>
       </div>
     </div>
   );

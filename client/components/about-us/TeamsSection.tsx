@@ -28,14 +28,6 @@ const foundingMembers: TeamMember[] = [
     bio: "The backbone of URB Insurance — a tycoon who builds businesses and shapes people. His leadership reflects power, precision, and purpose, holding the entire team together while standing strong through every challenge. Ritesh Jain defines what it means to lead from the front.",
   },
   {
-    name: "Tanvi Ritesh Jain",
-    role: "BBI Graduate | Certified Financial Planner (CFP) Specialist",
-    imageSrc: "/images/ritul.jpeg",
-    imageAlt: "Tanvi Ritesh Jain",
-    badge: "👑 Lead — Insurance & Financial Planning",
-    bio: "A certified financial planning specialist with deep insurance expertise, Tanvi brings precision and purpose to every client solution — dedicated to building secure futures with excellence.",
-  },
-  {
     name: "Ugamraj Jain",
     role: "Founder, URB Insurance",
     imageSrc: "/images/ugamraj.jpeg",
@@ -52,20 +44,28 @@ const foundingMembers: TeamMember[] = [
     bio: "A cornerstone of URB Insurance — deep industry insight and clarity in every client conversation, simplifying complex insurance into strategies clients can trust.",
   },
   {
-    name: "Kalpesh Chajjed",
-    role: "Operations Head, URB Insurance",
-    imageSrc: "/images/kalpesh.jpeg",
-    imageAlt: "Kalpesh Chajjed",
-    badge: "⚙️ Operations Leadership",
-    bio: "As the Operations Head at URB Insurance, Kalpesh Chajjed ensures the seamless functioning of day-to-day operations. With strong leadership and an eye for detail, he plays a key role in maintaining efficiency, streamlining processes, and supporting the team’s overall performance.",
+    name: "Tanvi Ritesh Jain",
+    role: "BBI Graduate | Certified Financial Planner (CFP) Specialist",
+    imageSrc: "/images/ritul.jpeg",
+    imageAlt: "Tanvi Ritesh Jain",
+    badge: "✨ Insurance & Finance Expert",
+    bio: "A certified financial planning specialist with deep insurance expertise, Tanvi brings precision and purpose to every client solution — dedicated to building secure futures with excellence.",
   },
   {
     name: "Ujjwal Punmiya",
     role: "Chartered Accountant & Lawyer",
     imageSrc: "/images/ujjawal.jpeg",
     imageAlt: "Ujjwal Punmiya",
-    badge: "⚖️ CA, Tax & Legal Counsel",
+    badge: "⚖️ Financial & Legal Expert",
     bio: "Chartered Accountant and Lawyer — financial rigor and legal precision for compliance, accuracy, and sound decision-making across URB Insurance.",
+  },
+  {
+    name: "Kalpesh Chajjed",
+    role: "Operations Head, URB Insurance",
+    imageSrc: "/images/kalpesh.jpeg",
+    imageAlt: "Kalpesh Chajjed",
+    badge: "⚙️ Operations Leadership",
+    bio: "As the Operations Head at URB Insurance, Kalpesh Chajjed ensures the seamless functioning of day-to-day operations. With strong leadership and an eye for detail, he plays a key role in maintaining efficiency, streamlining processes, and supporting the team’s overall performance.",
   },
 ];
 
@@ -156,7 +156,7 @@ export function TeamsSection({
             <p className="mb-5 text-center text-md font-semibold uppercase tracking-[0.28em] text-brand-primary">
               Founding Team
             </p>
-            <div className="grid gap-5 sm:grid-cols-2">
+            <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
               {foundingMembers.map((member) => (
                 <TeamCard key={member.name} {...member} variant="founding" />
               ))}

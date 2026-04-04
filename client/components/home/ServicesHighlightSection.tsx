@@ -5,7 +5,7 @@ import { homeServicesHighlight } from "@/data/insuranceServiceCards";
 
 export function ServicesHighlightSection() {
   return (
-    <section className="relative isolate overflow-hidden bg-linear-to-br from-brand-primary/5 via-transparent to-transparent px-4 sm:px-6 lg:px-20 pt-6 sm:pt-8 lg:pt-10 pb-6 sm:pb-8 text-brand-dark">
+    <section className="relative isolate overflow-hidden bg-linear-to-br from-brand-primary/5 via-transparent to-transparent px-4 sm:px-6 lg:px-20 pt-4 sm:pt-6 lg:pt-8 pb-6 sm:pb-8 text-brand-dark">
       <div className="mx-auto max-w-7xl">
         <div className="relative bg-white rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.08)]">
           <div className="absolute inset-0 rounded-2xl bg-linear-to-br from-brand-primary/5 via-transparent to-transparent" />

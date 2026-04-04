@@ -1,4 +1,4 @@
-/** Short blurbs — kept to ~1–2 lines in the UI for scannable cards */
+/** Card copy for services listings (icon = Iconify name, mdi line icons). */
 
 export type InsuranceServiceCard = {
   title: string;
@@ -50,19 +50,19 @@ export const financialAdvisoryServices: InsuranceServiceCard[] = [
     title: "Business & Personal Financial Advisory",
     icon: "mdi:briefcase-outline",
     description:
-      "Align cash flow, insurance, and investments with your business stage—documented reviews, no product noise.",
+      "A disciplined weave of cash flow, protection, and investments around the stage your business is in — measured reviews, no product clutter.",
   },
   {
     title: "Complete Protection Planning",
     icon: "mdi:shield-star-outline",
     description:
-      "One map for life, health, liability, and assets—no gaps or overlaps; priorities when the budget is tight.",
+      "One elegant map across life, health, liability, and assets: gaps closed deliberately, overlap removed, priorities clear when budgets tighten.",
   },
   {
     title: "Smart Financial Growth Strategy",
     icon: "mdi:trending-up",
     description:
-      "Mutual funds and deposits matched to risk and horizon; insurance stays the safety net beneath growth.",
+      "Mutual funds and deposits calibrated to risk and horizon; insurance remains the quiet foundation beneath every growth decision.",
   },
 ];
 
@@ -71,19 +71,19 @@ export const lifePersonalInsuranceServices: InsuranceServiceCard[] = [
     title: "Life Insurance",
     icon: "mdi:heart-pulse",
     description:
-      "Protection or savings-linked cover for income, loans, and legacy—with clear nomination and claim guidance.",
+      "Pure protection or savings-led structures shaped around income continuity, borrowings, and the legacy you mean to leave.",
   },
   {
     title: "Health Insurance",
     icon: "mdi:hospital-box-outline",
     description:
-      "Individual or floater plans with sensible room rent and co-pay; networks checked before you buy.",
+      "Individual and floater designs with prudent room-rent limits, co-pay choices, and networks vetted before you sign.",
   },
   {
     title: "General Insurance",
     icon: "mdi:bank-outline",
     description:
-      "Property, liability, and commercial non-life under one advisory—wordings and renewals coordinated together.",
+      "Property, liability, and commercial non-life counsel in one relationship — wordings, renewals, and endorsements kept in step.",
   },
 ];
 
@@ -92,54 +92,60 @@ export const generalInsuranceServices: InsuranceServiceCard[] = [
     title: "Motor Insurance (Car & Bike)",
     icon: "mdi:car-outline",
     description:
-      "Comprehensive or third-party with add-ons for how you drive; IDV, NCB, and claims explained upfront.",
+      "Own-damage and liability tuned to how you actually drive; IDV, NCB, and add-ons chosen for merit — not factory defaults.",
   },
   {
     title: "Home Insurance",
     icon: "mdi:home-outline",
     description:
-      "Building, contents, or landlord cover—extensions added only where they matter; claims checklists provided.",
+      "Dwelling, contents, and landlord programmes anchored to reinstatement reality; extensions only where exposure justifies the premium.",
   },
   {
     title: "Shop & Business Insurance",
-    icon: "mdi:office-building-outline",
+    icon: "mdi:storefront-outline",
     description:
-      "Fire, burglary, money, and liability packs for retail and offices—stock sums kept realistic.",
+      "Fire, burglary, money-in-transit, and liability woven for retail and office risk — sums insured that respect real stock and footfall.",
   },
   {
     title: "Mutual Fund Investments",
     icon: "mdi:chart-line",
     description:
-      "Goal-based SIPs and KYC in one place; risk labels keep equity and debt weights sensible.",
+      "SIPs and allocations framed by life goals, transparent risk labels, and a KYC estate that stays expedition-ready.",
   },
   {
     title: "Financial Planning & Wealth Management",
     icon: "mdi:wallet-outline",
     description:
-      "Retirement and education goals turned into numbers; insurance fills gaps before markets do the rest.",
+      "Goals expressed in numbers and stress-tested; protection is secured before wealth scales, so shocks never force a distressed exit.",
   },
   {
     title: "Marine Insurance",
     icon: "mdi:anchor",
     description:
-      "Cargo and inland transit with ICC terms and surveys clarified before goods move.",
+      "Cargo and inland transit with ICC language and survey protocol explained before the first shipment moves — clarity at the loading bay.",
   },
   {
     title: "Travel Insurance",
     icon: "mdi:airplane",
     description:
-      "Medical and trip risks for domestic or overseas travel—limits set for visa rules and age where needed.",
+      "Medical, cancellation, and baggage limits matched to itinerary, age, and embassy rules — disclosures done right for overseas peace of mind.",
   },
   {
     title: "Tax Planning Services",
-    icon: "mdi:file-document-edit-outline",
+    icon: "mdi:clipboard-text-outline",
     description:
-      "Salary, business, and capital-gains angles coordinated with your investments and insurance.",
+      "Salary, enterprise, and capital-gains thinking coordinated with your investment and insurance architecture — efficient, compliant, understated.",
+  },
+  {
+    title: "Temple & Sacred Place Insurance",
+    icon: "mdi:church",
+    description:
+      "Trustee-grade programmes: structure, precious metals, theft and burglary (terror where the policy permits), fidelity, and sacred cash flows including hundis.",
   },
   {
     title: "General Insurance Solutions",
-    icon: "mdi:shield-check-outline",
+    icon: "mdi:shield-lock-outline",
     description:
-      "Bundled non-life for SMEs—one renewal calendar and consistent deductibles across policies.",
+      "Multi-policy non-life for ambitious SMEs — harmonised renewals, deductibles, and valuations from a single, senior point of care.",
   },
 ];

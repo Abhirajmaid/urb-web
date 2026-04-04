@@ -182,7 +182,7 @@ export function TestimonialsSection() {
   }, []);
 
   return (
-    <section className="relative isolate overflow-hidden bg-linear-to-br from-brand-primary/5 via-transparent to-transparent px-4 sm:px-6 lg:px-20 py-8 sm:py-10 lg:py-12 text-brand-dark">
+    <section className="relative isolate overflow-hidden bg-linear-to-br from-brand-primary/5 via-transparent to-transparent px-4 sm:px-6 lg:px-20 pt-6 sm:pt-8 lg:pt-10 pb-8 sm:pb-10 lg:pb-12 text-brand-dark">
       <StructuredData data={reviewSchema} />
       <div className="mx-auto max-w-7xl">
         <div className="relative bg-white rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.08)]">
