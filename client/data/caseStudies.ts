@@ -1,5 +1,3 @@
-import { SITE_IMAGES } from "./siteImages";
-
 export type CaseStudy = {
   clientLogo: string;
   clientLogoAlt: string;
@@ -92,8 +90,8 @@ export const caseStudies: CaseStudy[] = [
     category: "SME",
     images: [
       {
-        src: SITE_IMAGES.caseStudies.extra1,
-        alt: "Professional insurance advisory meeting at URB office",
+        src: "/images/texttile.jpg",
+        alt: "Textile production setup for Heritage Textiles Collective",
       },
     ],
   },
@@ -109,8 +107,8 @@ export const caseStudies: CaseStudy[] = [
     category: "Professional",
     images: [
       {
-        src: SITE_IMAGES.caseStudies.extra2,
-        alt: "Modern office interior where URB supports professional clients",
+        src: "/images/doc.jpg",
+        alt: "Doctor with stethoscope representing Dr. Meera Iyer",
       },
     ],
   },

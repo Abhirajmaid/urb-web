@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 type TeamCardProps = {
   name: string;
   role: string;
@@ -41,15 +39,15 @@ export function TeamCard({
       <div
         className={`relative mx-auto mb-5 overflow-hidden rounded-full bg-brand-secondary shadow-lg ${
           isFounding
-            ? "h-32 w-32 border-4 border-[#d7b26b] sm:h-40 sm:w-40"
+            ? "h-36 w-36 border-4 border-[#d7b26b] sm:h-40 sm:w-40"
             : "h-32 w-32 border-2 border-brand-primary/20"
         }`}
       >
-        <Image
+        <img
           src={imageSrc}
           alt={imageAlt}
-          fill
-          className="object-cover transition-transform duration-300 group-hover:scale-110"
+          className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
+          loading="lazy"
         />
       </div>
 

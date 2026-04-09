@@ -36,12 +36,12 @@ const foundingMembers: TeamMember[] = [
     bio: "The founding force behind URB Insurance with over 50 years in the industry — his vision, integrity, and client relationships built the trusted foundation and values that define us today.",
   },
   {
-    name: "Bharat Punmiya",
-    role: "A Pillar of Expertise at URB Insurance",
-    imageSrc: "/images/bharat.jpeg",
-    imageAlt: "Bharat Punmiya",
-    badge: "🏛️ Core Leadership",
-    bio: "A cornerstone of URB Insurance — deep industry insight and clarity in every client conversation, simplifying complex insurance into strategies clients can trust.",
+    name: "Kalpesh Chajjed",
+    role: "Operations Head, URB Insurance",
+    imageSrc: "/images/kalpesh.jpeg",
+    imageAlt: "Kalpesh Chajjed",
+    badge: "⚙️ Operations Leadership",
+    bio: "As the Operations Head at URB Insurance, Kalpesh Chajjed ensures the seamless functioning of day-to-day operations. With strong leadership and an eye for detail, he plays a key role in maintaining efficiency, streamlining processes, and supporting the team’s overall performance.",
   },
   {
     name: "Tanvi Ritesh Jain",
@@ -60,12 +60,12 @@ const foundingMembers: TeamMember[] = [
     bio: "Chartered Accountant and Lawyer — financial rigor and legal precision for compliance, accuracy, and sound decision-making across URB Insurance.",
   },
   {
-    name: "Kalpesh Chajjed",
-    role: "Operations Head, URB Insurance",
-    imageSrc: "/images/kalpesh.jpeg",
-    imageAlt: "Kalpesh Chajjed",
-    badge: "⚙️ Operations Leadership",
-    bio: "As the Operations Head at URB Insurance, Kalpesh Chajjed ensures the seamless functioning of day-to-day operations. With strong leadership and an eye for detail, he plays a key role in maintaining efficiency, streamlining processes, and supporting the team’s overall performance.",
+    name: "Bharat Punmiya",
+    role: "A Pillar of Expertise at URB Insurance",
+    imageSrc: "/images/bharat.jpeg",
+    imageAlt: "Bharat Punmiya",
+    badge: "🏛️ Core Leadership",
+    bio: "A cornerstone of URB Insurance — deep industry insight and clarity in every client conversation, simplifying complex insurance into strategies clients can trust.",
   },
 ];
 

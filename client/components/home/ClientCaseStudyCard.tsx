@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Icon } from "@iconify/react";
 
 type ClientCaseStudyCardProps = {
@@ -36,12 +35,11 @@ export function ClientCaseStudyCard({
       {/* Featured Image */}
       <div className="relative aspect-[16/10] w-full shrink-0 overflow-hidden bg-[#ebe2df]">
         {featuredImage && (
-          <Image
+          <img
             src={featuredImage.src}
             alt={featuredImage.alt}
-            fill
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+            className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+            loading="lazy"
           />
         )}
         <div className="absolute inset-0 bg-linear-to-t from-black/40 via-transparent to-transparent" />
