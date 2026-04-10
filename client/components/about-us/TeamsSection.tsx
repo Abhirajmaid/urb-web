@@ -36,12 +36,12 @@ const foundingMembers: TeamMember[] = [
     bio: "The founding force behind URB Insurance with over 50 years in the industry — his vision, integrity, and client relationships built the trusted foundation and values that define us today.",
   },
   {
-    name: "Kalpesh Chajjed",
-    role: "Operations Head, URB Insurance",
-    imageSrc: "/images/kalpesh.jpeg",
-    imageAlt: "Kalpesh Chajjed",
-    badge: "⚙️ Operations Leadership",
-    bio: "As the Operations Head at URB Insurance, Kalpesh Chajjed ensures the seamless functioning of day-to-day operations. With strong leadership and an eye for detail, he plays a key role in maintaining efficiency, streamlining processes, and supporting the team’s overall performance.",
+    name: "Bharat Punmiya",
+    role: "A Pillar of Expertise at URB Insurance",
+    imageSrc: "/images/bharat.jpeg",
+    imageAlt: "Bharat Punmiya",
+    badge: "🏛️ Core Leadership",
+    bio: "A cornerstone of URB Insurance — deep industry insight and clarity in every client conversation, simplifying complex insurance into strategies clients can trust.",
   },
   {
     name: "Tanvi Ritesh Jain",
@@ -52,20 +52,20 @@ const foundingMembers: TeamMember[] = [
     bio: "A certified financial planning specialist with deep insurance expertise, Tanvi brings precision and purpose to every client solution — dedicated to building secure futures with excellence.",
   },
   {
+    name: "Kalpesh Chajjed",
+    role: "Operations Head, URB Insurance",
+    imageSrc: "/images/kalpesh.jpeg",
+    imageAlt: "Kalpesh Chajjed",
+    badge: "⚙️ Operations Leadership",
+    bio: "As the Operations Head at URB Insurance, Kalpesh Chajjed ensures the seamless functioning of day-to-day operations. With strong leadership and an eye for detail, he plays a key role in maintaining efficiency, streamlining processes, and supporting the team’s overall performance.",
+  },
+  {
     name: "Ujjwal Punmiya",
     role: "Chartered Accountant & Lawyer",
     imageSrc: "/images/ujjawal.jpeg",
     imageAlt: "Ujjwal Punmiya",
     badge: "⚖️ Financial & Legal Expert",
     bio: "Chartered Accountant and Lawyer — financial rigor and legal precision for compliance, accuracy, and sound decision-making across URB Insurance.",
-  },
-  {
-    name: "Bharat Punmiya",
-    role: "A Pillar of Expertise at URB Insurance",
-    imageSrc: "/images/bharat.jpeg",
-    imageAlt: "Bharat Punmiya",
-    badge: "🏛️ Core Leadership",
-    bio: "A cornerstone of URB Insurance — deep industry insight and clarity in every client conversation, simplifying complex insurance into strategies clients can trust.",
   },
 ];
 
@@ -156,7 +156,7 @@ export function TeamsSection({
             <p className="mb-5 text-center text-md font-semibold uppercase tracking-[0.28em] text-brand-primary">
               Founding Team
             </p>
-            <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+            <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
               {foundingMembers.map((member) => (
                 <TeamCard key={member.name} {...member} variant="founding" />
               ))}

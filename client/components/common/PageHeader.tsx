@@ -20,11 +20,11 @@ export function PageHeader({
 }: PageHeaderProps) {
   return (
     <section
-      className="relative overflow-hidden bg-white px-2 sm:px-3 lg:px-4 pt-0 pb-8 sm:pb-10 lg:pb-12"
+      className="relative overflow-hidden bg-white px-2 sm:px-3 lg:px-4 pt-8 pb-8 sm:pb-10 lg:pb-12"
       data-hero-root
     >
-      <div className="mx-auto">
-        <div className="relative mt-2 sm:mt-8 lg:mt-12 rounded-2xl overflow-hidden min-h-[400px] md:min-h-[80vh] flex items-center justify-center">
+      <div className="mx-auto w-full">
+        <div className="relative mt-2 w-full rounded-2xl sm:mt-8 lg:mt-12 overflow-hidden min-h-[400px] md:min-h-[80vh] flex items-center justify-center">
           <Image
             src={backgroundImage}
             alt={backgroundImageAlt}

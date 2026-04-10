@@ -141,7 +141,8 @@ export function Navbar() {
           </nav>
         </div>
       </header>
-      <div className="h-[56px] sm:h-[60px] lg:h-[88px]" aria-hidden />
+      {/* Match fixed header (~50px content + border); tighter than 56px to remove stray strip before hero on mobile */}
+      <div className="h-[52px] lg:h-[88px]" aria-hidden />
     </>
   );
 }
