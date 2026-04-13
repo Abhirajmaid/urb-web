@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { PageHeader } from "@/components/common/PageHeader";
 import { Footer } from "@/components/common/Footer";
 // import { PartnersSection } from "@/components/common/PartnersSection";
+import { AboutIntroSection } from "@/components/about-us/AboutIntroSection";
 import { PurposeSection } from "@/components/about-us/PurposeSection";
 import { ServiceCTASection } from "@/components/common/ServiceCTASection";
 import { StorySection } from "@/components/about-us/StorySection";
@@ -60,6 +61,8 @@ export default function AboutUsPage() {
         title="Experience innovative architecture that transforms your"
         highlightedText="vision into reality."
       /> */}
+
+      <AboutIntroSection />
 
       <PurposeSection pillars={purposePillars} />
 

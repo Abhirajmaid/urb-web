@@ -5,37 +5,38 @@ const missionVisionPurpose = [
     number: "01",
     title: "Our Mission",
     description:
-      "To deliver exceptional construction and infrastructure solutions that exceed client expectations through innovation, quality craftsmanship, and unwavering commitment to excellence.",
+      "To be the partner families and businesses turn to with confidence—earning trust through honesty, continuity, and advice that puts your long-term interests first, generation after generation.",
   },
   {
     number: "02",
-    title: "Our Vision",
+    title: "Our Legacy",
     description:
-      "To become a leading and most trusted financial and insurance service provider by delivering reliable, transparent, and complete solutions under one roof while continuing our legacy of excellence for generations to come.",
+      "Founded on 5th February 1976, URB Insurance began as a small LIC initiative by our grandfather. Over five decades, it has grown into a full-service insurance and financial advisory firm — built on trust, family values, and an unwavering commitment to our clients.",
   },
   {
     number: "03",
     title: "Our Purpose",
     description:
-      "Focused on creativity and precision, we turn ideas into lasting designs that harmonize aesthetic brilliance with structural integrity.",
+      "To give you one place for insurance, investments, and planning—life, health, motor, business, and beyond—with our in-house Chartered Accountant, Lawyer, and CFP working together so your choices stay clear, compliant, and suited to your goals.",
   },
 ];
 
 export function MissionVisionSection() {
   return (
-    <section className="relative isolate overflow-hidden text-brand-dark px-4 sm:px-6 lg:px-20 py-10 sm:py-10 lg:py-12">
+    <section className="relative isolate mt-4 overflow-hidden text-brand-dark px-4 py-10 sm:mt-4 sm:px-6 sm:py-10 lg:px-20 lg:py-12">
       <div className="mx-auto max-w-7xl">
         <div className="bg-white rounded-2xl shadow-[0_4px_20px_rgba(var(--color-dark-rgb),0.08)]">
           {/* Top left gradient with primary color */}
           <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/5 via-transparent to-transparent" />
 
           <div className="relative z-10 mx-auto max-w-7xl px-4 py-9 sm:px-6 sm:py-10 lg:px-10 xl:px-14 lg:py-12">
-            <div className="mb-6 sm:mb-8">
+            <div className="mb-6 mt-2 sm:mb-8 sm:mt-4">
               <SectionHeader
                 eyebrow="OUR FOUNDATION"
                 title="Mission, Vision & Purpose"
                 description="The core principles that guide our work and define our commitment to excellence."
                 align="center"
+                verticalSpacing="space-y-4 sm:space-y-5"
                 eyebrowClassName="text-primary"
                 titleClassName="text-brand-dark text-[1.9rem] leading-tight sm:text-4xl"
                 descriptionClassName="text-brand-dark/75 text-base sm:text-lg max-w-2xl mx-auto"

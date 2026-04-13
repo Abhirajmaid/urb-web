@@ -71,8 +71,59 @@
   }
 }
 
+/* Subtle pulse ring for floating WhatsApp CTA */
+@keyframes whatsapp-float-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.45;
+  }
+  50% {
+    transform: scale(1.12);
+    opacity: 0.12;
+  }
+}
+
+@keyframes whatsapp-icon-nudge {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+}
+
+/* Green glow pulse on the floating button (WhatsApp #25D366) */
+@keyframes whatsapp-float-glow {
+  0%,
+  100% {
+    box-shadow:
+      0 4px 14px rgba(0, 0, 0, 0.18),
+      0 0 0 0 rgba(37, 211, 102, 0.55);
+  }
+  50% {
+    box-shadow:
+      0 6px 22px rgba(0, 0, 0, 0.2),
+      0 0 0 14px rgba(37, 211, 102, 0);
+  }
+}
+
 /* Component Styles */
 @layer components {
+  .whatsapp-float-glow {
+    animation: whatsapp-float-glow 2.4s ease-in-out infinite;
+  }
+
+  .whatsapp-float-pulse {
+    animation: whatsapp-float-pulse 2.8s ease-in-out infinite;
+  }
+
+  .whatsapp-float-icon {
+    animation: whatsapp-icon-nudge 2.5s ease-in-out infinite;
+  }
+
+  /* Portaled to body — fixed positioning + z-index not affected by parent layout */
   /* Line clamp utilities */
   .line-clamp-1 {
     overflow: hidden;
@@ -415,4 +466,30 @@
 .table-fixed td {
   word-wrap: break-word;
   overflow-wrap: break-word;
+}
+
+/*
+  WhatsApp floating CTA — plain CSS (not inside @layer) so Tailwind cascade
+  cannot override position/z-index. Max z-index keeps it above all UI.
+*/
+a#whatsapp-floating-cta {
+  position: fixed;
+  z-index: 2147483647;
+  right: 24px;
+  bottom: calc(24px + 4.5rem);
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #25d366;
+  border-radius: 9999px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+  pointer-events: auto;
+}
+
+@media (min-width: 1024px) {
+  a#whatsapp-floating-cta {
+    bottom: 24px;
+  }
 }

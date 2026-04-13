@@ -59,14 +59,17 @@ export const purposePillars = [
 ];
 
 export const contactDetails = {
-  phoneTel1: "9004162157",
-  phoneTel2: "9821311710",
-  /** Formatted contact line */
-  contactPhoneDisplay: "+91 90041 62157",
-  contactPhoneTel: "+919004162157",
-  email: "Riteshjain.lic@gmail.com",
-  address:
-    "Tanvi 108 regal industrial estates acharya dongde marg sewree naka opp white magic store Mumbai 400015 sewree Maharashtra",
+  /** Formatted display (single line for footer) */
+  phoneDisplayLine: "+91 90041 62157 / +91 98213 11710",
+  phoneTelHref1: "+919004162157",
+  phoneTelHref2: "+919821311710",
+  whatsappHref: "https://wa.me/919004162157",
+  email: "riteshjain.lic@gmail.com",
+  address: `TANVI, 108 REGAL INDUSTRIAL ESTATES,
+ACHARYA DONGDE MARG, SEWREE NAKA,
+OPP. WHITE MAGIC STORE,
+SEWREE, MUMBAI – 400015,
+MAHARASHTRA`,
   copyrightYear: 2026,
   designerCredit: "pruit",
 };

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { PageHeader } from "@/components/common/PageHeader";
 import { ConnectMarquee } from "@/components/common/ConnectMarquee";
 import { ServicesSection } from "@/components/services/ServicesSection";
+import { TaglineVisionSection } from "@/components/services/TaglineVisionSection";
 import { ServiceCTASection } from "@/components/common/ServiceCTASection";
 import { Footer } from "@/components/common/Footer";
 import { FAQSection } from "@/components/common/FAQSection";
@@ -52,6 +53,7 @@ export default function ServicesPage() {
       />
       <ConnectMarquee />
       <ServicesSection services={services} />
+      <TaglineVisionSection />
       <div className="bg-white">
         <FAQSection />
       </div>

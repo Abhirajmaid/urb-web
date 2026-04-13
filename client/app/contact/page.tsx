@@ -1,278 +1,98 @@
-"use client";
-
-import { useState } from "react";
-import { Icon } from "@iconify/react";
 import { PageHeader } from "@/components/common/PageHeader";
-import { SectionHeader } from "@/components/common/SectionHeader";
-import { FAQSection } from "@/components/common/FAQSection";
 import { Footer } from "@/components/common/Footer";
-import Button from "@/components/common/Button";
-import { SITE_IMAGES } from "@/data/siteImages";
-import { ClientExperienceStrip } from "@/components/common/OfficeVisualSections";
+import { EmailGlyph, WhatsAppGlyph } from "@/components/icons/ContactGlyphIcons";
+import { contactDetails } from "@/data/aboutUs";
+
+const WHATSAPP_URL = "https://wa.me/919004162157";
+const WHATSAPP_DISPLAY = "+91 90041 62157";
+const EMAIL = "riteshjain.lic@gmail.com";
+
+/** Same outlined CTA style for both cards (matches email button look). */
+const contactCtaClassName =
+  "inline-flex w-full min-h-[48px] shrink-0 items-center justify-center rounded-xl border-2 border-brand-primary bg-white px-4 py-3.5 text-sm font-semibold uppercase tracking-wide text-brand-primary transition hover:bg-brand-primary/[0.06]";
+
+const iconTileClassName =
+  "mb-5 flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-brand-primary text-white shadow-sm";
+
+const cardTitleClassName = "text-lg font-semibold leading-snug text-brand-dark";
+const primaryLineClassName =
+  "text-lg font-medium leading-snug text-brand-dark/90 break-words";
+const secondaryLineClassName = "text-sm leading-normal text-brand-dark/65";
 
 export default function ContactPage() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    company: "",
-    phone: "",
-    message: "",
-  });
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">(
-    "idle"
-  );
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitStatus("idle");
-
-    try {
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      setSubmitStatus("success");
-      setFormData({ name: "", email: "", company: "", phone: "", message: "" });
-    } catch {
-      setSubmitStatus("error");
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
-  const contactInfo = [
-    {
-      icon: "mdi:map-marker",
-      title: "Address",
-      content: "Insurance Plaza, Financial District, City 12345",
-      link: "#",
-    },
-    {
-      icon: "mdi:phone",
-      title: "Phone",
-      content: "+1 (555) 123-4567",
-      link: "tel:+15551234567",
-    },
-    {
-      icon: "mdi:email",
-      title: "Email",
-      content: "info@urbinsurance.com",
-      link: "mailto:info@urbinsurance.com",
-    },
-  ];
-
   return (
     <main className="text-[#031B4E]">
       <PageHeader
         title="Contact Us"
-        description="Ready to protect your future? Let's discuss your insurance needs and explore how we can provide comprehensive coverage and peace of mind."
+        description="Reach out for insurance and financial guidance — we respond quickly on WhatsApp and email."
         backgroundImage="/contact.jpg"
         backgroundImageAlt="Contact hero background"
         showButton={false}
       />
 
-      <ClientExperienceStrip
-        eyebrow="CLIENT EXPERIENCE"
-        title="Visit us—or start the conversation online"
-        description="Whether you walk in for a review or reach out digitally, you get the same careful attention: clear answers, honest timelines, and guidance that respects your priorities."
-        images={[
-          {
-            src: SITE_IMAGES.office[5],
-            alt: "URB Insurance office—comfortable client meeting environment",
-          },
-          {
-            src: SITE_IMAGES.office[6],
-            alt: "Professional setting for insurance consultations at URB",
-          },
-        ]}
-      />
+      <section className="relative isolate bg-[#f4f0ee] px-4 py-12 sm:px-6 sm:py-16 lg:px-20 lg:py-20">
+        <div className="mx-auto max-w-4xl">
+          <div className="text-center">
+            <h2 className="text-3xl font-semibold tracking-tight text-brand-dark sm:text-4xl">
+              Get In Touch
+            </h2>
+            <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-brand-dark/75 sm:text-lg">
+              We&apos;re here to help. Reach out to us on WhatsApp or drop us an
+              email — we&apos;ll get back to you promptly.
+            </p>
+          </div>
 
-      <section className="relative isolate overflow-hidden bg-[#f4f0ee] px-4 py-8 sm:px-6 sm:py-10 lg:px-20 lg:py-12">
-        <div className="mx-auto max-w-7xl">
-          <div className="relative min-h-[800px] overflow-hidden rounded-2xl bg-white shadow-[0_4px_20px_rgba(0,0,0,0.08)] sm:min-h-[900px] lg:min-h-0">
-            <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/5 via-transparent to-transparent" />
-
-            <div className="relative z-10 mx-auto max-w-7xl px-6 py-8 sm:py-10 lg:px-10 lg:py-12 xl:px-14">
-              <div className="mb-6 text-center sm:mb-8">
-                <SectionHeader
-                  eyebrow="CONTACT US"
-                  title="Let's start a conversation"
-                  description="Fill out the form below or reach out to us directly. We're here to help with your insurance needs and provide the right coverage for you."
-                  align="center"
-                />
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 sm:items-stretch sm:gap-8">
+            <div className="flex h-full min-h-[20rem] flex-col rounded-2xl border border-brand-gray-light/60 bg-white p-8 shadow-sm">
+              <div className={iconTileClassName}>
+                <WhatsAppGlyph className="h-8 w-8" />
               </div>
-
-              <div className="grid gap-8 sm:gap-10 lg:grid-cols-[1.2fr,1fr] lg:gap-16">
-                <div
-                  className="rounded-2xl border border-brand-gray-light/50 bg-white p-5 shadow-sm sm:p-6 lg:p-10"
-                  id="contact-form"
+              <p className={cardTitleClassName}>Chat with Us on WhatsApp</p>
+              <div className="mt-3 flex min-h-0 flex-1 flex-col">
+                <div className="space-y-2">
+                  <p className={primaryLineClassName}>{WHATSAPP_DISPLAY}</p>
+                  
+                </div>
+                <div className="min-h-0 flex-1" aria-hidden />
+                <a
+                  href={WHATSAPP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`${contactCtaClassName} mt-8`}
                 >
-                  <form onSubmit={handleSubmit} className="space-y-5 sm:space-y-6">
-                    <div className="grid gap-5 sm:grid-cols-2 sm:gap-6">
-                      <label className="block space-y-2">
-                        <span className="text-base font-medium text-brand-dark sm:text-base lg:text-sm">
-                          Full Name <span className="text-red-500">*</span>
-                        </span>
-                        <input
-                          type="text"
-                          name="name"
-                          value={formData.name}
-                          onChange={handleChange}
-                          required
-                          placeholder="John Doe"
-                          className="w-full rounded-xl border border-brand-gray-light bg-white px-4 py-3.5 text-base text-brand-dark outline-none transition focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20 sm:py-3 sm:text-base lg:py-3 lg:text-sm"
-                        />
-                      </label>
-                      <label className="block space-y-2">
-                        <span className="text-base font-medium text-brand-dark sm:text-base lg:text-sm">
-                          Email Address <span className="text-red-500">*</span>
-                        </span>
-                        <input
-                          type="email"
-                          name="email"
-                          value={formData.email}
-                          onChange={handleChange}
-                          required
-                          placeholder="john@example.com"
-                          className="w-full rounded-xl border border-brand-gray-light bg-white px-4 py-3.5 text-base text-brand-dark outline-none transition focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20 sm:py-3 sm:text-base lg:py-3 lg:text-sm"
-                        />
-                      </label>
-                    </div>
+                  Open WhatsApp
+                </a>
+              </div>
+            </div>
 
-                    <div className="grid gap-5 sm:grid-cols-2 sm:gap-6">
-                      <label className="block space-y-2">
-                        <span className="text-base font-medium text-brand-dark sm:text-base lg:text-sm">
-                          Company Name
-                        </span>
-                        <input
-                          type="text"
-                          name="company"
-                          value={formData.company}
-                          onChange={handleChange}
-                          placeholder="Company Inc."
-                          className="w-full rounded-xl border border-brand-gray-light bg-white px-4 py-3.5 text-base text-brand-dark outline-none transition focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20 sm:py-3 sm:text-base lg:py-3 lg:text-sm"
-                        />
-                      </label>
-                      <label className="block space-y-2">
-                        <span className="text-base font-medium text-brand-dark sm:text-base lg:text-sm">
-                          Phone Number
-                        </span>
-                        <input
-                          type="tel"
-                          name="phone"
-                          value={formData.phone}
-                          onChange={handleChange}
-                          placeholder="+1 (555) 123-4567"
-                          className="w-full rounded-xl border border-brand-gray-light bg-white px-4 py-3.5 text-base text-brand-dark outline-none transition focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20 sm:py-3 sm:text-base lg:py-3 lg:text-sm"
-                        />
-                      </label>
-                    </div>
-
-                    <label className="block space-y-2">
-                      <span className="text-base font-medium text-brand-dark sm:text-base lg:text-sm">
-                        Insurance Inquiry <span className="text-red-500">*</span>
-                      </span>
-                      <textarea
-                        name="message"
-                        value={formData.message}
-                        onChange={handleChange}
-                        required
-                        rows={6}
-                        placeholder="Tell us about your insurance needs, coverage requirements, and any questions you have..."
-                        className="w-full resize-none rounded-xl border border-brand-gray-light bg-white px-4 py-3.5 text-base text-brand-dark outline-none transition focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20 sm:py-3 sm:text-base lg:py-3 lg:text-sm"
-                      />
-                    </label>
-
-                    {submitStatus === "success" && (
-                      <div className="rounded-xl border border-green-200 bg-green-50 p-4 text-sm text-green-800 sm:p-4 sm:text-sm lg:text-xs">
-                        Thank you! Your message has been sent. We&apos;ll get back
-                        to you soon.
-                      </div>
-                    )}
-                    {submitStatus === "error" && (
-                      <div className="rounded-xl border border-red-200 bg-red-50 p-4 text-sm text-red-800 sm:p-4 sm:text-sm lg:text-xs">
-                        Something went wrong. Please try again or contact us
-                        directly.
-                      </div>
-                    )}
-
-                    <Button
-                      type="primary"
-                      size="lg"
-                      htmlType="submit"
-                      disabled={isSubmitting}
-                      className="w-full uppercase tracking-wide"
-                    >
-                      {isSubmitting ? "Sending..." : "Send Message"}
-                    </Button>
-                  </form>
+            <div className="flex h-full min-h-[20rem] flex-col rounded-2xl border border-brand-gray-light/60 bg-white p-8 shadow-sm">
+              <div className={iconTileClassName}>
+                <EmailGlyph className="h-8 w-8" />
+              </div>
+              <p className={cardTitleClassName}>Send Us an Email</p>
+              <div className="mt-3 flex min-h-0 flex-1 flex-col">
+                <div className="space-y-2">
+                  <p className={`${primaryLineClassName} break-all`}>{EMAIL}</p>
+                  
                 </div>
-
-                <div className="space-y-5 sm:space-y-6">
-                  <div className="rounded-2xl border border-brand-gray-light/50 bg-gradient-to-br from-brand-primary/5 to-transparent p-6 sm:p-6 lg:p-10">
-                    <h3 className="mb-5 text-xl font-semibold text-brand-dark sm:mb-6 sm:text-xl lg:text-lg">
-                      Contact Information
-                    </h3>
-                    <div className="space-y-5 sm:space-y-6">
-                      {contactInfo.map((info) => (
-                        <a
-                          key={info.title}
-                          href={info.link}
-                          className="group flex items-start gap-4 transition hover:opacity-80"
-                        >
-                          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-brand-primary text-white transition group-hover:scale-110">
-                            <Icon
-                              icon={info.icon}
-                              className="text-xl sm:text-2xl lg:text-lg"
-                            />
-                          </div>
-                          <div>
-                            <h4 className="text-base font-semibold text-brand-dark sm:text-base lg:text-sm">
-                              {info.title}
-                            </h4>
-                            <p className="mt-2 text-sm text-brand-dark/70 sm:mt-1 sm:text-sm lg:text-xs">
-                              {info.content}
-                            </p>
-                          </div>
-                        </a>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="rounded-2xl border border-brand-gray-light/50 bg-white p-6 sm:p-6 lg:p-10">
-                    <h3 className="mb-4 text-lg font-semibold text-brand-dark sm:text-lg lg:text-base">
-                      Business Hours
-                    </h3>
-                    <div className="space-y-3 text-sm text-brand-dark/70 sm:space-y-2 sm:text-sm lg:text-xs">
-                      <div className="flex justify-between gap-4">
-                        <span>Mon–Sat</span>
-                        <span className="shrink-0 font-medium text-right">
-                          10:30 AM - 6:00 PM
-                        </span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span>Sunday</span>
-                        <span className="font-medium">Holiday</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <div className="min-h-0 flex-1" aria-hidden />
+                <a href={`mailto:${EMAIL}`} className={`${contactCtaClassName} mt-8`}>
+                  Send Email
+                </a>
               </div>
             </div>
           </div>
+
+          <div className="mt-10 rounded-2xl border border-brand-gray-light/60 bg-white p-8 shadow-sm sm:p-10">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-primary">
+              OUR OFFICE
+            </p>
+            <address className="mt-4 whitespace-pre-line text-base leading-relaxed not-italic text-brand-dark/90">
+              {contactDetails.address}
+            </address>
+          </div>
         </div>
       </section>
-
-      <div className="bg-white">
-        <FAQSection />
-      </div>
 
       <Footer />
     </main>

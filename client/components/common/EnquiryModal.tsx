@@ -86,7 +86,7 @@ export function EnquiryModal({ isOpen, onClose }: EnquiryModalProps) {
 
   return (
     <div
-      className="fixed inset-0 z-[9999] flex items-center justify-center p-4"
+      className="fixed inset-0 z-[10000] flex items-center justify-center p-4"
       onClick={handleOverlayClick}
     >
       {/* Backdrop */}

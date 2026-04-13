@@ -92,25 +92,17 @@ export function Footer() {
                 <address className="mt-6 space-y-2 not-italic text-base leading-relaxed text-white">
                   <p>
                     <a
-                      href={`tel:${contactDetails.phoneTel1}`}
+                      href={`tel:${contactDetails.phoneTelHref1}`}
                       className="transition hover:text-white/80"
                     >
-                      {contactDetails.phoneTel1}
+                      +91 90041 62157
                     </a>
                     {" / "}
                     <a
-                      href={`tel:${contactDetails.phoneTel2}`}
+                      href={`tel:${contactDetails.phoneTelHref2}`}
                       className="transition hover:text-white/80"
                     >
-                      {contactDetails.phoneTel2}
-                    </a>
-                  </p>
-                  <p>
-                    <a
-                      href={`tel:${contactDetails.contactPhoneTel}`}
-                      className="transition hover:text-white/80"
-                    >
-                      {contactDetails.contactPhoneDisplay}
+                      +91 98213 11710
                     </a>
                   </p>
                   <p>
@@ -121,7 +113,9 @@ export function Footer() {
                       {contactDetails.email}
                     </a>
                   </p>
-                  <p className="max-w-sm">{contactDetails.address}</p>
+                  <p className="max-w-sm whitespace-pre-line">
+                    {contactDetails.address}
+                  </p>
                 </address>
               </div>
 

@@ -3,6 +3,7 @@ import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/common/Navbar";
 import { BottomNavbar } from "@/components/common/BottomNavbar";
+import { WhatsAppFloatingButton } from "@/components/common/WhatsAppFloatingButton";
 import { EnquiryModalProvider } from "@/contexts/EnquiryModalContext";
 import {
   organizationSchema,
@@ -113,6 +114,7 @@ export default function RootLayout({
           {children}
           <BottomNavbar />
         </EnquiryModalProvider>
+        <WhatsAppFloatingButton />
       </body>
     </html>
   );

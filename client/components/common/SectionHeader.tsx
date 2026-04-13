@@ -4,6 +4,8 @@ type SectionHeaderProps = {
   description?: string;
   align?: "left" | "center" | "right";
   className?: string;
+  /** Tailwind `space-y-*` stack between eyebrow, title, and description (default: tight) */
+  verticalSpacing?: string;
   eyebrowClassName?: string;
   titleClassName?: string;
   descriptionClassName?: string;
@@ -22,6 +24,7 @@ export function SectionHeader({
   description,
   align = "left",
   className,
+  verticalSpacing,
   eyebrowClassName,
   titleClassName,
   descriptionClassName,
@@ -33,7 +36,9 @@ export function SectionHeader({
         ? "items-end text-right"
         : "items-start text-left";
 
-  const gapClass = eyebrow ? "space-y-3 sm:space-y-2" : "space-y-4 sm:space-y-3";
+  const gapClass =
+    verticalSpacing ??
+    (eyebrow ? "space-y-3 sm:space-y-2" : "space-y-4 sm:space-y-3");
 
   return (
     <div
