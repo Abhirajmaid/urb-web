@@ -5,7 +5,6 @@ import { ServicesSection } from "@/components/services/ServicesSection";
 import { TaglineVisionSection } from "@/components/services/TaglineVisionSection";
 import { ServiceCTASection } from "@/components/common/ServiceCTASection";
 import { Footer } from "@/components/common/Footer";
-import { FAQSection } from "@/components/common/FAQSection";
 import { services } from "@/data/services";
 
 export const metadata: Metadata = {
@@ -54,9 +53,6 @@ export default function ServicesPage() {
       <ConnectMarquee />
       <ServicesSection services={services} />
       <TaglineVisionSection />
-      <div className="bg-white">
-        <FAQSection />
-      </div>
 
       <div className="bg-white">
         <ServiceCTASection />

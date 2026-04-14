@@ -9,7 +9,7 @@ const missionVisionPurpose = [
   },
   {
     number: "02",
-    title: "Our Legacy",
+    title: "Our Vision",
     description:
       "Founded on 5th February 1976, URB Insurance began as a small LIC initiative by our grandfather. Over five decades, it has grown into a full-service insurance and financial advisory firm — built on trust, family values, and an unwavering commitment to our clients.",
   },

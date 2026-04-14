@@ -135,7 +135,7 @@ export function Navbar() {
                 size="sm"
                 className="shrink-0 uppercase tracking-[0.12em]"
               >
-                Claim Assistance
+                Contact us
               </Button>
             </div>
           </nav>
