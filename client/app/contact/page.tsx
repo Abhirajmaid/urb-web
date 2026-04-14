@@ -6,6 +6,9 @@ import { contactDetails } from "@/data/aboutUs";
 const WHATSAPP_URL = "https://wa.me/919004162157";
 const WHATSAPP_DISPLAY = "+91 90041 62157";
 const EMAIL = "riteshjain.lic@gmail.com";
+const MAP_QUERY = contactDetails.address.replace(/\n/g, ", ");
+const GOOGLE_MAPS_EMBED_URL = `https://maps.google.com/maps?hl=en&q=${encodeURIComponent(MAP_QUERY)}&t=&z=15&ie=UTF8&iwloc=B&output=embed`;
+const GOOGLE_MAPS_DIRECTIONS_URL = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(contactDetails.address.replace(/\n/g, ", "))}`;
 
 /** Same outlined CTA style for both cards (matches email button look). */
 const contactCtaClassName =
@@ -90,6 +93,23 @@ export default function ContactPage() {
             <address className="mt-4 whitespace-pre-line text-base leading-relaxed not-italic text-brand-dark/90">
               {contactDetails.address}
             </address>
+            <div className="mt-6 overflow-hidden rounded-xl border border-brand-gray-light/70">
+              <iframe
+                title="URB Office Location on Google Maps"
+                src={GOOGLE_MAPS_EMBED_URL}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="h-[280px] w-full sm:h-[340px]"
+              />
+            </div>
+            <a
+              href={GOOGLE_MAPS_DIRECTIONS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`${contactCtaClassName} mt-6`}
+            >
+              Get Directions
+            </a>
           </div>
         </div>
       </section>
