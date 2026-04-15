@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     images: ["/aboutus.jpg"],
   },
   alternates: {
-    canonical: "https://www.urbinsurance.co.in/AboutPage",
+    canonical: "https://urbinsurance.com/about-us",
   },
 };
 

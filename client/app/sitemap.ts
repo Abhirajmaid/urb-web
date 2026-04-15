@@ -4,8 +4,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://urbinsurance.com";
   const currentDate = new Date();
 
-  // Static pages
-  const staticPages = [
+  return [
     {
       url: baseUrl,
       lastModified: currentDate,
@@ -31,24 +30,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/projects`,
-      lastModified: currentDate,
-      changeFrequency: "weekly" as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/aggregates`,
-      lastModified: currentDate,
-      changeFrequency: "weekly" as const,
-      priority: 0.7,
-    },
-    {
       url: `${baseUrl}/case-studies`,
       lastModified: currentDate,
       changeFrequency: "weekly" as const,
       priority: 0.8,
     },
   ];
-
-  return staticPages;
 }

@@ -12,14 +12,14 @@ export const siteConfig = {
   ogImage: "https://urbinsurance.com/images/hero.jpg",
   logo: "https://urbinsurance.com/URB-logo.png",
   twitterHandle: "@urbinsurance",
-  email: "info@urbinsurance.com",
-  phone: "+1-XXX-XXX-XXXX",
+  email: "riteshjain.lic@gmail.com",
+  phone: "+91-9004162157",
   address: {
-    street: "Insurance Plaza, Financial District",
-    city: "City",
-    state: "State",
-    zip: "12345",
-    country: "United States",
+    street: "TANVI, 108 REGAL INDUSTRIAL ESTATES, ACHARYA DONGDE MARG, SEWREE NAKA, OPP. WHITE MAGIC STORE, SEWREE",
+    city: "Mumbai",
+    state: "Maharashtra",
+    zip: "400015",
+    country: "India",
   },
 };
 
