@@ -24,7 +24,7 @@ export function BottomNavbar() {
       </div>
 
       {/* Navigation Items */}
-      <div className="relative z-10 grid grid-cols-5 items-center px-1 py-3">
+      <div className="relative z-10 grid grid-cols-5 items-start px-1 py-3">
         {navLinks.map((link) => {
           const isActive = pathname === link.href || (link.href !== "/" && pathname?.startsWith(link.href));
           
@@ -32,7 +32,7 @@ export function BottomNavbar() {
             <Link
               key={link.href}
               href={link.href}
-              className={`relative flex flex-col items-center justify-center gap-1 rounded-xl px-1 py-2 transition-all duration-200 ${
+              className={`relative flex min-h-[64px] flex-col items-center justify-start gap-1 rounded-xl px-1 py-2 transition-all duration-200 ${
                 isActive
                   ? "text-brand-primary scale-110"
                   : "text-brand-dark/60 hover:text-brand-dark"
@@ -48,7 +48,7 @@ export function BottomNavbar() {
               <span
                 className={`text-xs font-medium transition-all duration-200 ${
                   isActive ? "opacity-100" : "opacity-70"
-                }`}
+                } text-center leading-tight`}
               >
                 {link.label}
               </span>

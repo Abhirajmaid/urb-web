@@ -95,14 +95,16 @@ export default function ContactPage() {
                 <address className="mt-4 whitespace-pre-line text-base leading-relaxed not-italic text-brand-dark/90">
                   {contactDetails.address}
                 </address>
-                <a
-                  href={GOOGLE_MAPS_DIRECTIONS_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`${contactCtaClassName} mt-6 md:mt-auto`}
-                >
-                  Get Directions
-                </a>
+                <div className="mt-6 flex justify-center">
+                  <a
+                    href={GOOGLE_MAPS_DIRECTIONS_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`${contactCtaClassName} w-full sm:w-auto sm:min-w-[220px]`}
+                  >
+                    Get Directions
+                  </a>
+                </div>
               </div>
 
               <div className="overflow-hidden rounded-xl border border-brand-gray-light/70">
