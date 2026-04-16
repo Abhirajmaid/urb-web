@@ -87,29 +87,34 @@ export default function ContactPage() {
           </div>
 
           <div className="mt-10 rounded-2xl border border-brand-gray-light/60 bg-white p-8 shadow-sm sm:p-10">
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-primary">
-              OUR OFFICE
-            </p>
-            <address className="mt-4 whitespace-pre-line text-base leading-relaxed not-italic text-brand-dark/90">
-              {contactDetails.address}
-            </address>
-            <div className="mt-6 overflow-hidden rounded-xl border border-brand-gray-light/70">
-              <iframe
-                title="URB Office Location on Google Maps"
-                src={GOOGLE_MAPS_EMBED_URL}
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                className="h-[280px] w-full sm:h-[340px]"
-              />
+            <div className="grid gap-8 md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.6fr)] md:items-start">
+              <div className="flex h-full flex-col">
+                <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-primary">
+                  OUR OFFICE
+                </p>
+                <address className="mt-4 whitespace-pre-line text-base leading-relaxed not-italic text-brand-dark/90">
+                  {contactDetails.address}
+                </address>
+                <a
+                  href={GOOGLE_MAPS_DIRECTIONS_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`${contactCtaClassName} mt-6 md:mt-auto`}
+                >
+                  Get Directions
+                </a>
+              </div>
+
+              <div className="overflow-hidden rounded-xl border border-brand-gray-light/70">
+                <iframe
+                  title="URB Office Location on Google Maps"
+                  src={GOOGLE_MAPS_EMBED_URL}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="h-[280px] w-full sm:h-[340px] md:h-full md:min-h-[360px]"
+                />
+              </div>
             </div>
-            <a
-              href={GOOGLE_MAPS_DIRECTIONS_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`${contactCtaClassName} mt-6`}
-            >
-              Get Directions
-            </a>
           </div>
         </div>
       </section>

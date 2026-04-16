@@ -27,10 +27,10 @@ export function HeroSection() {
             priority
             quality={85}
             sizes="100vw"
-            className="object-cover object-center"
+            className="object-cover object-[72%_center] sm:object-[68%_center] lg:object-center"
           />
           <div
-            className="absolute inset-0 bg-linear-to-r from-black/70 via-black/50 to-black/30"
+            className="absolute inset-0 bg-linear-to-r from-black/58 via-black/28 to-white/6 sm:from-black/52 sm:via-black/22 sm:to-white/8 lg:from-black/46 lg:via-black/16 lg:to-white/12"
             aria-hidden
           />
           <div className="absolute inset-0 z-10 flex flex-col justify-between">
