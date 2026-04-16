@@ -27,10 +27,14 @@ export function HeroSection() {
             priority
             quality={85}
             sizes="100vw"
-            className="object-cover object-[72%_center] sm:object-[68%_center] lg:object-center"
+            className="object-cover object-[82%_center] sm:object-[72%_center] lg:object-center"
           />
           <div
             className="absolute inset-0 bg-linear-to-r from-black/58 via-black/28 to-white/6 sm:from-black/52 sm:via-black/22 sm:to-white/8 lg:from-black/46 lg:via-black/16 lg:to-white/12"
+            aria-hidden
+          />
+          <div
+            className="absolute inset-x-0 bottom-0 h-[34%] bg-linear-to-t from-black/46 via-black/18 to-transparent sm:h-[28%] sm:from-black/34 sm:via-black/10"
             aria-hidden
           />
           <div className="absolute inset-0 z-10 flex flex-col justify-between">
@@ -73,12 +77,12 @@ export function HeroSection() {
             </div>
 
             <div className="shrink-0 px-4 sm:px-6 lg:px-10 xl:px-14 pb-5 sm:pb-6 lg:pb-8 max-w-7xl mx-auto w-full">
-              <div className="rounded-2xl  p-4 sm:p-5 lg:p-6">
+              <div className="rounded-2xl bg-black/12 p-4 backdrop-blur-[2px] sm:bg-transparent sm:p-5 lg:p-6">
                 <div className="grid grid-cols-2 gap-4 sm:grid-cols-4 sm:gap-6">
                   {stats.map((stat, index) => (
                     <div
                       key={index}
-                      className="rounded-xl  px-4 py-4 sm:px-5 sm:py-6 text-center"
+                      className="rounded-xl px-4 py-4 text-center sm:px-5 sm:py-6"
                     >
                       <div className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-white mb-2 sm:mb-2">
                         {stat.value}
