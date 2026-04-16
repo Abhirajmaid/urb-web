@@ -6,9 +6,9 @@ export const organizationSchema = {
   name: "URB Insurance",
   description:
     "URB Insurance — trusted wealth creation and insurance advisory since 1976. We provide personalised financial planning, investment products and insurance solutions with transparency and technology-first access.",
-  url: "https://www.urbinsurance.co.in",
-  logo: "https://www.urbinsurance.co.in/URB-logo.png",
-  image: "https://www.urbinsurance.co.in/images/hero.jpg",
+  url: "https://urbinsurance.com",
+  logo: "https://urbinsurance.com/URB-logo.png",
+  image: "https://urbinsurance.com/images/hero.jpg",
   telephone: "+91-9773113511",
   email: "punmiya.bharat@gmail.com",
   address: {
@@ -38,17 +38,9 @@ export const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   name: "URB Insurance",
-  url: "https://www.urbinsurance.co.in",
+  url: "https://urbinsurance.com",
   description:
     "URB Insurance — wealth creation, financial planning and insurance advisory. Access client dashboards, certified advisors and transparent reporting.",
-  potentialAction: {
-    "@type": "SearchAction",
-    target: {
-      "@type": "EntryPoint",
-      urlTemplate: "https://www.urbinsurance.co.in/search?q={search_term_string}",
-    },
-    "query-input": "required name=search_term_string",
-  },
 };
 
 export const createBreadcrumbSchema = (
@@ -80,7 +72,7 @@ export const createServiceSchema = (service: {
   url: service.url,
   areaServed: {
     "@type": "Country",
-    name: "United States",
+    name: "India",
   },
 });
 

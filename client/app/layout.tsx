@@ -54,14 +54,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://www.urbinsurance.co.in",
+    url: "https://urbinsurance.com",
     siteName: "URB Insurance",
     title: "URB Insurance - Leading Insurance Company",
     description:
       "Premier insurance company specializing in comprehensive insurance solutions, risk management, and innovative coverage options.",
     images: [
       {
-        url: "/images/hero.jpg",
+        url: "/images/aboutus.jpg",
         width: 1200,
         height: 630,
         alt: "URB Insurance - Insurance Company",
@@ -73,14 +73,14 @@ export const metadata: Metadata = {
     title: "URB Insurance - Leading Insurance Company",
     description:
       "Premier insurance company specializing in comprehensive insurance solutions and innovative coverage options.",
-    images: ["/images/hero.jpg"],
+    images: ["/images/aboutus.jpg"],
     creator: "@urbinsurance",
   },
   alternates: {
-    canonical: "https://www.urbinsurance.co.in",
+    canonical: "https://urbinsurance.com",
   },
   category: "Insurance",
-  metadataBase: new URL("https://www.urbinsurance.co.in"),
+  metadataBase: new URL("https://urbinsurance.com"),
 };
 
 export default function RootLayout({
