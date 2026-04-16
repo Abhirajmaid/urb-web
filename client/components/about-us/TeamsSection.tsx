@@ -67,6 +67,14 @@ const foundingMembers: TeamMember[] = [
     badge: "⚖️ Financial & Legal Expert",
     bio: "Chartered Accountant and Lawyer — financial rigor and legal precision for compliance, accuracy, and sound decision-making across URB Insurance.",
   },
+  {
+    name: "Bhavika Punmiya",
+    role: "Mutual Fund Operations Head",
+    imageSrc: "/images/bhavika.png",
+    imageAlt: "Bhavika Punmiya",
+    badge: "📈 Mutual Fund Operations",
+    bio: "Bhavika Punmiya leads mutual fund operations with care, accuracy, and consistency. She helps keep investment processes smooth and well-coordinated, ensuring clients and internal teams receive timely support, reliable execution, and day-to-day operational clarity.",
+  },
 ];
 
 const defaultTeamMembers: TeamMember[] = [

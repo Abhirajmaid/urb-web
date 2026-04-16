@@ -9,6 +9,7 @@ const navLinks = [
   { label: "Services", href: "/services", icon: "mdi:briefcase" },
   { label: "Case Studies", href: "/case-studies", icon: "mdi:folder-open-outline" },
   { label: "About", href: "/about-us", icon: "mdi:information" },
+  { label: "Contact Us", href: "/contact", icon: "mdi:phone" },
 ];
 
 export function BottomNavbar() {
@@ -23,7 +24,7 @@ export function BottomNavbar() {
       </div>
 
       {/* Navigation Items */}
-      <div className="relative z-10 flex items-center justify-around px-2 py-3">
+      <div className="relative z-10 grid grid-cols-5 items-center px-1 py-3">
         {navLinks.map((link) => {
           const isActive = pathname === link.href || (link.href !== "/" && pathname?.startsWith(link.href));
           
@@ -31,7 +32,7 @@ export function BottomNavbar() {
             <Link
               key={link.href}
               href={link.href}
-              className={`flex flex-col items-center justify-center gap-1 px-3 py-2 rounded-xl transition-all duration-200 ${
+              className={`relative flex flex-col items-center justify-center gap-1 rounded-xl px-1 py-2 transition-all duration-200 ${
                 isActive
                   ? "text-brand-primary scale-110"
                   : "text-brand-dark/60 hover:text-brand-dark"

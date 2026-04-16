@@ -21,8 +21,8 @@ export function HeroSection() {
       <div className="w-full mx-auto flex-1 flex flex-col min-h-0">
         <div className="relative flex-1 w-full mt-2 sm:mt-8 lg:mt-12 rounded-2xl overflow-hidden min-h-[min(92vh,920px)] sm:min-h-[min(94vh,960px)]">
           <Image
-            src="/images/hero1.jpg"
-            alt="Insurance protection"
+            src="/images/clock%20urb.png"
+            alt="URB insurance clock display"
             fill
             priority
             quality={85}

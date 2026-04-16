@@ -34,7 +34,7 @@ export default function ContactPage() {
       />
 
       <section className="relative isolate bg-[#f4f0ee] px-4 py-12 sm:px-6 sm:py-16 lg:px-20 lg:py-20">
-        <div className="mx-auto max-w-4xl">
+        <div className="mx-auto max-w-7xl">
           <div className="text-center">
             <h2 className="text-3xl font-semibold tracking-tight text-brand-dark sm:text-4xl">
               Get In Touch
