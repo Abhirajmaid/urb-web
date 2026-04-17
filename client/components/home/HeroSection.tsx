@@ -58,7 +58,7 @@ export function HeroSection() {
                   </Link>
                 </div>
                 </div>
-                <div className="relative h-full min-h-[320px] sm:min-h-[420px] overflow-hidden rounded-[1.25rem]">
+                <div className="relative h-full min-h-[320px] sm:min-h-[420px] overflow-hidden rounded-[1.25rem] bg-white/95">
                   <Image
                     src="/images/clock%20urb.png"
                     alt="URB insurance clock display"
@@ -66,7 +66,7 @@ export function HeroSection() {
                     priority
                     quality={85}
                     sizes="(max-width: 1024px) 45vw, 42vw"
-                    className="object-cover object-[70%_center] lg:object-center"
+                    className="object-contain object-center"
                   />
                 </div>
               </div>
