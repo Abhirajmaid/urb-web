@@ -90,14 +90,14 @@ export default function ContactPage() {
 
           <div className="mt-10 rounded-2xl border border-brand-gray-light/60 bg-white p-6 shadow-sm sm:p-8">
             <div className="grid gap-6 md:grid-cols-[minmax(0,0.95fr)_minmax(0,1.55fr)] md:items-stretch">
-              <div className="flex h-full flex-col justify-between">
+              <div className="flex h-full flex-col">
                 <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-primary">
                   OUR OFFICE
                 </p>
-                <address className="mt-4 whitespace-pre-line text-base leading-relaxed not-italic text-brand-dark/90">
+                <address className="mt-3 whitespace-pre-line text-base leading-relaxed not-italic text-brand-dark/90">
                   {contactDetails.address}
                 </address>
-                <div className="mt-1 w-full">
+                <div className="mt-3 w-full">
                   <a
                     href={GOOGLE_MAPS_DIRECTIONS_URL}
                     target="_blank"
