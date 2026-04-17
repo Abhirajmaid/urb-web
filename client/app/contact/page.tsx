@@ -97,12 +97,12 @@ export default function ContactPage() {
                 <address className="mt-4 whitespace-pre-line text-base leading-relaxed not-italic text-brand-dark/90">
                   {contactDetails.address}
                 </address>
-                <div className="mt-4 w-full">
+                <div className="mt-3 w-full">
                   <a
                     href={GOOGLE_MAPS_DIRECTIONS_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`${officeDirectionsCtaClassName} w-full`}
+                    className={`${officeDirectionsCtaClassName} w-full sm:w-auto sm:min-w-[220px] sm:px-6`}
                   >
                     Get Directions
                   </a>
