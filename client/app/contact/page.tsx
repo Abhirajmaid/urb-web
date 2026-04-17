@@ -97,7 +97,7 @@ export default function ContactPage() {
                 <address className="mt-4 whitespace-pre-line text-base leading-relaxed not-italic text-brand-dark/90">
                   {contactDetails.address}
                 </address>
-                <div className="mt-3 w-full">
+                <div className="mt-1 w-full">
                   <a
                     href={GOOGLE_MAPS_DIRECTIONS_URL}
                     target="_blank"
