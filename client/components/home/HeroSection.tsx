@@ -19,27 +19,11 @@ export function HeroSection() {
       data-hero-root
     >
       <div className="w-full mx-auto flex-1 flex flex-col min-h-0">
-        <div className="relative mt-2 sm:mt-3 lg:mt-8 flex-1 w-full rounded-2xl overflow-hidden min-h-[min(92vh,920px)] sm:min-h-[min(94vh,960px)]">
-          <Image
-            src="/images/clock%20urb.png"
-            alt="URB insurance clock display"
-            fill
-            priority
-            quality={85}
-            sizes="100vw"
-            className="object-cover object-[82%_center] sm:object-[72%_center] lg:object-center"
-          />
-          <div
-            className="absolute inset-0 bg-linear-to-r from-black/58 via-black/28 to-white/6 sm:from-black/52 sm:via-black/22 sm:to-white/8 lg:from-black/46 lg:via-black/16 lg:to-white/12"
-            aria-hidden
-          />
-          <div
-            className="absolute inset-x-0 bottom-0 h-[34%] bg-linear-to-t from-black/46 via-black/18 to-transparent sm:h-[28%] sm:from-black/34 sm:via-black/10"
-            aria-hidden
-          />
-          <div className="absolute inset-0 z-10 flex flex-col justify-between">
+        <div className="relative mt-2 sm:mt-3 lg:mt-8 flex-1 w-full rounded-2xl overflow-hidden min-h-[min(92vh,920px)] sm:min-h-[min(94vh,960px)] bg-black">
+          <div className="relative z-10 h-full flex flex-col justify-between">
             <div className="flex-1 flex items-center px-4 sm:px-6 lg:px-10 xl:px-14 pt-6 sm:pt-8 max-w-7xl mx-auto w-full">
-              <div className="max-w-2xl">
+              <div className="w-full grid grid-cols-[55%_45%] lg:grid-cols-[58%_42%] items-stretch gap-3 sm:gap-4 lg:gap-8 min-h-[360px] sm:min-h-[420px]">
+                <div className="flex flex-col justify-center">
                 <h1 className="text-2xl md:text-7xl leading-[60px] font-semibold text-white">
                   Insurance that protects what matters most.
                 </h1>
@@ -72,6 +56,18 @@ export function HeroSection() {
                       />
                     </span>
                   </Link>
+                </div>
+                </div>
+                <div className="relative h-full min-h-[320px] sm:min-h-[420px] overflow-hidden rounded-[1.25rem]">
+                  <Image
+                    src="/images/clock%20urb.png"
+                    alt="URB insurance clock display"
+                    fill
+                    priority
+                    quality={85}
+                    sizes="(max-width: 1024px) 45vw, 42vw"
+                    className="object-cover object-[70%_center] lg:object-center"
+                  />
                 </div>
               </div>
             </div>

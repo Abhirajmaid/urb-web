@@ -13,6 +13,8 @@ const GOOGLE_MAPS_DIRECTIONS_URL = `https://www.google.com/maps/search/?api=1&qu
 /** Same outlined CTA style for both cards (matches email button look). */
 const contactCtaClassName =
   "inline-flex w-full min-h-[48px] shrink-0 items-center justify-center rounded-xl border-2 border-brand-primary bg-white px-4 py-3.5 text-sm font-semibold uppercase tracking-wide text-brand-primary transition hover:bg-brand-primary/[0.06]";
+const officeDirectionsCtaClassName =
+  "inline-flex w-full min-h-[48px] shrink-0 items-center justify-center rounded-xl border-2 border-brand-primary bg-brand-primary px-4 py-3.5 text-sm font-semibold uppercase tracking-wide text-white transition hover:bg-brand-primary/90";
 
 const iconTileClassName =
   "mb-5 flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-brand-primary text-white shadow-sm";
@@ -86,34 +88,34 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <div className="mt-10 rounded-2xl border border-brand-gray-light/60 bg-white p-8 shadow-sm sm:p-10">
-            <div className="grid gap-8 md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.6fr)] md:items-start">
-              <div className="flex h-full flex-col">
+          <div className="mt-10 rounded-2xl border border-brand-gray-light/60 bg-white p-6 shadow-sm sm:p-8">
+            <div className="grid gap-6 md:grid-cols-[minmax(0,0.95fr)_minmax(0,1.55fr)] md:items-stretch">
+              <div className="flex h-full flex-col justify-between">
                 <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-primary">
                   OUR OFFICE
                 </p>
                 <address className="mt-4 whitespace-pre-line text-base leading-relaxed not-italic text-brand-dark/90">
                   {contactDetails.address}
                 </address>
-                <div className="mt-6 flex justify-center">
+                <div className="mt-4 w-full">
                   <a
                     href={GOOGLE_MAPS_DIRECTIONS_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`${contactCtaClassName} w-full sm:w-auto sm:min-w-[220px]`}
+                    className={`${officeDirectionsCtaClassName} w-full`}
                   >
                     Get Directions
                   </a>
                 </div>
               </div>
 
-              <div className="overflow-hidden rounded-xl border border-brand-gray-light/70">
+              <div className="h-full overflow-hidden rounded-xl border border-brand-gray-light/70">
                 <iframe
                   title="URB Office Location on Google Maps"
                   src={GOOGLE_MAPS_EMBED_URL}
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  className="h-[280px] w-full sm:h-[340px] md:h-full md:min-h-[360px]"
+                  className="h-[300px] w-full sm:h-[340px] md:h-full md:min-h-[320px]"
                 />
               </div>
             </div>

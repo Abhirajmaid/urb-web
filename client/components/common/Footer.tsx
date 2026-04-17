@@ -90,7 +90,12 @@ export function Footer() {
                 </div>
 
                 <address className="mt-6 space-y-2 not-italic text-base leading-relaxed text-white">
-                  <p>
+                  <p className="flex items-start gap-2.5">
+                    <Icon
+                      icon="mdi:phone-outline"
+                      className="mt-0.5 h-4 w-4 shrink-0 text-white"
+                    />
+                    <span>
                     <a
                       href={`tel:${contactDetails.phoneTelHref1}`}
                       className="transition hover:text-white/80"
@@ -104,17 +109,30 @@ export function Footer() {
                     >
                       +91 98213 11710
                     </a>
+                    </span>
                   </p>
-                  <p>
+                  <p className="flex items-start gap-2.5">
+                    <Icon
+                      icon="mdi:email-outline"
+                      className="mt-0.5 h-4 w-4 shrink-0 text-white"
+                    />
+                    <span>
                     <a
                       href={`mailto:${contactDetails.email}`}
                       className="transition hover:text-white/80"
                     >
                       {contactDetails.email}
                     </a>
+                    </span>
                   </p>
-                  <p className="max-w-sm whitespace-pre-line">
-                    {contactDetails.address}
+                  <p className="flex items-start gap-2.5">
+                    <Icon
+                      icon="mdi:map-marker-outline"
+                      className="mt-0.5 h-4 w-4 shrink-0 text-white"
+                    />
+                    <span className="max-w-sm whitespace-pre-line">
+                      {contactDetails.address}
+                    </span>
                   </p>
                 </address>
               </div>
