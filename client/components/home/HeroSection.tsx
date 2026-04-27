@@ -65,7 +65,7 @@ export function HeroSection() {
             </div>
 
             <div className="shrink-0 px-4 sm:px-6 lg:px-10 xl:px-14 pb-4 sm:pb-6 lg:pb-8 max-w-7xl mx-auto w-full">
-              <div className="rounded-2xl bg-gray-900/30 backdrop-blur-md p-2 sm:rounded-none sm:bg-transparent sm:backdrop-blur-0 sm:p-0">
+              <div className="rounded-2xl bg-[rgba(0,0,0,0.78)] backdrop-blur-sm p-2 sm:rounded-none sm:bg-transparent sm:backdrop-blur-0 sm:p-0">
                 <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-6">
                 {stats.map((stat, index) => (
                   <div
