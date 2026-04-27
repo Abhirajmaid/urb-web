@@ -27,7 +27,7 @@ export function HeroSection() {
             priority
             quality={85}
             sizes="100vw"
-            className="object-cover object-right sm:object-[76%_center] lg:object-center"
+            className="object-cover object-[96%_center] sm:object-[76%_center] lg:object-center"
           />
           <div className="absolute inset-0 z-10 flex flex-col justify-between">
             <div className="flex-1 flex items-center px-4 sm:px-6 lg:px-10 xl:px-14 pt-6 sm:pt-8 max-w-7xl mx-auto w-full">
@@ -65,7 +65,7 @@ export function HeroSection() {
             </div>
 
             <div className="shrink-0 px-4 sm:px-6 lg:px-10 xl:px-14 pb-4 sm:pb-6 lg:pb-8 max-w-7xl mx-auto w-full">
-              <div className="rounded-2xl bg-[rgba(0,0,0,0.78)] backdrop-blur-sm p-2 sm:rounded-none sm:bg-transparent sm:backdrop-blur-0 sm:p-0">
+              <div className="rounded-2xl border border-white/10 bg-[linear-gradient(135deg,rgba(0,0,0,0.88),rgba(24,24,24,0.82))] backdrop-blur-[3px] shadow-[0_12px_28px_rgba(0,0,0,0.45)] p-2 sm:rounded-none sm:border-0 sm:bg-transparent sm:backdrop-blur-0 sm:shadow-none sm:p-0">
                 <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-6">
                 {stats.map((stat, index) => (
                   <div
