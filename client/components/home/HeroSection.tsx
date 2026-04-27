@@ -27,7 +27,7 @@ export function HeroSection() {
             priority
             quality={85}
             sizes="100vw"
-            className="object-cover object-[96%_center] sm:object-[76%_center] lg:object-center"
+            className="object-cover object-right sm:object-[76%_center] lg:object-center"
           />
           <div className="absolute inset-0 z-10 flex flex-col justify-between">
             <div className="flex-1 flex items-center px-4 sm:px-6 lg:px-10 xl:px-14 pt-6 sm:pt-8 max-w-7xl mx-auto w-full">
@@ -48,14 +48,14 @@ export function HeroSection() {
                 <div className="mt-2 sm:mt-3 lg:hidden flex justify-start w-full">
                   <Link
                     href="/contact"
-                    className="flex items-center justify-center gap-3 bg-[#4e0708] hover:bg-[#5a0a0b] text-white rounded-full px-5 py-3.5 pr-3.5 shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl"
+                    className="inline-flex h-12 items-center justify-center gap-2 bg-[#4e0708] hover:bg-[#5a0a0b] text-white rounded-full pl-5 pr-2 shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl whitespace-nowrap"
                   >
-                    <span className="text-base font-medium">Connect us</span>
-                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white">
+                    <span className="text-sm font-medium leading-none">Connect us</span>
+                    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white">
                       <Icon
                         icon="solar:arrow-right-up-linear"
-                        width={18}
-                        height={18}
+                        width={16}
+                        height={16}
                         className="text-[#4e0708]"
                       />
                     </span>
@@ -64,13 +64,13 @@ export function HeroSection() {
               </div>
             </div>
 
-            <div className="shrink-0 px-4 sm:px-6 lg:px-10 xl:px-14 pb-4 sm:pb-6 lg:pb-8 max-w-7xl mx-auto w-full">
-              <div className="rounded-2xl border border-white/10 bg-[linear-gradient(135deg,rgba(0,0,0,0.88),rgba(24,24,24,0.82))] backdrop-blur-[3px] shadow-[0_12px_28px_rgba(0,0,0,0.45)] p-2 sm:rounded-none sm:border-0 sm:bg-transparent sm:backdrop-blur-0 sm:shadow-none sm:p-0">
+            <div className="shrink-0 px-4 sm:px-6 lg:px-10 xl:px-14 pb-20 sm:pb-6 lg:pb-8 max-w-7xl mx-auto w-full">
+              <div className="rounded-2xl border border-white/20 bg-black/65 backdrop-blur-md shadow-[0_12px_28px_rgba(0,0,0,0.55)] p-2 sm:rounded-none sm:border-0 sm:bg-transparent sm:backdrop-blur-0 sm:shadow-none sm:p-0">
                 <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-6">
                 {stats.map((stat, index) => (
                   <div
                     key={index}
-                    className="px-3 py-3 text-center sm:px-5 sm:py-6"
+                    className="rounded-xl bg-black/40 px-3 py-3 text-center sm:rounded-none sm:bg-transparent sm:px-5 sm:py-6"
                   >
                     <div className="text-4xl sm:text-4xl lg:text-5xl font-semibold text-[#f5f5f5] [text-shadow:0_2px_8px_rgba(0,0,0,0.6)] [-webkit-text-stroke:1px_rgba(0,0,0,0.55)] sm:[-webkit-text-stroke:0px_transparent] mb-2 sm:mb-2">
                       {stat.value}
