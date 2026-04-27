@@ -27,7 +27,7 @@ export function HeroSection() {
             priority
             quality={85}
             sizes="100vw"
-            className="object-cover object-[88%_center] sm:object-[76%_center] lg:object-center"
+            className="object-cover object-right sm:object-[76%_center] lg:object-center"
           />
           <div className="absolute inset-0 z-10 flex flex-col justify-between">
             <div className="flex-1 flex items-center px-4 sm:px-6 lg:px-10 xl:px-14 pt-6 sm:pt-8 max-w-7xl mx-auto w-full">
@@ -48,14 +48,14 @@ export function HeroSection() {
                 <div className="mt-2 sm:mt-3 lg:hidden flex justify-start w-full">
                   <Link
                     href="/contact"
-                    className="flex items-center justify-center gap-3.5 bg-[#4e0708] hover:bg-[#5a0a0b] text-white rounded-full px-7 py-4.5 pr-4 shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl"
+                    className="flex items-center justify-center gap-3 bg-[#4e0708] hover:bg-[#5a0a0b] text-white rounded-full px-5 py-3.5 pr-3.5 shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl"
                   >
-                    <span className="text-lg font-medium">Connect us</span>
-                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white">
+                    <span className="text-base font-medium">Connect us</span>
+                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white">
                       <Icon
                         icon="solar:arrow-right-up-linear"
-                        width={20}
-                        height={20}
+                        width={18}
+                        height={18}
                         className="text-[#4e0708]"
                       />
                     </span>
@@ -64,21 +64,23 @@ export function HeroSection() {
               </div>
             </div>
 
-            <div className="shrink-0 px-4 sm:px-6 lg:px-10 xl:px-14 pb-5 sm:pb-6 lg:pb-8 max-w-7xl mx-auto w-full">
-              <div className="grid grid-cols-2 gap-4 sm:grid-cols-4 sm:gap-6">
+            <div className="shrink-0 px-4 sm:px-6 lg:px-10 xl:px-14 pb-4 sm:pb-6 lg:pb-8 max-w-7xl mx-auto w-full">
+              <div className="rounded-2xl bg-gray-900/30 backdrop-blur-md p-2 sm:rounded-none sm:bg-transparent sm:backdrop-blur-0 sm:p-0">
+                <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-6">
                 {stats.map((stat, index) => (
                   <div
                     key={index}
-                    className="px-4 py-4 text-center sm:px-5 sm:py-6"
+                    className="px-3 py-3 text-center sm:px-5 sm:py-6"
                   >
-                    <div className="text-4xl sm:text-4xl lg:text-5xl font-semibold text-[#f5f5f5] [text-shadow:0_2px_8px_rgba(0,0,0,0.6)] mb-2 sm:mb-2">
+                    <div className="text-4xl sm:text-4xl lg:text-5xl font-semibold text-[#f5f5f5] [text-shadow:0_2px_8px_rgba(0,0,0,0.6)] [-webkit-text-stroke:1px_rgba(0,0,0,0.55)] sm:[-webkit-text-stroke:0px_transparent] mb-2 sm:mb-2">
                       {stat.value}
                     </div>
-                    <p className="text-sm sm:text-sm text-[#f0f0f0] [text-shadow:0_1px_8px_rgba(0,0,0,0.55)] leading-snug">
+                    <p className="text-sm sm:text-sm text-[#f0f0f0] [text-shadow:0_1px_8px_rgba(0,0,0,0.55)] [-webkit-text-stroke:0.6px_rgba(0,0,0,0.55)] sm:[-webkit-text-stroke:0px_transparent] leading-snug">
                       {stat.label}
                     </p>
                   </div>
                 ))}
+                </div>
               </div>
             </div>
           </div>
